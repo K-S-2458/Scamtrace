@@ -1,0 +1,2802 @@
+[
+  {
+    "id": "url_b_0001",
+    "url": "https://examplebank.test/about-us/careers?id=100",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0002",
+    "url": "https://examplebank.test/personal-banking/accounts?id=101",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0003",
+    "url": "https://trustpay.test/terms-and-conditions?id=102",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0004",
+    "url": "https://securebank.test/customer-service/faq?id=103",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0005",
+    "url": "https://securebank.test/customer-service/faq?id=104",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0006",
+    "url": "https://examplebank.test/contact-support?id=105",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0007",
+    "url": "https://examplebank.test/about-us/careers?id=106",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0008",
+    "url": "https://community-blog.test/post/2026/03/software-engineering?id=107",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0009",
+    "url": "https://examplebank.test/about-us/careers?id=108",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0010",
+    "url": "https://examplebank.in/services/netbanking?id=109",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0011",
+    "url": "https://news-portal.test/technology/cybersecurity-tips?id=110",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0012",
+    "url": "https://examplebank.test/personal-banking/accounts?id=111",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0013",
+    "url": "https://examplebank.test/personal-banking/accounts?id=112",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0014",
+    "url": "https://examplebank.test/about-us/careers?id=113",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0015",
+    "url": "https://securebank.test/customer-service/faq?id=114",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0016",
+    "url": "https://securebank.test/customer-service/faq?id=115",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0017",
+    "url": "https://community-blog.test/post/2026/03/software-engineering?id=116",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0018",
+    "url": "https://examplebank.in/services/netbanking?id=117",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0019",
+    "url": "https://examplebank.test/personal-banking/accounts?id=118",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0020",
+    "url": "https://community-blog.test/post/2026/03/software-engineering?id=119",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0021",
+    "url": "https://securebank.test/customer-service/faq?id=120",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0022",
+    "url": "https://community-blog.test/post/2026/03/software-engineering?id=121",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0023",
+    "url": "https://news-portal.test/technology/cybersecurity-tips?id=122",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0024",
+    "url": "https://securebank.test/customer-service/faq?id=123",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0025",
+    "url": "https://public-library.test/books/catalog?genre=science?id=124",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0026",
+    "url": "https://examplebank.in/services/netbanking?id=125",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0027",
+    "url": "https://trustpay.test/terms-and-conditions?id=126",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0028",
+    "url": "https://examplebank.test/personal-banking/accounts?id=127",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0029",
+    "url": "https://examplebank.test/contact-support?id=128",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0030",
+    "url": "https://news-portal.test/technology/cybersecurity-tips?id=129",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0031",
+    "url": "https://fastupi.test/merchant/directory?id=130",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0032",
+    "url": "https://trustpay.test/terms-and-conditions?id=131",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0033",
+    "url": "https://examplebank.test/contact-support?id=132",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0034",
+    "url": "https://securebank.test/customer-service/faq?id=133",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0035",
+    "url": "https://fastupi.test/merchant/directory?id=134",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0036",
+    "url": "https://examplebank.test/about-us/careers?id=135",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0037",
+    "url": "https://examplebank.test/about-us/careers?id=136",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0038",
+    "url": "https://news-portal.test/technology/cybersecurity-tips?id=137",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0039",
+    "url": "https://examplebank.test/about-us/careers?id=138",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0040",
+    "url": "https://fastupi.test/merchant/directory?id=139",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0041",
+    "url": "https://fastupi.test/merchant/directory?id=140",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0042",
+    "url": "https://examplebank.in/services/netbanking?id=141",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0043",
+    "url": "https://trustpay.test/terms-and-conditions?id=142",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0044",
+    "url": "https://examplebank.test/personal-banking/accounts?id=143",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0045",
+    "url": "https://public-library.test/books/catalog?genre=science?id=144",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0046",
+    "url": "https://community-blog.test/post/2026/03/software-engineering?id=145",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0047",
+    "url": "https://examplebank.test/about-us/careers?id=146",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0048",
+    "url": "https://news-portal.test/technology/cybersecurity-tips?id=147",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0049",
+    "url": "https://examplebank.test/about-us/careers?id=148",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0050",
+    "url": "https://community-blog.test/post/2026/03/software-engineering?id=149",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0051",
+    "url": "https://trustpay.test/terms-and-conditions?id=150",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0052",
+    "url": "https://examplebank.in/services/netbanking?id=151",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0053",
+    "url": "https://fastupi.test/merchant/directory?id=152",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0054",
+    "url": "https://examplebank.in/services/netbanking?id=153",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0055",
+    "url": "https://securebank.test/customer-service/faq?id=154",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0056",
+    "url": "https://examplebank.test/about-us/careers?id=155",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0057",
+    "url": "https://examplebank.test/personal-banking/accounts?id=156",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0058",
+    "url": "https://securebank.test/customer-service/faq?id=157",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0059",
+    "url": "https://trustpay.test/terms-and-conditions?id=158",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0060",
+    "url": "https://examplebank.test/about-us/careers?id=159",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0061",
+    "url": "https://securebank.test/customer-service/faq?id=160",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0062",
+    "url": "https://examplebank.test/about-us/careers?id=161",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0063",
+    "url": "https://news-portal.test/technology/cybersecurity-tips?id=162",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0064",
+    "url": "https://trustpay.test/terms-and-conditions?id=163",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0065",
+    "url": "https://public-library.test/books/catalog?genre=science?id=164",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0066",
+    "url": "https://fastupi.test/merchant/directory?id=165",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0067",
+    "url": "https://examplebank.test/contact-support?id=166",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0068",
+    "url": "https://fastupi.test/merchant/directory?id=167",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0069",
+    "url": "https://fastupi.test/merchant/directory?id=168",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0070",
+    "url": "https://securebank.test/customer-service/faq?id=169",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0071",
+    "url": "https://trustpay.test/terms-and-conditions?id=170",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0072",
+    "url": "https://examplebank.test/about-us/careers?id=171",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0073",
+    "url": "https://examplebank.in/services/netbanking?id=172",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0074",
+    "url": "https://examplebank.test/contact-support?id=173",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0075",
+    "url": "https://community-blog.test/post/2026/03/software-engineering?id=174",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0076",
+    "url": "https://securebank.test/customer-service/faq?id=175",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0077",
+    "url": "https://examplebank.test/contact-support?id=176",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0078",
+    "url": "https://public-library.test/books/catalog?genre=science?id=177",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0079",
+    "url": "https://news-portal.test/technology/cybersecurity-tips?id=178",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0080",
+    "url": "https://trustpay.test/terms-and-conditions?id=179",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0081",
+    "url": "https://community-blog.test/post/2026/03/software-engineering?id=180",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0082",
+    "url": "https://securebank.test/customer-service/faq?id=181",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0083",
+    "url": "https://fastupi.test/merchant/directory?id=182",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0084",
+    "url": "https://examplebank.test/personal-banking/accounts?id=183",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0085",
+    "url": "https://securebank.test/customer-service/faq?id=184",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0086",
+    "url": "https://examplebank.test/personal-banking/accounts?id=185",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0087",
+    "url": "https://fastupi.test/merchant/directory?id=186",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0088",
+    "url": "https://news-portal.test/technology/cybersecurity-tips?id=187",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0089",
+    "url": "https://trustpay.test/terms-and-conditions?id=188",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0090",
+    "url": "https://examplebank.test/about-us/careers?id=189",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0091",
+    "url": "https://securebank.test/customer-service/faq?id=190",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0092",
+    "url": "https://examplebank.in/services/netbanking?id=191",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0093",
+    "url": "https://fastupi.test/merchant/directory?id=192",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0094",
+    "url": "https://securebank.test/customer-service/faq?id=193",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0095",
+    "url": "https://public-library.test/books/catalog?genre=science?id=194",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0096",
+    "url": "https://news-portal.test/technology/cybersecurity-tips?id=195",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0097",
+    "url": "https://public-library.test/books/catalog?genre=science?id=196",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0098",
+    "url": "https://examplebank.test/contact-support?id=197",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0099",
+    "url": "https://trustpay.test/terms-and-conditions?id=198",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0100",
+    "url": "https://examplebank.test/contact-support?id=199",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0101",
+    "url": "https://securebank.test/customer-service/faq?id=200",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0102",
+    "url": "https://community-blog.test/post/2026/03/software-engineering?id=201",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0103",
+    "url": "https://community-blog.test/post/2026/03/software-engineering?id=202",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0104",
+    "url": "https://trustpay.test/terms-and-conditions?id=203",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0105",
+    "url": "https://examplebank.in/services/netbanking?id=204",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0106",
+    "url": "https://news-portal.test/technology/cybersecurity-tips?id=205",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0107",
+    "url": "https://examplebank.in/services/netbanking?id=206",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0108",
+    "url": "https://news-portal.test/technology/cybersecurity-tips?id=207",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0109",
+    "url": "https://fastupi.test/merchant/directory?id=208",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0110",
+    "url": "https://securebank.test/customer-service/faq?id=209",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0111",
+    "url": "https://examplebank.test/contact-support?id=210",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0112",
+    "url": "https://community-blog.test/post/2026/03/software-engineering?id=211",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0113",
+    "url": "https://public-library.test/books/catalog?genre=science?id=212",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0114",
+    "url": "https://examplebank.test/about-us/careers?id=213",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0115",
+    "url": "https://examplebank.test/personal-banking/accounts?id=214",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0116",
+    "url": "https://examplebank.test/about-us/careers?id=215",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0117",
+    "url": "https://examplebank.test/contact-support?id=216",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0118",
+    "url": "https://examplebank.test/contact-support?id=217",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0119",
+    "url": "https://news-portal.test/technology/cybersecurity-tips?id=218",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0120",
+    "url": "https://examplebank.in/services/netbanking?id=219",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0121",
+    "url": "https://examplebank.test/about-us/careers?id=220",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0122",
+    "url": "https://news-portal.test/technology/cybersecurity-tips?id=221",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0123",
+    "url": "https://news-portal.test/technology/cybersecurity-tips?id=222",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0124",
+    "url": "https://examplebank.in/services/netbanking?id=223",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0125",
+    "url": "https://public-library.test/books/catalog?genre=science?id=224",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0126",
+    "url": "https://community-blog.test/post/2026/03/software-engineering?id=225",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0127",
+    "url": "https://trustpay.test/terms-and-conditions?id=226",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0128",
+    "url": "https://community-blog.test/post/2026/03/software-engineering?id=227",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0129",
+    "url": "https://examplebank.test/personal-banking/accounts?id=228",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0130",
+    "url": "https://examplebank.test/about-us/careers?id=229",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0131",
+    "url": "https://community-blog.test/post/2026/03/software-engineering?id=230",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0132",
+    "url": "https://trustpay.test/terms-and-conditions?id=231",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0133",
+    "url": "https://fastupi.test/merchant/directory?id=232",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0134",
+    "url": "https://examplebank.test/about-us/careers?id=233",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0135",
+    "url": "https://trustpay.test/terms-and-conditions?id=234",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0136",
+    "url": "https://news-portal.test/technology/cybersecurity-tips?id=235",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0137",
+    "url": "https://examplebank.test/contact-support?id=236",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0138",
+    "url": "https://public-library.test/books/catalog?genre=science?id=237",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0139",
+    "url": "https://examplebank.test/personal-banking/accounts?id=238",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0140",
+    "url": "https://trustpay.test/terms-and-conditions?id=239",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0141",
+    "url": "https://community-blog.test/post/2026/03/software-engineering?id=240",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0142",
+    "url": "https://examplebank.test/contact-support?id=241",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0143",
+    "url": "https://community-blog.test/post/2026/03/software-engineering?id=242",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0144",
+    "url": "https://examplebank.test/about-us/careers?id=243",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0145",
+    "url": "https://trustpay.test/terms-and-conditions?id=244",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0146",
+    "url": "https://community-blog.test/post/2026/03/software-engineering?id=245",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0147",
+    "url": "https://examplebank.in/services/netbanking?id=246",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0148",
+    "url": "https://securebank.test/customer-service/faq?id=247",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0149",
+    "url": "https://examplebank.test/contact-support?id=248",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0150",
+    "url": "https://fastupi.test/merchant/directory?id=249",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0151",
+    "url": "https://examplebank.test/contact-support?id=250",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0152",
+    "url": "https://community-blog.test/post/2026/03/software-engineering?id=251",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0153",
+    "url": "https://community-blog.test/post/2026/03/software-engineering?id=252",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0154",
+    "url": "https://examplebank.test/personal-banking/accounts?id=253",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0155",
+    "url": "https://examplebank.in/services/netbanking?id=254",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0156",
+    "url": "https://fastupi.test/merchant/directory?id=255",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0157",
+    "url": "https://public-library.test/books/catalog?genre=science?id=256",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0158",
+    "url": "https://examplebank.test/personal-banking/accounts?id=257",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0159",
+    "url": "https://examplebank.test/about-us/careers?id=258",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0160",
+    "url": "https://fastupi.test/merchant/directory?id=259",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0161",
+    "url": "https://trustpay.test/terms-and-conditions?id=260",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0162",
+    "url": "https://securebank.test/customer-service/faq?id=261",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0163",
+    "url": "https://examplebank.test/personal-banking/accounts?id=262",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0164",
+    "url": "https://securebank.test/customer-service/faq?id=263",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0165",
+    "url": "https://examplebank.in/services/netbanking?id=264",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0166",
+    "url": "https://examplebank.test/about-us/careers?id=265",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0167",
+    "url": "https://examplebank.test/about-us/careers?id=266",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0168",
+    "url": "https://public-library.test/books/catalog?genre=science?id=267",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0169",
+    "url": "https://examplebank.test/about-us/careers?id=268",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0170",
+    "url": "https://community-blog.test/post/2026/03/software-engineering?id=269",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0171",
+    "url": "https://examplebank.test/contact-support?id=270",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0172",
+    "url": "https://examplebank.test/contact-support?id=271",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0173",
+    "url": "https://public-library.test/books/catalog?genre=science?id=272",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0174",
+    "url": "https://community-blog.test/post/2026/03/software-engineering?id=273",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0175",
+    "url": "https://examplebank.test/contact-support?id=274",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0176",
+    "url": "https://trustpay.test/terms-and-conditions?id=275",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0177",
+    "url": "https://community-blog.test/post/2026/03/software-engineering?id=276",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0178",
+    "url": "https://examplebank.in/services/netbanking?id=277",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0179",
+    "url": "https://news-portal.test/technology/cybersecurity-tips?id=278",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0180",
+    "url": "https://securebank.test/customer-service/faq?id=279",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0181",
+    "url": "https://community-blog.test/post/2026/03/software-engineering?id=280",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0182",
+    "url": "https://securebank.test/customer-service/faq?id=281",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0183",
+    "url": "https://trustpay.test/terms-and-conditions?id=282",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0184",
+    "url": "https://news-portal.test/technology/cybersecurity-tips?id=283",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0185",
+    "url": "https://fastupi.test/merchant/directory?id=284",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0186",
+    "url": "https://public-library.test/books/catalog?genre=science?id=285",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0187",
+    "url": "https://community-blog.test/post/2026/03/software-engineering?id=286",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0188",
+    "url": "https://public-library.test/books/catalog?genre=science?id=287",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0189",
+    "url": "https://examplebank.test/about-us/careers?id=288",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0190",
+    "url": "https://securebank.test/customer-service/faq?id=289",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0191",
+    "url": "https://securebank.test/customer-service/faq?id=290",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0192",
+    "url": "https://examplebank.test/about-us/careers?id=291",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0193",
+    "url": "https://fastupi.test/merchant/directory?id=292",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0194",
+    "url": "https://examplebank.test/personal-banking/accounts?id=293",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0195",
+    "url": "https://examplebank.in/services/netbanking?id=294",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0196",
+    "url": "https://community-blog.test/post/2026/03/software-engineering?id=295",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0197",
+    "url": "https://securebank.test/customer-service/faq?id=296",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0198",
+    "url": "https://examplebank.in/services/netbanking?id=297",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0199",
+    "url": "https://securebank.test/customer-service/faq?id=298",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_b_0200",
+    "url": "https://examplebank.test/personal-banking/accounts?id=299",
+    "label": 0,
+    "category": "benign",
+    "family": "benign_standard"
+  },
+  {
+    "id": "url_s_0001",
+    "url": "https://login.example-bank-secure.test/signin?redirect=kyc&utm_source=sms",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0002",
+    "url": "https://files.example-bank-secure.test/app.apk",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0003",
+    "url": "https://verify-identity.securebank.test/auth/login",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0004",
+    "url": "https://secure-cancel.trustpay.test/revert?ref=294",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0005",
+    "url": "https://login.example-bank-secure.test/signin?redirect=kyc&utm_source=sms",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0006",
+    "url": "https://verify-identity.securebank.test/auth/login",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0007",
+    "url": "https://kyc-update.example-bank-secure.test/verify?step=1&user_id=7596",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0008",
+    "url": "https://secure-cancel.trustpay.test/revert?ref=649",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0009",
+    "url": "https://claim-bonus.fastupi.test/reward?code=34050",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0010",
+    "url": "https://secure-cancel.trustpay.test/revert?ref=927",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0011",
+    "url": "https://kyc-update.example-bank-secure.test/verify?step=1&user_id=9856",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0012",
+    "url": "https://claim-bonus.fastupi.test/reward?code=73653",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0013",
+    "url": "http://192.168.1.100:8080/examplebank-login/verification.html",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0014",
+    "url": "http://192.168.1.100:8080/examplebank-login/verification.html",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0015",
+    "url": "https://verify-identity.securebank.test/auth/login",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0016",
+    "url": "https://kyc-update.example-bank-secure.test/verify?step=1&user_id=9883",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0017",
+    "url": "https://kyc-update.example-bank-secure.test/verify?step=1&user_id=1821",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0018",
+    "url": "https://claim-bonus.fastupi.test/reward?code=76562",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0019",
+    "url": "https://login.example-bank-secure.test/signin?redirect=kyc&utm_source=sms",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0020",
+    "url": "http://192.168.1.100:8080/examplebank-login/verification.html",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0021",
+    "url": "https://login.example-bank-secure.test/signin?redirect=kyc&utm_source=sms",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0022",
+    "url": "https://files.example-bank-secure.test/app.apk",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0023",
+    "url": "https://secure-cancel.trustpay.test/revert?ref=234",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0024",
+    "url": "https://verify-identity.securebank.test/auth/login",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0025",
+    "url": "https://login.example-bank-secure.test/signin?redirect=kyc&utm_source=sms",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0026",
+    "url": "https://points-redeem.example-bank-secure.test/cash?token=5002",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0027",
+    "url": "https://files.example-bank-secure.test/app.apk",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0028",
+    "url": "https://points-redeem.example-bank-secure.test/cash?token=5905",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0029",
+    "url": "https://login.example-bank-secure.test/signin?redirect=kyc&utm_source=sms",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0030",
+    "url": "https://claim-bonus.fastupi.test/reward?code=46930",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0031",
+    "url": "https://files.example-bank-secure.test/app.apk",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0032",
+    "url": "https://verify-identity.securebank.test/auth/login",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0033",
+    "url": "https://points-redeem.example-bank-secure.test/cash?token=3143",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0034",
+    "url": "https://points-redeem.example-bank-secure.test/cash?token=8007",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0035",
+    "url": "https://kyc-update.example-bank-secure.test/verify?step=1&user_id=2832",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0036",
+    "url": "https://kyc-update.example-bank-secure.test/verify?step=1&user_id=7049",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0037",
+    "url": "http://192.168.1.100:8080/examplebank-login/verification.html",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0038",
+    "url": "https://kyc-update.example-bank-secure.test/verify?step=1&user_id=6862",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0039",
+    "url": "https://login.example-bank-secure.test/signin?redirect=kyc&utm_source=sms",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0040",
+    "url": "https://claim-bonus.fastupi.test/reward?code=31299",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0041",
+    "url": "http://192.168.1.100:8080/examplebank-login/verification.html",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0042",
+    "url": "http://192.168.1.100:8080/examplebank-login/verification.html",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0043",
+    "url": "http://192.168.1.100:8080/examplebank-login/verification.html",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0044",
+    "url": "https://verify-identity.securebank.test/auth/login",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0045",
+    "url": "https://secure-cancel.trustpay.test/revert?ref=297",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0046",
+    "url": "https://files.example-bank-secure.test/app.apk",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0047",
+    "url": "https://files.example-bank-secure.test/app.apk",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0048",
+    "url": "https://files.example-bank-secure.test/app.apk",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0049",
+    "url": "https://claim-bonus.fastupi.test/reward?code=15014",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0050",
+    "url": "https://files.example-bank-secure.test/app.apk",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0051",
+    "url": "https://login.example-bank-secure.test/signin?redirect=kyc&utm_source=sms",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0052",
+    "url": "https://kyc-update.example-bank-secure.test/verify?step=1&user_id=8144",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0053",
+    "url": "https://secure-cancel.trustpay.test/revert?ref=171",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0054",
+    "url": "https://files.example-bank-secure.test/app.apk",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0055",
+    "url": "http://192.168.1.100:8080/examplebank-login/verification.html",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0056",
+    "url": "https://claim-bonus.fastupi.test/reward?code=65108",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0057",
+    "url": "https://claim-bonus.fastupi.test/reward?code=63225",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0058",
+    "url": "https://points-redeem.example-bank-secure.test/cash?token=6279",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0059",
+    "url": "https://verify-identity.securebank.test/auth/login",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0060",
+    "url": "https://verify-identity.securebank.test/auth/login",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0061",
+    "url": "https://files.example-bank-secure.test/app.apk",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0062",
+    "url": "https://secure-cancel.trustpay.test/revert?ref=125",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0063",
+    "url": "https://secure-cancel.trustpay.test/revert?ref=970",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0064",
+    "url": "https://verify-identity.securebank.test/auth/login",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0065",
+    "url": "http://192.168.1.100:8080/examplebank-login/verification.html",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0066",
+    "url": "https://kyc-update.example-bank-secure.test/verify?step=1&user_id=2746",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0067",
+    "url": "https://verify-identity.securebank.test/auth/login",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0068",
+    "url": "https://verify-identity.securebank.test/auth/login",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0069",
+    "url": "https://files.example-bank-secure.test/app.apk",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0070",
+    "url": "http://192.168.1.100:8080/examplebank-login/verification.html",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0071",
+    "url": "https://verify-identity.securebank.test/auth/login",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0072",
+    "url": "https://verify-identity.securebank.test/auth/login",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0073",
+    "url": "https://points-redeem.example-bank-secure.test/cash?token=6238",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0074",
+    "url": "https://login.example-bank-secure.test/signin?redirect=kyc&utm_source=sms",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0075",
+    "url": "https://claim-bonus.fastupi.test/reward?code=18418",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0076",
+    "url": "https://files.example-bank-secure.test/app.apk",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0077",
+    "url": "https://secure-cancel.trustpay.test/revert?ref=888",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0078",
+    "url": "http://192.168.1.100:8080/examplebank-login/verification.html",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0079",
+    "url": "http://192.168.1.100:8080/examplebank-login/verification.html",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0080",
+    "url": "https://secure-cancel.trustpay.test/revert?ref=379",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0081",
+    "url": "https://verify-identity.securebank.test/auth/login",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0082",
+    "url": "https://claim-bonus.fastupi.test/reward?code=26728",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0083",
+    "url": "https://kyc-update.example-bank-secure.test/verify?step=1&user_id=7455",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0084",
+    "url": "https://login.example-bank-secure.test/signin?redirect=kyc&utm_source=sms",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0085",
+    "url": "https://claim-bonus.fastupi.test/reward?code=44099",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0086",
+    "url": "https://secure-cancel.trustpay.test/revert?ref=445",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0087",
+    "url": "https://points-redeem.example-bank-secure.test/cash?token=2341",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0088",
+    "url": "https://verify-identity.securebank.test/auth/login",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0089",
+    "url": "https://secure-cancel.trustpay.test/revert?ref=141",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0090",
+    "url": "https://secure-cancel.trustpay.test/revert?ref=736",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0091",
+    "url": "https://secure-cancel.trustpay.test/revert?ref=785",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0092",
+    "url": "https://secure-cancel.trustpay.test/revert?ref=885",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0093",
+    "url": "https://claim-bonus.fastupi.test/reward?code=31465",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0094",
+    "url": "https://kyc-update.example-bank-secure.test/verify?step=1&user_id=6111",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0095",
+    "url": "http://192.168.1.100:8080/examplebank-login/verification.html",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0096",
+    "url": "https://login.example-bank-secure.test/signin?redirect=kyc&utm_source=sms",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0097",
+    "url": "https://kyc-update.example-bank-secure.test/verify?step=1&user_id=6688",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0098",
+    "url": "https://login.example-bank-secure.test/signin?redirect=kyc&utm_source=sms",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0099",
+    "url": "http://192.168.1.100:8080/examplebank-login/verification.html",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0100",
+    "url": "https://verify-identity.securebank.test/auth/login",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0101",
+    "url": "https://points-redeem.example-bank-secure.test/cash?token=8136",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0102",
+    "url": "https://points-redeem.example-bank-secure.test/cash?token=2419",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0103",
+    "url": "https://points-redeem.example-bank-secure.test/cash?token=8613",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0104",
+    "url": "http://192.168.1.100:8080/examplebank-login/verification.html",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0105",
+    "url": "https://claim-bonus.fastupi.test/reward?code=37802",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0106",
+    "url": "https://files.example-bank-secure.test/app.apk",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0107",
+    "url": "https://kyc-update.example-bank-secure.test/verify?step=1&user_id=9464",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0108",
+    "url": "http://192.168.1.100:8080/examplebank-login/verification.html",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0109",
+    "url": "https://verify-identity.securebank.test/auth/login",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0110",
+    "url": "https://login.example-bank-secure.test/signin?redirect=kyc&utm_source=sms",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0111",
+    "url": "https://points-redeem.example-bank-secure.test/cash?token=9698",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0112",
+    "url": "https://files.example-bank-secure.test/app.apk",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0113",
+    "url": "https://verify-identity.securebank.test/auth/login",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0114",
+    "url": "https://login.example-bank-secure.test/signin?redirect=kyc&utm_source=sms",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0115",
+    "url": "https://claim-bonus.fastupi.test/reward?code=38361",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0116",
+    "url": "https://points-redeem.example-bank-secure.test/cash?token=2647",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0117",
+    "url": "https://secure-cancel.trustpay.test/revert?ref=469",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0118",
+    "url": "https://points-redeem.example-bank-secure.test/cash?token=5494",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0119",
+    "url": "https://kyc-update.example-bank-secure.test/verify?step=1&user_id=1893",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0120",
+    "url": "https://verify-identity.securebank.test/auth/login",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0121",
+    "url": "https://verify-identity.securebank.test/auth/login",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0122",
+    "url": "https://kyc-update.example-bank-secure.test/verify?step=1&user_id=5136",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0123",
+    "url": "http://192.168.1.100:8080/examplebank-login/verification.html",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0124",
+    "url": "https://claim-bonus.fastupi.test/reward?code=83772",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0125",
+    "url": "https://secure-cancel.trustpay.test/revert?ref=882",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0126",
+    "url": "https://secure-cancel.trustpay.test/revert?ref=561",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0127",
+    "url": "https://points-redeem.example-bank-secure.test/cash?token=1986",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0128",
+    "url": "https://login.example-bank-secure.test/signin?redirect=kyc&utm_source=sms",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0129",
+    "url": "https://login.example-bank-secure.test/signin?redirect=kyc&utm_source=sms",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0130",
+    "url": "https://claim-bonus.fastupi.test/reward?code=63545",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0131",
+    "url": "https://points-redeem.example-bank-secure.test/cash?token=5632",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0132",
+    "url": "https://verify-identity.securebank.test/auth/login",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0133",
+    "url": "http://192.168.1.100:8080/examplebank-login/verification.html",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0134",
+    "url": "https://points-redeem.example-bank-secure.test/cash?token=3718",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0135",
+    "url": "https://points-redeem.example-bank-secure.test/cash?token=8679",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0136",
+    "url": "https://points-redeem.example-bank-secure.test/cash?token=9847",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0137",
+    "url": "https://verify-identity.securebank.test/auth/login",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0138",
+    "url": "http://192.168.1.100:8080/examplebank-login/verification.html",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0139",
+    "url": "https://login.example-bank-secure.test/signin?redirect=kyc&utm_source=sms",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0140",
+    "url": "https://points-redeem.example-bank-secure.test/cash?token=9502",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0141",
+    "url": "https://verify-identity.securebank.test/auth/login",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0142",
+    "url": "https://verify-identity.securebank.test/auth/login",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0143",
+    "url": "https://files.example-bank-secure.test/app.apk",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0144",
+    "url": "https://files.example-bank-secure.test/app.apk",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0145",
+    "url": "https://kyc-update.example-bank-secure.test/verify?step=1&user_id=8451",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0146",
+    "url": "https://files.example-bank-secure.test/app.apk",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0147",
+    "url": "https://kyc-update.example-bank-secure.test/verify?step=1&user_id=9889",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0148",
+    "url": "https://secure-cancel.trustpay.test/revert?ref=737",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0149",
+    "url": "https://verify-identity.securebank.test/auth/login",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0150",
+    "url": "https://claim-bonus.fastupi.test/reward?code=67424",
+    "label": 1,
+    "category": "suspicious",
+    "family": "train_standard"
+  },
+  {
+    "id": "url_s_0151",
+    "url": "https://urgent-kyc-reactivate.example-bank-secure.test/portal/otp-confirm?session=1472",
+    "label": 1,
+    "category": "suspicious",
+    "family": "held_out_family"
+  },
+  {
+    "id": "url_s_0152",
+    "url": "https://urgent-kyc-reactivate.example-bank-secure.test/portal/otp-confirm?session=3594",
+    "label": 1,
+    "category": "suspicious",
+    "family": "held_out_family"
+  },
+  {
+    "id": "url_s_0153",
+    "url": "https://urgent-kyc-reactivate.example-bank-secure.test/portal/otp-confirm?session=7684",
+    "label": 1,
+    "category": "suspicious",
+    "family": "held_out_family"
+  },
+  {
+    "id": "url_s_0154",
+    "url": "https://urgent-kyc-reactivate.example-bank-secure.test/portal/otp-confirm?session=2858",
+    "label": 1,
+    "category": "suspicious",
+    "family": "held_out_family"
+  },
+  {
+    "id": "url_s_0155",
+    "url": "https://urgent-kyc-reactivate.example-bank-secure.test/portal/otp-confirm?session=3522",
+    "label": 1,
+    "category": "suspicious",
+    "family": "held_out_family"
+  },
+  {
+    "id": "url_s_0156",
+    "url": "https://refund-claim-desk.trustpay.test/dispute/instant-payout?case=822",
+    "label": 1,
+    "category": "suspicious",
+    "family": "held_out_family"
+  },
+  {
+    "id": "url_s_0157",
+    "url": "https://refund-claim-desk.trustpay.test/dispute/instant-payout?case=954",
+    "label": 1,
+    "category": "suspicious",
+    "family": "held_out_family"
+  },
+  {
+    "id": "url_s_0158",
+    "url": "https://refund-claim-desk.trustpay.test/dispute/instant-payout?case=349",
+    "label": 1,
+    "category": "suspicious",
+    "family": "held_out_family"
+  },
+  {
+    "id": "url_s_0159",
+    "url": "https://refund-claim-desk.trustpay.test/dispute/instant-payout?case=492",
+    "label": 1,
+    "category": "suspicious",
+    "family": "held_out_family"
+  },
+  {
+    "id": "url_s_0160",
+    "url": "https://urgent-kyc-reactivate.example-bank-secure.test/portal/otp-confirm?session=9327",
+    "label": 1,
+    "category": "suspicious",
+    "family": "held_out_family"
+  },
+  {
+    "id": "url_s_0161",
+    "url": "https://urgent-kyc-reactivate.example-bank-secure.test/portal/otp-confirm?session=2143",
+    "label": 1,
+    "category": "suspicious",
+    "family": "held_out_family"
+  },
+  {
+    "id": "url_s_0162",
+    "url": "https://refund-claim-desk.trustpay.test/dispute/instant-payout?case=906",
+    "label": 1,
+    "category": "suspicious",
+    "family": "held_out_family"
+  },
+  {
+    "id": "url_s_0163",
+    "url": "https://refund-claim-desk.trustpay.test/dispute/instant-payout?case=389",
+    "label": 1,
+    "category": "suspicious",
+    "family": "held_out_family"
+  },
+  {
+    "id": "url_s_0164",
+    "url": "https://refund-claim-desk.trustpay.test/dispute/instant-payout?case=986",
+    "label": 1,
+    "category": "suspicious",
+    "family": "held_out_family"
+  },
+  {
+    "id": "url_s_0165",
+    "url": "https://urgent-kyc-reactivate.example-bank-secure.test/portal/otp-confirm?session=8316",
+    "label": 1,
+    "category": "suspicious",
+    "family": "held_out_family"
+  },
+  {
+    "id": "url_s_0166",
+    "url": "https://refund-claim-desk.trustpay.test/dispute/instant-payout?case=440",
+    "label": 1,
+    "category": "suspicious",
+    "family": "held_out_family"
+  },
+  {
+    "id": "url_s_0167",
+    "url": "https://refund-claim-desk.trustpay.test/dispute/instant-payout?case=429",
+    "label": 1,
+    "category": "suspicious",
+    "family": "held_out_family"
+  },
+  {
+    "id": "url_s_0168",
+    "url": "https://urgent-kyc-reactivate.example-bank-secure.test/portal/otp-confirm?session=4912",
+    "label": 1,
+    "category": "suspicious",
+    "family": "held_out_family"
+  },
+  {
+    "id": "url_s_0169",
+    "url": "https://refund-claim-desk.trustpay.test/dispute/instant-payout?case=976",
+    "label": 1,
+    "category": "suspicious",
+    "family": "held_out_family"
+  },
+  {
+    "id": "url_s_0170",
+    "url": "https://refund-claim-desk.trustpay.test/dispute/instant-payout?case=425",
+    "label": 1,
+    "category": "suspicious",
+    "family": "held_out_family"
+  },
+  {
+    "id": "url_s_0171",
+    "url": "https://refund-claim-desk.trustpay.test/dispute/instant-payout?case=495",
+    "label": 1,
+    "category": "suspicious",
+    "family": "held_out_family"
+  },
+  {
+    "id": "url_s_0172",
+    "url": "https://urgent-kyc-reactivate.example-bank-secure.test/portal/otp-confirm?session=9115",
+    "label": 1,
+    "category": "suspicious",
+    "family": "held_out_family"
+  },
+  {
+    "id": "url_s_0173",
+    "url": "https://urgent-kyc-reactivate.example-bank-secure.test/portal/otp-confirm?session=9229",
+    "label": 1,
+    "category": "suspicious",
+    "family": "held_out_family"
+  },
+  {
+    "id": "url_s_0174",
+    "url": "https://refund-claim-desk.trustpay.test/dispute/instant-payout?case=995",
+    "label": 1,
+    "category": "suspicious",
+    "family": "held_out_family"
+  },
+  {
+    "id": "url_s_0175",
+    "url": "https://refund-claim-desk.trustpay.test/dispute/instant-payout?case=638",
+    "label": 1,
+    "category": "suspicious",
+    "family": "held_out_family"
+  },
+  {
+    "id": "url_s_0176",
+    "url": "https://refund-claim-desk.trustpay.test/dispute/instant-payout?case=839",
+    "label": 1,
+    "category": "suspicious",
+    "family": "held_out_family"
+  },
+  {
+    "id": "url_s_0177",
+    "url": "https://urgent-kyc-reactivate.example-bank-secure.test/portal/otp-confirm?session=7717",
+    "label": 1,
+    "category": "suspicious",
+    "family": "held_out_family"
+  },
+  {
+    "id": "url_s_0178",
+    "url": "https://urgent-kyc-reactivate.example-bank-secure.test/portal/otp-confirm?session=2225",
+    "label": 1,
+    "category": "suspicious",
+    "family": "held_out_family"
+  },
+  {
+    "id": "url_s_0179",
+    "url": "https://refund-claim-desk.trustpay.test/dispute/instant-payout?case=738",
+    "label": 1,
+    "category": "suspicious",
+    "family": "held_out_family"
+  },
+  {
+    "id": "url_s_0180",
+    "url": "https://refund-claim-desk.trustpay.test/dispute/instant-payout?case=972",
+    "label": 1,
+    "category": "suspicious",
+    "family": "held_out_family"
+  },
+  {
+    "id": "url_s_0181",
+    "url": "https://refund-claim-desk.trustpay.test/dispute/instant-payout?case=489",
+    "label": 1,
+    "category": "suspicious",
+    "family": "held_out_family"
+  },
+  {
+    "id": "url_s_0182",
+    "url": "https://refund-claim-desk.trustpay.test/dispute/instant-payout?case=993",
+    "label": 1,
+    "category": "suspicious",
+    "family": "held_out_family"
+  },
+  {
+    "id": "url_s_0183",
+    "url": "https://urgent-kyc-reactivate.example-bank-secure.test/portal/otp-confirm?session=2121",
+    "label": 1,
+    "category": "suspicious",
+    "family": "held_out_family"
+  },
+  {
+    "id": "url_s_0184",
+    "url": "https://refund-claim-desk.trustpay.test/dispute/instant-payout?case=864",
+    "label": 1,
+    "category": "suspicious",
+    "family": "held_out_family"
+  },
+  {
+    "id": "url_s_0185",
+    "url": "https://urgent-kyc-reactivate.example-bank-secure.test/portal/otp-confirm?session=8110",
+    "label": 1,
+    "category": "suspicious",
+    "family": "held_out_family"
+  },
+  {
+    "id": "url_s_0186",
+    "url": "https://urgent-kyc-reactivate.example-bank-secure.test/portal/otp-confirm?session=8269",
+    "label": 1,
+    "category": "suspicious",
+    "family": "held_out_family"
+  },
+  {
+    "id": "url_s_0187",
+    "url": "https://refund-claim-desk.trustpay.test/dispute/instant-payout?case=147",
+    "label": 1,
+    "category": "suspicious",
+    "family": "held_out_family"
+  },
+  {
+    "id": "url_s_0188",
+    "url": "https://refund-claim-desk.trustpay.test/dispute/instant-payout?case=400",
+    "label": 1,
+    "category": "suspicious",
+    "family": "held_out_family"
+  },
+  {
+    "id": "url_s_0189",
+    "url": "https://refund-claim-desk.trustpay.test/dispute/instant-payout?case=541",
+    "label": 1,
+    "category": "suspicious",
+    "family": "held_out_family"
+  },
+  {
+    "id": "url_s_0190",
+    "url": "https://urgent-kyc-reactivate.example-bank-secure.test/portal/otp-confirm?session=5000",
+    "label": 1,
+    "category": "suspicious",
+    "family": "held_out_family"
+  },
+  {
+    "id": "url_s_0191",
+    "url": "https://refund-claim-desk.trustpay.test/dispute/instant-payout?case=274",
+    "label": 1,
+    "category": "suspicious",
+    "family": "held_out_family"
+  },
+  {
+    "id": "url_s_0192",
+    "url": "https://urgent-kyc-reactivate.example-bank-secure.test/portal/otp-confirm?session=2293",
+    "label": 1,
+    "category": "suspicious",
+    "family": "held_out_family"
+  },
+  {
+    "id": "url_s_0193",
+    "url": "https://refund-claim-desk.trustpay.test/dispute/instant-payout?case=609",
+    "label": 1,
+    "category": "suspicious",
+    "family": "held_out_family"
+  },
+  {
+    "id": "url_s_0194",
+    "url": "https://urgent-kyc-reactivate.example-bank-secure.test/portal/otp-confirm?session=4804",
+    "label": 1,
+    "category": "suspicious",
+    "family": "held_out_family"
+  },
+  {
+    "id": "url_s_0195",
+    "url": "https://refund-claim-desk.trustpay.test/dispute/instant-payout?case=361",
+    "label": 1,
+    "category": "suspicious",
+    "family": "held_out_family"
+  },
+  {
+    "id": "url_s_0196",
+    "url": "https://urgent-kyc-reactivate.example-bank-secure.test/portal/otp-confirm?session=8622",
+    "label": 1,
+    "category": "suspicious",
+    "family": "held_out_family"
+  },
+  {
+    "id": "url_s_0197",
+    "url": "https://urgent-kyc-reactivate.example-bank-secure.test/portal/otp-confirm?session=2210",
+    "label": 1,
+    "category": "suspicious",
+    "family": "held_out_family"
+  },
+  {
+    "id": "url_s_0198",
+    "url": "https://refund-claim-desk.trustpay.test/dispute/instant-payout?case=754",
+    "label": 1,
+    "category": "suspicious",
+    "family": "held_out_family"
+  },
+  {
+    "id": "url_s_0199",
+    "url": "https://refund-claim-desk.trustpay.test/dispute/instant-payout?case=567",
+    "label": 1,
+    "category": "suspicious",
+    "family": "held_out_family"
+  },
+  {
+    "id": "url_s_0200",
+    "url": "https://refund-claim-desk.trustpay.test/dispute/instant-payout?case=493",
+    "label": 1,
+    "category": "suspicious",
+    "family": "held_out_family"
+  }
+]

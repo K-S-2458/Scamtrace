@@ -1,0 +1,4 @@
+analyzer,suspicious_samples,label_or_score_decreased,faithfulness_score
+SMS (Text),24,24,1.0
+URL (Lexical),50,50,1.0
+APK (Static Manifest),35,35,1.0

@@ -1,0 +1,2402 @@
+[
+  {
+    "id": "sms_s_0144",
+    "text": "Your loan of Rs 2,00,000 is approved with zero documentation! Download app immediately: https://files.example-bank-secure.test/loan-app.apk",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0040",
+    "text": "Dear customer, Rs 45,000 debited from account ending 2290 via UPI. If not requested, cancel immediately at https://secure-cancel.trustpay.test/revert or call +91 99999 31572.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0194",
+    "text": "Your loan of Rs 2,00,000 is approved with zero documentation! Download app immediately: https://files.example-bank-secure.test/loan-app.apk",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0012",
+    "text": "Your OTP for secure login is 584920. Valid for 10 minutes. Do not share.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0027",
+    "text": "Your order #48291 has been shipped and will arrive by Friday.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0131",
+    "text": "Hey, can you send over the project notes when you get a chance?",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0177",
+    "text": "Dear customer, Rs 45,000 debited from account ending 1282 via UPI. If not requested, cancel immediately at https://secure-cancel.trustpay.test/revert or call +91 99999 58744.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0135",
+    "text": "Team meeting has been rescheduled to tomorrow at 10 AM.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0066",
+    "text": "Congratulations! You won a cash reward of Rs 25,000 on FastUPI. Claim your prize immediately: https://claim-bonus.fastupi.test/reward",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0159",
+    "text": "Security Alert: Unauthorized login attempt from foreign device on your bank account. Secure account now: https://verify-identity.securebank.test/auth",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0092",
+    "text": "Team meeting has been rescheduled to tomorrow at 10 AM.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0088",
+    "text": "Important notification from ExampleBank: Your netbanking access is locked due to pending PAN linking. Reactivate here: https://login.example-bank-secure.test/pan-update",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0170",
+    "text": "Security Alert: Unauthorized login attempt from foreign device on your bank account. Secure account now: https://verify-identity.securebank.test/auth",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0133",
+    "text": "Hey, can you send over the project notes when you get a chance?",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0028",
+    "text": "Dear customer, Rs 45,000 debited from account ending 1771 via UPI. If not requested, cancel immediately at https://secure-cancel.trustpay.test/revert or call +91 99999 99062.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0038",
+    "text": "Welcome to the portal. Your registration is complete.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0117",
+    "text": "Congratulations! You won a cash reward of Rs 25,000 on FastUPI. Claim your prize immediately: https://claim-bonus.fastupi.test/reward",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0026",
+    "text": "Dear user, your credit card points worth Rs 8,500 will expire tonight. Redeem to cash instantly: https://points-redeem.example-bank-secure.test/cash",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0195",
+    "text": "Important notification from ExampleBank: Your netbanking access is locked due to pending PAN linking. Reactivate here: https://login.example-bank-secure.test/pan-update",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0008",
+    "text": "Dear user, your credit card points worth Rs 8,500 will expire tonight. Redeem to cash instantly: https://points-redeem.example-bank-secure.test/cash",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0155",
+    "text": "Hey, can you send over the project notes when you get a chance?",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0199",
+    "text": "Thanks for catching up yesterday! Let's talk again soon.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0157",
+    "text": "Important notification from ExampleBank: Your netbanking access is locked due to pending PAN linking. Reactivate here: https://login.example-bank-secure.test/pan-update",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0166",
+    "text": "Reminder: Dentist appointment tomorrow at 4:30 PM.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0149",
+    "text": "Dear user, your credit card points worth Rs 8,500 will expire tonight. Redeem to cash instantly: https://points-redeem.example-bank-secure.test/cash",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0190",
+    "text": "Hi, are we still meeting for lunch today at 1 PM?",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0114",
+    "text": "Electricity Department: Your power connection will be disconnected tonight at 9:30 PM due to unpaid bill. Immediately contact officer at +91 99999 88778.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0029",
+    "text": "Security Alert: Unauthorized login attempt from foreign device on your bank account. Secure account now: https://verify-identity.securebank.test/auth",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0108",
+    "text": "URGENT: Your KYC is expiring today. Update immediately at https://kyc-update.example-bank-secure.test/verify to avoid account suspension. Call +91 99999 92902.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0016",
+    "text": "Dear user, your credit card points worth Rs 8,500 will expire tonight. Redeem to cash instantly: https://points-redeem.example-bank-secure.test/cash",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0034",
+    "text": "Team meeting has been rescheduled to tomorrow at 10 AM.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0156",
+    "text": "Hey, can you send over the project notes when you get a chance?",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0055",
+    "text": "URGENT: Your KYC is expiring today. Update immediately at https://kyc-update.example-bank-secure.test/verify to avoid account suspension. Call +91 99999 53884.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0123",
+    "text": "Security Alert: Unauthorized login attempt from foreign device on your bank account. Secure account now: https://verify-identity.securebank.test/auth",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0050",
+    "text": "Dear customer, Rs 45,000 debited from account ending 6413 via UPI. If not requested, cancel immediately at https://secure-cancel.trustpay.test/revert or call +91 99999 04118.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0116",
+    "text": "Dear user, your credit card points worth Rs 8,500 will expire tonight. Redeem to cash instantly: https://points-redeem.example-bank-secure.test/cash",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0021",
+    "text": "Your order #48291 has been shipped and will arrive by Friday.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0172",
+    "text": "Dear user, your credit card points worth Rs 8,500 will expire tonight. Redeem to cash instantly: https://points-redeem.example-bank-secure.test/cash",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0098",
+    "text": "Reminder: Dentist appointment tomorrow at 4:30 PM.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0102",
+    "text": "Security Alert: Unauthorized login attempt from foreign device on your bank account. Secure account now: https://verify-identity.securebank.test/auth",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0051",
+    "text": "Your electricity bill of Rs 1,450 for the month has been paid successfully.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0188",
+    "text": "URGENT: Your KYC is expiring today. Update immediately at https://kyc-update.example-bank-secure.test/verify to avoid account suspension. Call +91 99999 23520.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0138",
+    "text": "Security Alert: Unauthorized login attempt from foreign device on your bank account. Secure account now: https://verify-identity.securebank.test/auth",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0087",
+    "text": "Dear user, your credit card points worth Rs 8,500 will expire tonight. Redeem to cash instantly: https://points-redeem.example-bank-secure.test/cash",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0132",
+    "text": "Your electricity bill of Rs 1,450 for the month has been paid successfully.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0146",
+    "text": "Reminder: Dentist appointment tomorrow at 4:30 PM.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0011",
+    "text": "Security Alert: Unauthorized login attempt from foreign device on your bank account. Secure account now: https://verify-identity.securebank.test/auth",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0165",
+    "text": "Happy Birthday! Wishing you a fantastic year ahead.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0130",
+    "text": "Your electricity bill of Rs 1,450 for the month has been paid successfully.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0033",
+    "text": "Security Alert: Unauthorized login attempt from foreign device on your bank account. Secure account now: https://verify-identity.securebank.test/auth",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0164",
+    "text": "Security Alert: Unauthorized login attempt from foreign device on your bank account. Secure account now: https://verify-identity.securebank.test/auth",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0073",
+    "text": "Dear user, your credit card points worth Rs 8,500 will expire tonight. Redeem to cash instantly: https://points-redeem.example-bank-secure.test/cash",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0160",
+    "text": "Your order #48291 has been shipped and will arrive by Friday.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0017",
+    "text": "Dear customer, Rs 45,000 debited from account ending 5374 via UPI. If not requested, cancel immediately at https://secure-cancel.trustpay.test/revert or call +91 99999 87842.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0078",
+    "text": "Your electricity bill of Rs 1,450 for the month has been paid successfully.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0123",
+    "text": "Reminder: Dentist appointment tomorrow at 4:30 PM.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0111",
+    "text": "Your OTP for secure login is 584920. Valid for 10 minutes. Do not share.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0005",
+    "text": "Your electricity bill of Rs 1,450 for the month has been paid successfully.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0036",
+    "text": "Congratulations! You won a cash reward of Rs 25,000 on FastUPI. Claim your prize immediately: https://claim-bonus.fastupi.test/reward",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0033",
+    "text": "Happy Birthday! Wishing you a fantastic year ahead.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0184",
+    "text": "Important notification from ExampleBank: Your netbanking access is locked due to pending PAN linking. Reactivate here: https://login.example-bank-secure.test/pan-update",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0134",
+    "text": "Dear customer, Rs 45,000 debited from account ending 6238 via UPI. If not requested, cancel immediately at https://secure-cancel.trustpay.test/revert or call +91 99999 44021.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0093",
+    "text": "Hi, are we still meeting for lunch today at 1 PM?",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0046",
+    "text": "Your electricity bill of Rs 1,450 for the month has been paid successfully.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0147",
+    "text": "Important notification from ExampleBank: Your netbanking access is locked due to pending PAN linking. Reactivate here: https://login.example-bank-secure.test/pan-update",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0190",
+    "text": "Important notification from ExampleBank: Your netbanking access is locked due to pending PAN linking. Reactivate here: https://login.example-bank-secure.test/pan-update",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0110",
+    "text": "Dear user, your credit card points worth Rs 8,500 will expire tonight. Redeem to cash instantly: https://points-redeem.example-bank-secure.test/cash",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0003",
+    "text": "Welcome to the portal. Your registration is complete.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0071",
+    "text": "Welcome to the portal. Your registration is complete.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0089",
+    "text": "Hey, can you send over the project notes when you get a chance?",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0003",
+    "text": "URGENT: Your KYC is expiring today. Update immediately at https://kyc-update.example-bank-secure.test/verify to avoid account suspension. Call +91 99999 55303.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0007",
+    "text": "Team meeting has been rescheduled to tomorrow at 10 AM.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0086",
+    "text": "Security Alert: Unauthorized login attempt from foreign device on your bank account. Secure account now: https://verify-identity.securebank.test/auth",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0052",
+    "text": "Your loan of Rs 2,00,000 is approved with zero documentation! Download app immediately: https://files.example-bank-secure.test/loan-app.apk",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0013",
+    "text": "Welcome to the portal. Your registration is complete.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0015",
+    "text": "Your OTP for secure login is 584920. Valid for 10 minutes. Do not share.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0047",
+    "text": "URGENT: Your KYC is expiring today. Update immediately at https://kyc-update.example-bank-secure.test/verify to avoid account suspension. Call +91 99999 08393.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0119",
+    "text": "Dear customer, Rs 45,000 debited from account ending 6491 via UPI. If not requested, cancel immediately at https://secure-cancel.trustpay.test/revert or call +91 99999 67562.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0015",
+    "text": "Your loan of Rs 2,00,000 is approved with zero documentation! Download app immediately: https://files.example-bank-secure.test/loan-app.apk",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0091",
+    "text": "Security Alert: Unauthorized login attempt from foreign device on your bank account. Secure account now: https://verify-identity.securebank.test/auth",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0175",
+    "text": "Your OTP for secure login is 584920. Valid for 10 minutes. Do not share.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0039",
+    "text": "Congratulations! You won a cash reward of Rs 25,000 on FastUPI. Claim your prize immediately: https://claim-bonus.fastupi.test/reward",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0004",
+    "text": "Your OTP for secure login is 584920. Valid for 10 minutes. Do not share.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0193",
+    "text": "Team meeting has been rescheduled to tomorrow at 10 AM.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0088",
+    "text": "Team meeting has been rescheduled to tomorrow at 10 AM.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0018",
+    "text": "Congratulations! You won a cash reward of Rs 25,000 on FastUPI. Claim your prize immediately: https://claim-bonus.fastupi.test/reward",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0026",
+    "text": "Welcome to the portal. Your registration is complete.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0089",
+    "text": "URGENT: Your KYC is expiring today. Update immediately at https://kyc-update.example-bank-secure.test/verify to avoid account suspension. Call +91 99999 72310.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0002",
+    "text": "Your order #48291 has been shipped and will arrive by Friday.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0160",
+    "text": "Dear customer, Rs 45,000 debited from account ending 4978 via UPI. If not requested, cancel immediately at https://secure-cancel.trustpay.test/revert or call +91 99999 09962.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0162",
+    "text": "Dear user, your credit card points worth Rs 8,500 will expire tonight. Redeem to cash instantly: https://points-redeem.example-bank-secure.test/cash",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0107",
+    "text": "Electricity Department: Your power connection will be disconnected tonight at 9:30 PM due to unpaid bill. Immediately contact officer at +91 99999 75575.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0048",
+    "text": "Welcome to the portal. Your registration is complete.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0150",
+    "text": "Reminder: Dentist appointment tomorrow at 4:30 PM.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0079",
+    "text": "Team meeting has been rescheduled to tomorrow at 10 AM.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0156",
+    "text": "Dear user, your credit card points worth Rs 8,500 will expire tonight. Redeem to cash instantly: https://points-redeem.example-bank-secure.test/cash",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0178",
+    "text": "Congratulations! You won a cash reward of Rs 25,000 on FastUPI. Claim your prize immediately: https://claim-bonus.fastupi.test/reward",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0167",
+    "text": "Welcome to the portal. Your registration is complete.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0129",
+    "text": "Security Alert: Unauthorized login attempt from foreign device on your bank account. Secure account now: https://verify-identity.securebank.test/auth",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0025",
+    "text": "Electricity Department: Your power connection will be disconnected tonight at 9:30 PM due to unpaid bill. Immediately contact officer at +91 99999 97648.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0094",
+    "text": "Important notification from ExampleBank: Your netbanking access is locked due to pending PAN linking. Reactivate here: https://login.example-bank-secure.test/pan-update",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0054",
+    "text": "Dear user, your credit card points worth Rs 8,500 will expire tonight. Redeem to cash instantly: https://points-redeem.example-bank-secure.test/cash",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0120",
+    "text": "Your order #48291 has been shipped and will arrive by Friday.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0137",
+    "text": "Reminder: Dentist appointment tomorrow at 4:30 PM.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0183",
+    "text": "Your OTP for secure login is 584920. Valid for 10 minutes. Do not share.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0028",
+    "text": "Your OTP for secure login is 584920. Valid for 10 minutes. Do not share.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0159",
+    "text": "Welcome to the portal. Your registration is complete.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0097",
+    "text": "Your order #48291 has been shipped and will arrive by Friday.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0072",
+    "text": "URGENT: Your KYC is expiring today. Update immediately at https://kyc-update.example-bank-secure.test/verify to avoid account suspension. Call +91 99999 74669.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0067",
+    "text": "URGENT: Your KYC is expiring today. Update immediately at https://kyc-update.example-bank-secure.test/verify to avoid account suspension. Call +91 99999 75915.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0029",
+    "text": "Team meeting has been rescheduled to tomorrow at 10 AM.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0082",
+    "text": "Important notification from ExampleBank: Your netbanking access is locked due to pending PAN linking. Reactivate here: https://login.example-bank-secure.test/pan-update",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0067",
+    "text": "Hi, are we still meeting for lunch today at 1 PM?",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0035",
+    "text": "Dear customer, Rs 45,000 debited from account ending 3927 via UPI. If not requested, cancel immediately at https://secure-cancel.trustpay.test/revert or call +91 99999 99872.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0087",
+    "text": "Thanks for catching up yesterday! Let's talk again soon.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0095",
+    "text": "Your order #48291 has been shipped and will arrive by Friday.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0186",
+    "text": "Welcome to the portal. Your registration is complete.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0124",
+    "text": "Hey, can you send over the project notes when you get a chance?",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0052",
+    "text": "Your order #48291 has been shipped and will arrive by Friday.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0134",
+    "text": "Thanks for catching up yesterday! Let's talk again soon.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0194",
+    "text": "Your OTP for secure login is 584920. Valid for 10 minutes. Do not share.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0109",
+    "text": "Your electricity bill of Rs 1,450 for the month has been paid successfully.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0082",
+    "text": "Your electricity bill of Rs 1,450 for the month has been paid successfully.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0174",
+    "text": "Your electricity bill of Rs 1,450 for the month has been paid successfully.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0095",
+    "text": "Security Alert: Unauthorized login attempt from foreign device on your bank account. Secure account now: https://verify-identity.securebank.test/auth",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0168",
+    "text": "Reminder: Dentist appointment tomorrow at 4:30 PM.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0118",
+    "text": "Your electricity bill of Rs 1,450 for the month has been paid successfully.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0103",
+    "text": "Your electricity bill of Rs 1,450 for the month has been paid successfully.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0090",
+    "text": "URGENT: Your KYC is expiring today. Update immediately at https://kyc-update.example-bank-secure.test/verify to avoid account suspension. Call +91 99999 09863.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0064",
+    "text": "Electricity Department: Your power connection will be disconnected tonight at 9:30 PM due to unpaid bill. Immediately contact officer at +91 99999 00283.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0104",
+    "text": "URGENT: Your KYC is expiring today. Update immediately at https://kyc-update.example-bank-secure.test/verify to avoid account suspension. Call +91 99999 23406.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0163",
+    "text": "URGENT: Your KYC is expiring today. Update immediately at https://kyc-update.example-bank-secure.test/verify to avoid account suspension. Call +91 99999 66318.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0172",
+    "text": "Team meeting has been rescheduled to tomorrow at 10 AM.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0023",
+    "text": "Your order #48291 has been shipped and will arrive by Friday.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0022",
+    "text": "Dear user, your credit card points worth Rs 8,500 will expire tonight. Redeem to cash instantly: https://points-redeem.example-bank-secure.test/cash",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0158",
+    "text": "Thanks for catching up yesterday! Let's talk again soon.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0174",
+    "text": "Congratulations! You won a cash reward of Rs 25,000 on FastUPI. Claim your prize immediately: https://claim-bonus.fastupi.test/reward",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0185",
+    "text": "Electricity Department: Your power connection will be disconnected tonight at 9:30 PM due to unpaid bill. Immediately contact officer at +91 99999 28362.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0138",
+    "text": "Reminder: Dentist appointment tomorrow at 4:30 PM.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0171",
+    "text": "Dear user, your credit card points worth Rs 8,500 will expire tonight. Redeem to cash instantly: https://points-redeem.example-bank-secure.test/cash",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0056",
+    "text": "Your OTP for secure login is 584920. Valid for 10 minutes. Do not share.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0048",
+    "text": "Congratulations! You won a cash reward of Rs 25,000 on FastUPI. Claim your prize immediately: https://claim-bonus.fastupi.test/reward",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0046",
+    "text": "Congratulations! You won a cash reward of Rs 25,000 on FastUPI. Claim your prize immediately: https://claim-bonus.fastupi.test/reward",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0038",
+    "text": "URGENT: Your KYC is expiring today. Update immediately at https://kyc-update.example-bank-secure.test/verify to avoid account suspension. Call +91 99999 42488.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0137",
+    "text": "Your loan of Rs 2,00,000 is approved with zero documentation! Download app immediately: https://files.example-bank-secure.test/loan-app.apk",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0042",
+    "text": "Important notification from ExampleBank: Your netbanking access is locked due to pending PAN linking. Reactivate here: https://login.example-bank-secure.test/pan-update",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0125",
+    "text": "Security Alert: Unauthorized login attempt from foreign device on your bank account. Secure account now: https://verify-identity.securebank.test/auth",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0135",
+    "text": "Security Alert: Unauthorized login attempt from foreign device on your bank account. Secure account now: https://verify-identity.securebank.test/auth",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0115",
+    "text": "Reminder: Dentist appointment tomorrow at 4:30 PM.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0022",
+    "text": "Thanks for catching up yesterday! Let's talk again soon.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0057",
+    "text": "Congratulations! You won a cash reward of Rs 25,000 on FastUPI. Claim your prize immediately: https://claim-bonus.fastupi.test/reward",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0077",
+    "text": "Hey, can you send over the project notes when you get a chance?",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0092",
+    "text": "Dear user, your credit card points worth Rs 8,500 will expire tonight. Redeem to cash instantly: https://points-redeem.example-bank-secure.test/cash",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0056",
+    "text": "Dear user, your credit card points worth Rs 8,500 will expire tonight. Redeem to cash instantly: https://points-redeem.example-bank-secure.test/cash",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0012",
+    "text": "Dear user, your credit card points worth Rs 8,500 will expire tonight. Redeem to cash instantly: https://points-redeem.example-bank-secure.test/cash",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0143",
+    "text": "Dear user, your credit card points worth Rs 8,500 will expire tonight. Redeem to cash instantly: https://points-redeem.example-bank-secure.test/cash",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0037",
+    "text": "URGENT: Your KYC is expiring today. Update immediately at https://kyc-update.example-bank-secure.test/verify to avoid account suspension. Call +91 99999 49010.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0147",
+    "text": "Reminder: Dentist appointment tomorrow at 4:30 PM.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0122",
+    "text": "Your order #48291 has been shipped and will arrive by Friday.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0080",
+    "text": "Happy Birthday! Wishing you a fantastic year ahead.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0100",
+    "text": "Congratulations! You won a cash reward of Rs 25,000 on FastUPI. Claim your prize immediately: https://claim-bonus.fastupi.test/reward",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0070",
+    "text": "Your electricity bill of Rs 1,450 for the month has been paid successfully.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0131",
+    "text": "Electricity Department: Your power connection will be disconnected tonight at 9:30 PM due to unpaid bill. Immediately contact officer at +91 99999 33973.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0081",
+    "text": "Your electricity bill of Rs 1,450 for the month has been paid successfully.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0101",
+    "text": "Reminder: Dentist appointment tomorrow at 4:30 PM.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0099",
+    "text": "Your order #48291 has been shipped and will arrive by Friday.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0140",
+    "text": "Electricity Department: Your power connection will be disconnected tonight at 9:30 PM due to unpaid bill. Immediately contact officer at +91 99999 00773.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0094",
+    "text": "Your OTP for secure login is 584920. Valid for 10 minutes. Do not share.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0163",
+    "text": "Your OTP for secure login is 584920. Valid for 10 minutes. Do not share.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0097",
+    "text": "Dear customer, Rs 45,000 debited from account ending 3608 via UPI. If not requested, cancel immediately at https://secure-cancel.trustpay.test/revert or call +91 99999 34971.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0183",
+    "text": "Dear user, your credit card points worth Rs 8,500 will expire tonight. Redeem to cash instantly: https://points-redeem.example-bank-secure.test/cash",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0136",
+    "text": "Team meeting has been rescheduled to tomorrow at 10 AM.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0044",
+    "text": "Your electricity bill of Rs 1,450 for the month has been paid successfully.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0182",
+    "text": "Thanks for catching up yesterday! Let's talk again soon.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0061",
+    "text": "Your electricity bill of Rs 1,450 for the month has been paid successfully.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0010",
+    "text": "URGENT: Your KYC is expiring today. Update immediately at https://kyc-update.example-bank-secure.test/verify to avoid account suspension. Call +91 99999 45083.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0020",
+    "text": "URGENT: Your KYC is expiring today. Update immediately at https://kyc-update.example-bank-secure.test/verify to avoid account suspension. Call +91 99999 28786.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0084",
+    "text": "Dear user, your credit card points worth Rs 8,500 will expire tonight. Redeem to cash instantly: https://points-redeem.example-bank-secure.test/cash",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0141",
+    "text": "Reminder: Dentist appointment tomorrow at 4:30 PM.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0179",
+    "text": "Thanks for catching up yesterday! Let's talk again soon.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0002",
+    "text": "Dear customer, Rs 45,000 debited from account ending 2679 via UPI. If not requested, cancel immediately at https://secure-cancel.trustpay.test/revert or call +91 99999 18290.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0145",
+    "text": "Team meeting has been rescheduled to tomorrow at 10 AM.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0068",
+    "text": "Happy Birthday! Wishing you a fantastic year ahead.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0115",
+    "text": "Electricity Department: Your power connection will be disconnected tonight at 9:30 PM due to unpaid bill. Immediately contact officer at +91 99999 71820.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0057",
+    "text": "Your OTP for secure login is 584920. Valid for 10 minutes. Do not share.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0013",
+    "text": "URGENT: Your KYC is expiring today. Update immediately at https://kyc-update.example-bank-secure.test/verify to avoid account suspension. Call +91 99999 25204.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0178",
+    "text": "Thanks for catching up yesterday! Let's talk again soon.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0076",
+    "text": "URGENT: Your KYC is expiring today. Update immediately at https://kyc-update.example-bank-secure.test/verify to avoid account suspension. Call +91 99999 41442.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0167",
+    "text": "Your loan of Rs 2,00,000 is approved with zero documentation! Download app immediately: https://files.example-bank-secure.test/loan-app.apk",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0017",
+    "text": "Your order #48291 has been shipped and will arrive by Friday.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0005",
+    "text": "Security Alert: Unauthorized login attempt from foreign device on your bank account. Secure account now: https://verify-identity.securebank.test/auth",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0064",
+    "text": "Reminder: Dentist appointment tomorrow at 4:30 PM.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0112",
+    "text": "Reminder: Dentist appointment tomorrow at 4:30 PM.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0084",
+    "text": "Thanks for catching up yesterday! Let's talk again soon.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0085",
+    "text": "Your loan of Rs 2,00,000 is approved with zero documentation! Download app immediately: https://files.example-bank-secure.test/loan-app.apk",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0152",
+    "text": "Happy Birthday! Wishing you a fantastic year ahead.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0049",
+    "text": "Congratulations! You won a cash reward of Rs 25,000 on FastUPI. Claim your prize immediately: https://claim-bonus.fastupi.test/reward",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0091",
+    "text": "Happy Birthday! Wishing you a fantastic year ahead.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0061",
+    "text": "Congratulations! You won a cash reward of Rs 25,000 on FastUPI. Claim your prize immediately: https://claim-bonus.fastupi.test/reward",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0096",
+    "text": "Hi, are we still meeting for lunch today at 1 PM?",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0136",
+    "text": "Dear customer, Rs 45,000 debited from account ending 4505 via UPI. If not requested, cancel immediately at https://secure-cancel.trustpay.test/revert or call +91 99999 92592.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0006",
+    "text": "URGENT: Your KYC is expiring today. Update immediately at https://kyc-update.example-bank-secure.test/verify to avoid account suspension. Call +91 99999 58879.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0053",
+    "text": "Congratulations! You won a cash reward of Rs 25,000 on FastUPI. Claim your prize immediately: https://claim-bonus.fastupi.test/reward",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0100",
+    "text": "Your order #48291 has been shipped and will arrive by Friday.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0165",
+    "text": "Important notification from ExampleBank: Your netbanking access is locked due to pending PAN linking. Reactivate here: https://login.example-bank-secure.test/pan-update",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0158",
+    "text": "Electricity Department: Your power connection will be disconnected tonight at 9:30 PM due to unpaid bill. Immediately contact officer at +91 99999 14169.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0074",
+    "text": "Thanks for catching up yesterday! Let's talk again soon.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0031",
+    "text": "Electricity Department: Your power connection will be disconnected tonight at 9:30 PM due to unpaid bill. Immediately contact officer at +91 99999 61349.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0157",
+    "text": "Team meeting has been rescheduled to tomorrow at 10 AM.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0126",
+    "text": "Your order #48291 has been shipped and will arrive by Friday.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0154",
+    "text": "Important notification from ExampleBank: Your netbanking access is locked due to pending PAN linking. Reactivate here: https://login.example-bank-secure.test/pan-update",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0128",
+    "text": "Hey, can you send over the project notes when you get a chance?",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0144",
+    "text": "Reminder: Dentist appointment tomorrow at 4:30 PM.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0130",
+    "text": "Your loan of Rs 2,00,000 is approved with zero documentation! Download app immediately: https://files.example-bank-secure.test/loan-app.apk",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0098",
+    "text": "Congratulations! You won a cash reward of Rs 25,000 on FastUPI. Claim your prize immediately: https://claim-bonus.fastupi.test/reward",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0192",
+    "text": "Dear user, your credit card points worth Rs 8,500 will expire tonight. Redeem to cash instantly: https://points-redeem.example-bank-secure.test/cash",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0043",
+    "text": "Congratulations! You won a cash reward of Rs 25,000 on FastUPI. Claim your prize immediately: https://claim-bonus.fastupi.test/reward",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0200",
+    "text": "Dear customer, Rs 45,000 debited from account ending 1986 via UPI. If not requested, cancel immediately at https://secure-cancel.trustpay.test/revert or call +91 99999 81400.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0062",
+    "text": "Your loan of Rs 2,00,000 is approved with zero documentation! Download app immediately: https://files.example-bank-secure.test/loan-app.apk",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0164",
+    "text": "Reminder: Dentist appointment tomorrow at 4:30 PM.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0058",
+    "text": "Your electricity bill of Rs 1,450 for the month has been paid successfully.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0195",
+    "text": "Your OTP for secure login is 584920. Valid for 10 minutes. Do not share.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0122",
+    "text": "Your loan of Rs 2,00,000 is approved with zero documentation! Download app immediately: https://files.example-bank-secure.test/loan-app.apk",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0063",
+    "text": "Important notification from ExampleBank: Your netbanking access is locked due to pending PAN linking. Reactivate here: https://login.example-bank-secure.test/pan-update",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0184",
+    "text": "Your OTP for secure login is 584920. Valid for 10 minutes. Do not share.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0075",
+    "text": "Thanks for catching up yesterday! Let's talk again soon.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0076",
+    "text": "Hey, can you send over the project notes when you get a chance?",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0108",
+    "text": "Hi, are we still meeting for lunch today at 1 PM?",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0188",
+    "text": "Happy Birthday! Wishing you a fantastic year ahead.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0143",
+    "text": "Hey, can you send over the project notes when you get a chance?",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0179",
+    "text": "Your loan of Rs 2,00,000 is approved with zero documentation! Download app immediately: https://files.example-bank-secure.test/loan-app.apk",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0186",
+    "text": "Electricity Department: Your power connection will be disconnected tonight at 9:30 PM due to unpaid bill. Immediately contact officer at +91 99999 99642.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0153",
+    "text": "URGENT: Your KYC is expiring today. Update immediately at https://kyc-update.example-bank-secure.test/verify to avoid account suspension. Call +91 99999 32412.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0035",
+    "text": "Your electricity bill of Rs 1,450 for the month has been paid successfully.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0149",
+    "text": "Your order #48291 has been shipped and will arrive by Friday.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0101",
+    "text": "Dear customer, Rs 45,000 debited from account ending 5564 via UPI. If not requested, cancel immediately at https://secure-cancel.trustpay.test/revert or call +91 99999 43026.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0044",
+    "text": "Electricity Department: Your power connection will be disconnected tonight at 9:30 PM due to unpaid bill. Immediately contact officer at +91 99999 98995.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0200",
+    "text": "Welcome to the portal. Your registration is complete.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0110",
+    "text": "Reminder: Dentist appointment tomorrow at 4:30 PM.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0102",
+    "text": "Thanks for catching up yesterday! Let's talk again soon.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0099",
+    "text": "Electricity Department: Your power connection will be disconnected tonight at 9:30 PM due to unpaid bill. Immediately contact officer at +91 99999 60333.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0036",
+    "text": "Thanks for catching up yesterday! Let's talk again soon.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0009",
+    "text": "Dear customer, Rs 45,000 debited from account ending 7224 via UPI. If not requested, cancel immediately at https://secure-cancel.trustpay.test/revert or call +91 99999 12157.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0169",
+    "text": "Your order #48291 has been shipped and will arrive by Friday.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0018",
+    "text": "Welcome to the portal. Your registration is complete.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0113",
+    "text": "Security Alert: Unauthorized login attempt from foreign device on your bank account. Secure account now: https://verify-identity.securebank.test/auth",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0096",
+    "text": "Security Alert: Unauthorized login attempt from foreign device on your bank account. Secure account now: https://verify-identity.securebank.test/auth",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0066",
+    "text": "Team meeting has been rescheduled to tomorrow at 10 AM.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0077",
+    "text": "Dear customer, Rs 45,000 debited from account ending 2638 via UPI. If not requested, cancel immediately at https://secure-cancel.trustpay.test/revert or call +91 99999 81417.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0118",
+    "text": "Dear customer, Rs 45,000 debited from account ending 3780 via UPI. If not requested, cancel immediately at https://secure-cancel.trustpay.test/revert or call +91 99999 62022.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0025",
+    "text": "Your order #48291 has been shipped and will arrive by Friday.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0050",
+    "text": "Your OTP for secure login is 584920. Valid for 10 minutes. Do not share.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0019",
+    "text": "Electricity Department: Your power connection will be disconnected tonight at 9:30 PM due to unpaid bill. Immediately contact officer at +91 99999 60590.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0071",
+    "text": "Security Alert: Unauthorized login attempt from foreign device on your bank account. Secure account now: https://verify-identity.securebank.test/auth",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0059",
+    "text": "Team meeting has been rescheduled to tomorrow at 10 AM.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0063",
+    "text": "Your order #48291 has been shipped and will arrive by Friday.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0121",
+    "text": "URGENT: Your KYC is expiring today. Update immediately at https://kyc-update.example-bank-secure.test/verify to avoid account suspension. Call +91 99999 19314.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0124",
+    "text": "Important notification from ExampleBank: Your netbanking access is locked due to pending PAN linking. Reactivate here: https://login.example-bank-secure.test/pan-update",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0107",
+    "text": "Reminder: Dentist appointment tomorrow at 4:30 PM.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0173",
+    "text": "Thanks for catching up yesterday! Let's talk again soon.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0191",
+    "text": "Hey, can you send over the project notes when you get a chance?",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0142",
+    "text": "Security Alert: Unauthorized login attempt from foreign device on your bank account. Secure account now: https://verify-identity.securebank.test/auth",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0040",
+    "text": "Hi, are we still meeting for lunch today at 1 PM?",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0031",
+    "text": "Welcome to the portal. Your registration is complete.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0145",
+    "text": "URGENT: Your KYC is expiring today. Update immediately at https://kyc-update.example-bank-secure.test/verify to avoid account suspension. Call +91 99999 81561.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0182",
+    "text": "Congratulations! You won a cash reward of Rs 25,000 on FastUPI. Claim your prize immediately: https://claim-bonus.fastupi.test/reward",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0189",
+    "text": "Your electricity bill of Rs 1,450 for the month has been paid successfully.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0024",
+    "text": "Important notification from ExampleBank: Your netbanking access is locked due to pending PAN linking. Reactivate here: https://login.example-bank-secure.test/pan-update",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0105",
+    "text": "Your OTP for secure login is 584920. Valid for 10 minutes. Do not share.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0004",
+    "text": "URGENT: Your KYC is expiring today. Update immediately at https://kyc-update.example-bank-secure.test/verify to avoid account suspension. Call +91 99999 28658.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0080",
+    "text": "Your loan of Rs 2,00,000 is approved with zero documentation! Download app immediately: https://files.example-bank-secure.test/loan-app.apk",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0041",
+    "text": "Important notification from ExampleBank: Your netbanking access is locked due to pending PAN linking. Reactivate here: https://login.example-bank-secure.test/pan-update",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0196",
+    "text": "Dear customer, Rs 45,000 debited from account ending 5978 via UPI. If not requested, cancel immediately at https://secure-cancel.trustpay.test/revert or call +91 99999 73773.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0008",
+    "text": "Thanks for catching up yesterday! Let's talk again soon.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0032",
+    "text": "Your electricity bill of Rs 1,450 for the month has been paid successfully.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0125",
+    "text": "Hi, are we still meeting for lunch today at 1 PM?",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0171",
+    "text": "Happy Birthday! Wishing you a fantastic year ahead.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0152",
+    "text": "URGENT: Your KYC is expiring today. Update immediately at https://kyc-update.example-bank-secure.test/verify to avoid account suspension. Call +91 99999 29390.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0034",
+    "text": "Electricity Department: Your power connection will be disconnected tonight at 9:30 PM due to unpaid bill. Immediately contact officer at +91 99999 59471.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0180",
+    "text": "Your electricity bill of Rs 1,450 for the month has been paid successfully.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0053",
+    "text": "Your order #48291 has been shipped and will arrive by Friday.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0014",
+    "text": "Your order #48291 has been shipped and will arrive by Friday.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0185",
+    "text": "Your order #48291 has been shipped and will arrive by Friday.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0128",
+    "text": "Dear user, your credit card points worth Rs 8,500 will expire tonight. Redeem to cash instantly: https://points-redeem.example-bank-secure.test/cash",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0093",
+    "text": "Congratulations! You won a cash reward of Rs 25,000 on FastUPI. Claim your prize immediately: https://claim-bonus.fastupi.test/reward",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0161",
+    "text": "URGENT: Your KYC is expiring today. Update immediately at https://kyc-update.example-bank-secure.test/verify to avoid account suspension. Call +91 99999 89688.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0049",
+    "text": "Hi, are we still meeting for lunch today at 1 PM?",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0014",
+    "text": "Congratulations! You won a cash reward of Rs 25,000 on FastUPI. Claim your prize immediately: https://claim-bonus.fastupi.test/reward",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0106",
+    "text": "Dear customer, Rs 45,000 debited from account ending 9379 via UPI. If not requested, cancel immediately at https://secure-cancel.trustpay.test/revert or call +91 99999 57200.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0119",
+    "text": "Thanks for catching up yesterday! Let's talk again soon.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0139",
+    "text": "Security Alert: Unauthorized login attempt from foreign device on your bank account. Secure account now: https://verify-identity.securebank.test/auth",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0001",
+    "text": "Your OTP for secure login is 584920. Valid for 10 minutes. Do not share.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0132",
+    "text": "Electricity Department: Your power connection will be disconnected tonight at 9:30 PM due to unpaid bill. Immediately contact officer at +91 99999 63518.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0173",
+    "text": "Electricity Department: Your power connection will be disconnected tonight at 9:30 PM due to unpaid bill. Immediately contact officer at +91 99999 44609.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0030",
+    "text": "Security Alert: Unauthorized login attempt from foreign device on your bank account. Secure account now: https://verify-identity.securebank.test/auth",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0168",
+    "text": "Dear user, your credit card points worth Rs 8,500 will expire tonight. Redeem to cash instantly: https://points-redeem.example-bank-secure.test/cash",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0065",
+    "text": "Your loan of Rs 2,00,000 is approved with zero documentation! Download app immediately: https://files.example-bank-secure.test/loan-app.apk",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0081",
+    "text": "URGENT: Your KYC is expiring today. Update immediately at https://kyc-update.example-bank-secure.test/verify to avoid account suspension. Call +91 99999 92215.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0023",
+    "text": "Security Alert: Unauthorized login attempt from foreign device on your bank account. Secure account now: https://verify-identity.securebank.test/auth",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0187",
+    "text": "Congratulations! You won a cash reward of Rs 25,000 on FastUPI. Claim your prize immediately: https://claim-bonus.fastupi.test/reward",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0010",
+    "text": "Happy Birthday! Wishing you a fantastic year ahead.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0141",
+    "text": "Congratulations! You won a cash reward of Rs 25,000 on FastUPI. Claim your prize immediately: https://claim-bonus.fastupi.test/reward",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0103",
+    "text": "Dear customer, Rs 45,000 debited from account ending 1452 via UPI. If not requested, cancel immediately at https://secure-cancel.trustpay.test/revert or call +91 99999 43405.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0176",
+    "text": "Your electricity bill of Rs 1,450 for the month has been paid successfully.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0127",
+    "text": "Dear customer, Rs 45,000 debited from account ending 5082 via UPI. If not requested, cancel immediately at https://secure-cancel.trustpay.test/revert or call +91 99999 73061.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0106",
+    "text": "Happy Birthday! Wishing you a fantastic year ahead.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0085",
+    "text": "Your order #48291 has been shipped and will arrive by Friday.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0042",
+    "text": "Team meeting has been rescheduled to tomorrow at 10 AM.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0027",
+    "text": "Your loan of Rs 2,00,000 is approved with zero documentation! Download app immediately: https://files.example-bank-secure.test/loan-app.apk",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0083",
+    "text": "Thanks for catching up yesterday! Let's talk again soon.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0086",
+    "text": "Thanks for catching up yesterday! Let's talk again soon.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0193",
+    "text": "Your loan of Rs 2,00,000 is approved with zero documentation! Download app immediately: https://files.example-bank-secure.test/loan-app.apk",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0090",
+    "text": "Your OTP for secure login is 584920. Valid for 10 minutes. Do not share.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0162",
+    "text": "Happy Birthday! Wishing you a fantastic year ahead.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0181",
+    "text": "Your electricity bill of Rs 1,450 for the month has been paid successfully.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0126",
+    "text": "Your loan of Rs 2,00,000 is approved with zero documentation! Download app immediately: https://files.example-bank-secure.test/loan-app.apk",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0112",
+    "text": "Electricity Department: Your power connection will be disconnected tonight at 9:30 PM due to unpaid bill. Immediately contact officer at +91 99999 42754.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0150",
+    "text": "Electricity Department: Your power connection will be disconnected tonight at 9:30 PM due to unpaid bill. Immediately contact officer at +91 99999 36472.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0047",
+    "text": "Your order #48291 has been shipped and will arrive by Friday.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0072",
+    "text": "Your OTP for secure login is 584920. Valid for 10 minutes. Do not share.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0114",
+    "text": "Reminder: Dentist appointment tomorrow at 4:30 PM.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0133",
+    "text": "Congratulations! You won a cash reward of Rs 25,000 on FastUPI. Claim your prize immediately: https://claim-bonus.fastupi.test/reward",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0191",
+    "text": "Electricity Department: Your power connection will be disconnected tonight at 9:30 PM due to unpaid bill. Immediately contact officer at +91 99999 13447.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0045",
+    "text": "Your loan of Rs 2,00,000 is approved with zero documentation! Download app immediately: https://files.example-bank-secure.test/loan-app.apk",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0169",
+    "text": "Your loan of Rs 2,00,000 is approved with zero documentation! Download app immediately: https://files.example-bank-secure.test/loan-app.apk",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0148",
+    "text": "Dear user, your credit card points worth Rs 8,500 will expire tonight. Redeem to cash instantly: https://points-redeem.example-bank-secure.test/cash",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0069",
+    "text": "URGENT: Your KYC is expiring today. Update immediately at https://kyc-update.example-bank-secure.test/verify to avoid account suspension. Call +91 99999 69616.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0006",
+    "text": "Your order #48291 has been shipped and will arrive by Friday.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0151",
+    "text": "Your OTP for secure login is 584920. Valid for 10 minutes. Do not share.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0148",
+    "text": "Hi, are we still meeting for lunch today at 1 PM?",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0059",
+    "text": "Congratulations! You won a cash reward of Rs 25,000 on FastUPI. Claim your prize immediately: https://claim-bonus.fastupi.test/reward",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0024",
+    "text": "Hey, can you send over the project notes when you get a chance?",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0007",
+    "text": "Dear user, your credit card points worth Rs 8,500 will expire tonight. Redeem to cash instantly: https://points-redeem.example-bank-secure.test/cash",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0065",
+    "text": "Hey, can you send over the project notes when you get a chance?",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0155",
+    "text": "Congratulations! You won a cash reward of Rs 25,000 on FastUPI. Claim your prize immediately: https://claim-bonus.fastupi.test/reward",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0083",
+    "text": "Important notification from ExampleBank: Your netbanking access is locked due to pending PAN linking. Reactivate here: https://login.example-bank-secure.test/pan-update",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0111",
+    "text": "Electricity Department: Your power connection will be disconnected tonight at 9:30 PM due to unpaid bill. Immediately contact officer at +91 99999 94340.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0011",
+    "text": "Hey, can you send over the project notes when you get a chance?",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0154",
+    "text": "Welcome to the portal. Your registration is complete.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0197",
+    "text": "Congratulations! You won a cash reward of Rs 25,000 on FastUPI. Claim your prize immediately: https://claim-bonus.fastupi.test/reward",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0175",
+    "text": "Your loan of Rs 2,00,000 is approved with zero documentation! Download app immediately: https://files.example-bank-secure.test/loan-app.apk",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0127",
+    "text": "Hi, are we still meeting for lunch today at 1 PM?",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0139",
+    "text": "Reminder: Dentist appointment tomorrow at 4:30 PM.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0129",
+    "text": "Hey, can you send over the project notes when you get a chance?",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0070",
+    "text": "Dear customer, Rs 45,000 debited from account ending 4044 via UPI. If not requested, cancel immediately at https://secure-cancel.trustpay.test/revert or call +91 99999 10501.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0104",
+    "text": "Thanks for catching up yesterday! Let's talk again soon.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0078",
+    "text": "Electricity Department: Your power connection will be disconnected tonight at 9:30 PM due to unpaid bill. Immediately contact officer at +91 99999 27939.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0120",
+    "text": "Congratulations! You won a cash reward of Rs 25,000 on FastUPI. Claim your prize immediately: https://claim-bonus.fastupi.test/reward",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0032",
+    "text": "Electricity Department: Your power connection will be disconnected tonight at 9:30 PM due to unpaid bill. Immediately contact officer at +91 99999 01505.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0113",
+    "text": "Your electricity bill of Rs 1,450 for the month has been paid successfully.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0189",
+    "text": "URGENT: Your KYC is expiring today. Update immediately at https://kyc-update.example-bank-secure.test/verify to avoid account suspension. Call +91 99999 16592.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0146",
+    "text": "Dear customer, Rs 45,000 debited from account ending 1444 via UPI. If not requested, cancel immediately at https://secure-cancel.trustpay.test/revert or call +91 99999 77581.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0192",
+    "text": "Hey, can you send over the project notes when you get a chance?",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0079",
+    "text": "Congratulations! You won a cash reward of Rs 25,000 on FastUPI. Claim your prize immediately: https://claim-bonus.fastupi.test/reward",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0043",
+    "text": "Thanks for catching up yesterday! Let's talk again soon.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0016",
+    "text": "Happy Birthday! Wishing you a fantastic year ahead.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0187",
+    "text": "Your OTP for secure login is 584920. Valid for 10 minutes. Do not share.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0037",
+    "text": "Team meeting has been rescheduled to tomorrow at 10 AM.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0069",
+    "text": "Your electricity bill of Rs 1,450 for the month has been paid successfully.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0039",
+    "text": "Your OTP for secure login is 584920. Valid for 10 minutes. Do not share.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0166",
+    "text": "Electricity Department: Your power connection will be disconnected tonight at 9:30 PM due to unpaid bill. Immediately contact officer at +91 99999 23087.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0058",
+    "text": "Security Alert: Unauthorized login attempt from foreign device on your bank account. Secure account now: https://verify-identity.securebank.test/auth",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0140",
+    "text": "Hey, can you send over the project notes when you get a chance?",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0030",
+    "text": "Welcome to the portal. Your registration is complete.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0109",
+    "text": "Dear user, your credit card points worth Rs 8,500 will expire tonight. Redeem to cash instantly: https://points-redeem.example-bank-secure.test/cash",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0051",
+    "text": "Your loan of Rs 2,00,000 is approved with zero documentation! Download app immediately: https://files.example-bank-secure.test/loan-app.apk",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0198",
+    "text": "Your electricity bill of Rs 1,450 for the month has been paid successfully.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0151",
+    "text": "URGENT: Your KYC is expiring today. Update immediately at https://kyc-update.example-bank-secure.test/verify to avoid account suspension. Call +91 99999 61645.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0199",
+    "text": "Electricity Department: Your power connection will be disconnected tonight at 9:30 PM due to unpaid bill. Immediately contact officer at +91 99999 77140.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0198",
+    "text": "Your loan of Rs 2,00,000 is approved with zero documentation! Download app immediately: https://files.example-bank-secure.test/loan-app.apk",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0060",
+    "text": "URGENT: Your KYC is expiring today. Update immediately at https://kyc-update.example-bank-secure.test/verify to avoid account suspension. Call +91 99999 58083.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0176",
+    "text": "Your loan of Rs 2,00,000 is approved with zero documentation! Download app immediately: https://files.example-bank-secure.test/loan-app.apk",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0019",
+    "text": "Team meeting has been rescheduled to tomorrow at 10 AM.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0117",
+    "text": "Hey, can you send over the project notes when you get a chance?",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0180",
+    "text": "Security Alert: Unauthorized login attempt from foreign device on your bank account. Secure account now: https://verify-identity.securebank.test/auth",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0073",
+    "text": "Welcome to the portal. Your registration is complete.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0181",
+    "text": "Your loan of Rs 2,00,000 is approved with zero documentation! Download app immediately: https://files.example-bank-secure.test/loan-app.apk",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0074",
+    "text": "Congratulations! You won a cash reward of Rs 25,000 on FastUPI. Claim your prize immediately: https://claim-bonus.fastupi.test/reward",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0060",
+    "text": "Your OTP for secure login is 584920. Valid for 10 minutes. Do not share.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0009",
+    "text": "Your OTP for secure login is 584920. Valid for 10 minutes. Do not share.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0075",
+    "text": "Electricity Department: Your power connection will be disconnected tonight at 9:30 PM due to unpaid bill. Immediately contact officer at +91 99999 51877.",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0121",
+    "text": "Your order #48291 has been shipped and will arrive by Friday.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0153",
+    "text": "Hi, are we still meeting for lunch today at 1 PM?",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0177",
+    "text": "Hey, can you send over the project notes when you get a chance?",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0116",
+    "text": "Thanks for catching up yesterday! Let's talk again soon.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0105",
+    "text": "Dear user, your credit card points worth Rs 8,500 will expire tonight. Redeem to cash instantly: https://points-redeem.example-bank-secure.test/cash",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_s_0001",
+    "text": "Congratulations! You won a cash reward of Rs 25,000 on FastUPI. Claim your prize immediately: https://claim-bonus.fastupi.test/reward",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0197",
+    "text": "Your order #48291 has been shipped and will arrive by Friday.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0020",
+    "text": "Your electricity bill of Rs 1,450 for the month has been paid successfully.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0142",
+    "text": "Hey, can you send over the project notes when you get a chance?",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0045",
+    "text": "Reminder: Dentist appointment tomorrow at 4:30 PM.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0062",
+    "text": "Team meeting has been rescheduled to tomorrow at 10 AM.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0041",
+    "text": "Hey, can you send over the project notes when you get a chance?",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0021",
+    "text": "Security Alert: Unauthorized login attempt from foreign device on your bank account. Secure account now: https://verify-identity.securebank.test/auth",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0170",
+    "text": "Your order #48291 has been shipped and will arrive by Friday.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_s_0068",
+    "text": "Your loan of Rs 2,00,000 is approved with zero documentation! Download app immediately: https://files.example-bank-secure.test/loan-app.apk",
+    "label": 1,
+    "category": "suspicious"
+  },
+  {
+    "id": "sms_b_0055",
+    "text": "Reminder: Dentist appointment tomorrow at 4:30 PM.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0161",
+    "text": "Thanks for catching up yesterday! Let's talk again soon.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0054",
+    "text": "Your OTP for secure login is 584920. Valid for 10 minutes. Do not share.",
+    "label": 0,
+    "category": "benign"
+  },
+  {
+    "id": "sms_b_0196",
+    "text": "Team meeting has been rescheduled to tomorrow at 10 AM.",
+    "label": 0,
+    "category": "benign"
+  }
+]

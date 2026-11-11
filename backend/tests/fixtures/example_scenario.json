@@ -1,0 +1,65 @@
+{
+  "case_title": "Synthetic KYC scam incident",
+  "description": "Multimodal investigation into targeted bank KYC impersonation and SMS/APK lure campaign.",
+  "evidence_items": [
+    {
+      "id": "E1",
+      "type": "sms",
+      "source_timestamp": "2026-03-10 10:00:00",
+      "timestamp_source": "user_entered",
+      "uploader": "investigator",
+      "text": "Your KYC is expiring. Update now at https://kyc-update.example-bank-secure.test/verify to avoid account block. Call +91 99999 00001.",
+      "original_filename": "E1_sms.txt",
+      "sender_id": "AD-EXAMPLEBK"
+    },
+    {
+      "id": "E2",
+      "type": "chat",
+      "source_timestamp": "2026-03-10 10:03:00",
+      "timestamp_source": "user_entered",
+      "uploader": "investigator",
+      "text": "Dear customer, complete KYC here: https://kyc-update.example-bank-secure.test/verify and download the app: https://files.example-bank-secure.test/app.apk",
+      "original_filename": "E2_chat.txt",
+      "sender_phone": "+919999900001"
+    },
+    {
+      "id": "E3",
+      "type": "url",
+      "source_timestamp": "2026-03-10 10:05:00",
+      "timestamp_source": "user_entered",
+      "uploader": "investigator",
+      "text": "https://login.example-bank-secure.test/signin?utm_source=sms",
+      "original_filename": "E3_url.txt"
+    },
+    {
+      "id": "E4",
+      "type": "apk",
+      "source_timestamp": "2026-03-10 10:08:00",
+      "timestamp_source": "user_entered",
+      "uploader": "investigator",
+      "original_filename": "E4_app.apk",
+      "apk_metadata": {
+        "package_name": "com.fake.kycupdate",
+        "min_sdk": 21,
+        "target_sdk": 33,
+        "requested_permissions": [
+          "android.permission.INTERNET",
+          "android.permission.READ_SMS",
+          "android.permission.RECEIVE_SMS",
+          "android.permission.BIND_ACCESSIBILITY_SERVICE"
+        ],
+        "cert_sha256": "a1b2c3d4e5f67890123456789abcdef0123456789abcdef0123456789abcdef01"
+      }
+    },
+    {
+      "id": "E5",
+      "type": "sms",
+      "source_timestamp": "2026-03-10 10:15:00",
+      "timestamp_source": "user_entered",
+      "uploader": "investigator",
+      "text": "Rs 25,000 debited from your account ending 1234 via UPI. If not you, call +91 99999 00002.",
+      "original_filename": "E5_sms.txt",
+      "sender_id": "AD-EXAMPLEBK"
+    }
+  ]
+}

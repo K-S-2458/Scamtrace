@@ -1,0 +1,115 @@
+{
+  "dataset_type": "synthetic_sms",
+  "is_synthetic": true,
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "logistic_regression": [
+    {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "roc_auc": 1.0,
+      "pr_auc": 1.0000000000000002,
+      "fpr": 0.0,
+      "seed": 42,
+      "model": "LogisticRegression"
+    },
+    {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "roc_auc": 1.0,
+      "pr_auc": 1.0000000000000002,
+      "fpr": 0.0,
+      "seed": 43,
+      "model": "LogisticRegression"
+    },
+    {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "roc_auc": 1.0,
+      "pr_auc": 1.0000000000000002,
+      "fpr": 0.0,
+      "seed": 44,
+      "model": "LogisticRegression"
+    },
+    {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "roc_auc": 1.0,
+      "pr_auc": 1.0000000000000002,
+      "fpr": 0.0,
+      "seed": 45,
+      "model": "LogisticRegression"
+    },
+    {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "roc_auc": 1.0,
+      "pr_auc": 1.0000000000000002,
+      "fpr": 0.0,
+      "seed": 46,
+      "model": "LogisticRegression"
+    }
+  ],
+  "linear_svm": [
+    {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "roc_auc": 1.0,
+      "pr_auc": 1.0,
+      "fpr": 0.0,
+      "seed": 42,
+      "model": "LinearSVM"
+    },
+    {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "roc_auc": 1.0,
+      "pr_auc": 1.0,
+      "fpr": 0.0,
+      "seed": 43,
+      "model": "LinearSVM"
+    },
+    {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "roc_auc": 1.0,
+      "pr_auc": 1.0,
+      "fpr": 0.0,
+      "seed": 44,
+      "model": "LinearSVM"
+    },
+    {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "roc_auc": 1.0,
+      "pr_auc": 1.0,
+      "fpr": 0.0,
+      "seed": 45,
+      "model": "LinearSVM"
+    },
+    {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "roc_auc": 1.0,
+      "pr_auc": 1.0,
+      "fpr": 0.0,
+      "seed": 46,
+      "model": "LinearSVM"
+    }
+  ]
+}

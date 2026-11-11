@@ -1,0 +1,115 @@
+{
+  "dataset_type": "synthetic_apk",
+  "is_synthetic": true,
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "random_forest": [
+    {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "roc_auc": 1.0,
+      "pr_auc": 1.0,
+      "fpr": 0.0,
+      "seed": 42,
+      "model": "RandomForest"
+    },
+    {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "roc_auc": 1.0,
+      "pr_auc": 1.0,
+      "fpr": 0.0,
+      "seed": 43,
+      "model": "RandomForest"
+    },
+    {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "roc_auc": 1.0,
+      "pr_auc": 1.0,
+      "fpr": 0.0,
+      "seed": 44,
+      "model": "RandomForest"
+    },
+    {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "roc_auc": 1.0,
+      "pr_auc": 1.0,
+      "fpr": 0.0,
+      "seed": 45,
+      "model": "RandomForest"
+    },
+    {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "roc_auc": 1.0,
+      "pr_auc": 1.0,
+      "fpr": 0.0,
+      "seed": 46,
+      "model": "RandomForest"
+    }
+  ],
+  "logistic_regression": [
+    {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "roc_auc": 1.0,
+      "pr_auc": 1.0,
+      "fpr": 0.0,
+      "seed": 42,
+      "model": "LogisticRegression"
+    },
+    {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "roc_auc": 1.0,
+      "pr_auc": 1.0,
+      "fpr": 0.0,
+      "seed": 43,
+      "model": "LogisticRegression"
+    },
+    {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "roc_auc": 1.0,
+      "pr_auc": 1.0,
+      "fpr": 0.0,
+      "seed": 44,
+      "model": "LogisticRegression"
+    },
+    {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "roc_auc": 1.0,
+      "pr_auc": 1.0,
+      "fpr": 0.0,
+      "seed": 45,
+      "model": "LogisticRegression"
+    },
+    {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "roc_auc": 1.0,
+      "pr_auc": 1.0,
+      "fpr": 0.0,
+      "seed": 46,
+      "model": "LogisticRegression"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "url_length": 50.0,
+  "num_dots": 1.0,
+  "num_hyphens": 1.0,
+  "num_digits": 3.0,
+  "has_at_symbol": 0.0,
+  "is_ip_host": 0.0,
+  "num_subdomains": 0.0,
+  "is_https": 1.0,
+  "is_suspicious_tld": 1.0,
+  "keyword_count": 2.0,
+  "brand_mismatch": 0.0,
+  "has_punycode": 0.0,
+  "path_depth": 2.0,
+  "query_length": 6.0,
+  "domain_age_days": 0.0
+}

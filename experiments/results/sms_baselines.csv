@@ -1,0 +1,15 @@
+model,seed,precision,recall,f1,roc_auc,pr_auc,fpr
+LinearSVM,42,1.0,1.0,1.0,1.0,1.0,0.0
+LinearSVM,43,1.0,1.0,1.0,1.0,1.0,0.0
+LinearSVM,44,1.0,1.0,1.0,1.0,1.0,0.0
+LinearSVM,45,1.0,1.0,1.0,1.0,1.0,0.0
+LinearSVM,46,1.0,1.0,1.0,1.0,1.0,0.0
+LinearSVM_mean,mean,1.0,1.0,1.0,1.0,1.0,0.0
+LinearSVM_std,std,0.0,0.0,0.0,0.0,0.0,0.0
+LogisticRegression,42,1.0,1.0,1.0,1.0,1.0,0.0
+LogisticRegression,43,1.0,1.0,1.0,1.0,1.0,0.0
+LogisticRegression,44,1.0,1.0,1.0,1.0,1.0,0.0
+LogisticRegression,45,1.0,1.0,1.0,1.0,1.0,0.0
+LogisticRegression,46,1.0,1.0,1.0,1.0,1.0,0.0
+LogisticRegression_mean,mean,1.0,1.0,1.0,1.0,1.0,0.0
+LogisticRegression_std,std,0.0,0.0,0.0,0.0,0.0,0.0

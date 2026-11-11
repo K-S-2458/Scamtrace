@@ -1,0 +1,7 @@
+scenario,detected (yes/no),false alarms on untouched data
+untouched_baseline,no,0
+modify_evidence_byte,yes,0
+edit_audit_payload,yes,0
+delete_audit_entry,yes,0
+swap_audit_entries,yes,0
+delete_evidence_file,yes,0

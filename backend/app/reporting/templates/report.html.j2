@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SCAMTRACE Forensic Report - {{ report.case_header.title }} ({{ report.case_header.case_id }})</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #1e293b;
+      background-color: #f8fafc;
+      margin: 0;
+      padding: 32px;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+    h1, h2, h3 {
+      color: #0f172a;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 8px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+    }
+    .badge-high { background-color: #fee2e2; color: #b91c1c; }
+    .badge-medium { background-color: #fef3c7; color: #b45309; }
+    .badge-low { background-color: #dcfce7; color: #15803d; }
+    .badge-match { background-color: #dcfce7; color: #15803d; }
+    .badge-mismatch { background-color: #fee2e2; color: #b91c1c; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 0.9rem;
+    }
+    th, td {
+      border: 1px solid #cbd5e1;
+      padding: 10px 12px;
+      text-align: left;
+    }
+    th {
+      background-color: #f1f5f9;
+      font-weight: 600;
+    }
+    code {
+      font-family: ui-monospace, Menlo, Consolas, monospace;
+      background: #f1f5f9;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.85rem;
+    }
+    .notice-box {
+      background: #f8fafc;
+      border-left: 4px solid #38bdf8;
+      padding: 12px 16px;
+      margin: 16px 0;
+    }
+    .warning-box {
+      background: #fffbeb;
+      border-left: 4px solid #f59e0b;
+      padding: 12px 16px;
+      margin: 16px 0;
+    }
+    .footer {
+      margin-top: 40px;
+      border-top: 1px solid #e2e8f0;
+      padding-top: 16px;
+      font-size: 0.85rem;
+      color: #64748b;
+      display: flex;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- 1. Case Header -->
+  <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+    <div>
+      <h1>SCAMTRACE AI Forensic Investigation Report</h1>
+      <p style="margin: 0; font-size: 1.1rem; font-weight: 600;">{{ report.case_header.title }}</p>
+      <p style="margin: 4px 0; color: #64748b;">Case ID: <code>{{ report.case_header.case_id }}</code> | Status: <strong>{{ report.case_header.status | upper }}</strong></p>
+    </div>
+    <div style="text-align: right;">
+      <div>Risk Assessment</div>
+      <span class="badge badge-{{ report.risk_assessment.risk_band }}">
+        {{ report.risk_assessment.risk_band }} ({{ "%.2f"|format(report.risk_assessment.final_score) }})
+      </span>
+    </div>
+  </div>
+
+  <!-- 2. Traceable Case Summary -->
+  <h2>1. Traceable Incident Summary</h2>
+  <p>All statements below are algorithmically synthesized from verified evidence citations and correlation rules:</p>
+  <ul>
+    {% for claim in report.case_summary_claims %}
+      <li style="margin-bottom: 8px;">
+        {{ claim.claim_text }}
+        <span style="color: #64748b; font-size: 0.85rem;">[Rule: <code>{{ claim.rule_id }}</code>, Citations: 
+          {% for eid in claim.evidence_ids %}<code>{{ eid }}</code>{% if not loop.last %}, {% endif %}{% endfor %}
+        ]</span>
+      </li>
+    {% else %}
+      <li>No cross-artifact correlation links identified for this case.</li>
+    {% endfor %}
+  </ul>
+
+  <!-- 3. Evidence Inventory -->
+  <h2>2. Cryptographic Evidence Inventory</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Type</th>
+        <th>Original Filename</th>
+        <th>SHA-256 Digest</th>
+        <th>Source Timestamp</th>
+        <th>Ingestion Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for item in report.evidence_inventory %}
+      <tr>
+        <td><strong>{{ item.id }}</strong></td>
+        <td>{{ item.type | upper }}</td>
+        <td>{{ item.original_filename }}</td>
+        <td><code>{{ item.sha256[:16] }}...{{ item.sha256[-8:] }}</code></td>
+        <td>{{ item.source_timestamp }} <span style="font-size:0.75rem; color:#64748b;">({{ item.timestamp_source }})</span></td>
+        <td>{{ item.uploaded_at }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <!-- 4. Chronological Incident Timeline -->
+  <h2>3. Incident Timeline & Conflict Trace</h2>
+  {% if report.has_conflicts %}
+    <div class="warning-box">
+      <strong>Causal Ordering Conflicts Detected:</strong>
+      <ul>
+        {% for c in report.conflicts %}
+          <li>{{ c.description }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+  <table>
+    <thead>
+      <tr>
+        <th>Seq / ID</th>
+        <th>Timestamp</th>
+        <th>Gap</th>
+        <th>Forensic Event Summary</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for item in report.timeline %}
+      <tr {% if item.conflicts %}style="background: #fff1f2;"{% endif %}>
+        <td><strong>{{ item.evidence_id }}</strong></td>
+        <td>
+          {{ item.timestamp or "Time Uncertain" }}
+          {% if item.time_uncertain %}<span style="color: #ea580c; font-size: 0.75rem;">(uncertain)</span>{% endif %}
+        </td>
+        <td>{{ item.time_gap_from_prev or "-" }}</td>
+        <td>
+          {{ item.summary }}
+          {% if item.conflicts %}
+            <div style="color: #b91c1c; font-size: 0.8rem; margin-top: 4px;">⚠ {{ item.conflicts[0] }}</div>
+          {% endif %}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <!-- 5. Correlation Graph Edges -->
+  <h2>4. Corroborated Relationship Edges</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Link Type</th>
+        <th>Source</th>
+        <th>Target</th>
+        <th>Confidence</th>
+        <th>Explanatory Rationale</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for edge in report.correlation_edges %}
+      <tr>
+        <td><code>{{ edge.link_type }}</code></td>
+        <td><strong>{{ edge.source }}</strong></td>
+        <td><strong>{{ edge.target }}</strong></td>
+        <td>{{ "%.2f"|format(edge.confidence) }}</td>
+        <td>{{ edge.reason }}</td>
+      </tr>
+      {% else %}
+      <tr>
+        <td colspan="5" style="text-align: center; color: #64748b;">No confirmed correlation edges.</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <!-- 6. Explainable Risk Breakdown -->
+  <h2>5. Explainable Risk Breakdown</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Factor</th>
+        <th>Raw Value</th>
+        <th>Weight</th>
+        <th>Contribution</th>
+        <th>Supporting Evidence</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for f in report.risk_assessment.breakdown %}
+      <tr>
+        <td><strong>{{ f.factor_name }}</strong></td>
+        <td>{{ "%.2f"|format(f.raw_value) }}</td>
+        <td>{{ "%.2f"|format(f.weight) }}</td>
+        <td>+{{ "%.2f"|format(f.contribution) }}</td>
+        <td>
+          {% for eid in f.evidence_ids %}<code>{{ eid }}</code>{% if not loop.last %}, {% endif %}{% else %}-{% endfor %}
+        </td>
+        <td>{{ f.description }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <!-- 7. Multimodal Artifact Explanations -->
+  <h2>6. Multimodal Artifact Explanations</h2>
+  {% for an in report.analyses %}
+    <div style="margin-bottom: 16px; border: 1px solid #e2e8f0; border-radius: 6px; padding: 12px;">
+      <div style="display: flex; justify-content: space-between;">
+        <strong>Artifact {{ an.evidence_id }} - Model: {{ an.model_name }} (v{{ an.model_version }})</strong>
+        <span class="badge badge-{{ an.label }}">{{ an.label }} (Score: {{ "%.2f"|format(an.score) }})</span>
+      </div>
+      <div style="margin-top: 8px;">
+        <span style="font-size: 0.85rem; font-weight: 600; color: #475569;">Top Contributing Factors:</span>
+        <ul style="margin: 4px 0 0 16px; font-size: 0.85rem;">
+          {% for factor in an.top_factors %}
+            <li><code>{{ factor.feature }}</code> (Contrib: {{ factor.contribution }}, Value: {{ factor.value or "-" }})</li>
+          {% else %}
+            <li>Zero contributing anomalies identified.</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  {% else %}
+    <p style="color: #64748b;">No artifact analyses recorded.</p>
+  {% endfor %}
+
+  <!-- 8. Integrity Verification Status -->
+  <h2>7. Cryptographic Chain & Tamper Audit</h2>
+  <div class="notice-box">
+    <div>Overall Status: 
+      {% if report.integrity_verification.is_valid %}
+        <span class="badge badge-match">VERIFIED (Unbroken Chain)</span>
+      {% else %}
+        <span class="badge badge-mismatch">TAMPER DETECTED</span>
+      {% endif %}
+    </div>
+    <div style="font-size: 0.85rem; margin-top: 6px;">
+      Manifest Hash: <code>{{ report.integrity_verification.manifest_integrity.status }}</code> | 
+      Audit Chain: <code>{{ report.integrity_verification.audit_chain_integrity.status }}</code> ({{ report.integrity_verification.audit_chain_integrity.entry_count }} blocks)
+    </div>
+    {% if report.integrity_verification.tamper_reasons %}
+      <div style="color: #b91c1c; font-size: 0.85rem; margin-top: 6px;">
+        Detected Anomalies: {{ report.integrity_verification.tamper_reasons | join("; ") }}
+      </div>
+    {% endif %}
+  </div>
+
+  <!-- 9. Forensic Limitations -->
+  <h2>8. Forensic Limitations & Disclaimers</h2>
+  <div class="notice-box" style="border-left-color: #64748b; font-size: 0.85rem;">
+    <ul>
+      {% for lim in report.limitations %}
+        <li>{{ lim }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div>Generated: {{ report.footer.generated_at }}</div>
+    <div>System: {{ report.footer.tool_name }} v{{ report.footer.tool_version }}</div>
+  </div>
+
+</div>
+</body>
+</html>
