@@ -76,6 +76,10 @@ def detect_evidence_type(
         if url_pattern.match(text) and "\n" not in text:
             return "url"
 
+        # Call log or voice call transcript
+        if re.search(r"^(Call from|Incoming call|Call transcript|Audio call|Voice call):", text, re.IGNORECASE):
+            return "phone_call"
+
         # Email headers
         if re.search(r"^(From|To|Subject|Date):", text, re.MULTILINE):
             return "email_text"

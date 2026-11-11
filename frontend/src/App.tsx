@@ -11,71 +11,108 @@ export const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState<Tab>('dashboard');
   const [activeCaseId, setActiveCaseId] = useState<string | null>(null);
 
+  const tabs: Array<{ id: Tab; label: string; icon: string }> = [
+    { id: 'dashboard', label: 'Dashboard & Triage', icon: '📊' },
+    { id: 'evidence', label: 'Evidence Lab', icon: '🔬' },
+    { id: 'graph', label: 'Relationship Explorer', icon: '🕸️' },
+    { id: 'timeline', label: 'Incident Timeline', icon: '⏱️' },
+    { id: 'report', label: 'Forensic Report & Audit', icon: '📑' },
+  ];
+
   return (
     <div style={{ display: 'flex', flexDirection: 'column', height: '100vh', backgroundColor: 'var(--bg-primary)' }}>
       {/* Top Application Header */}
       <header
         style={{
-          backgroundColor: 'var(--bg-secondary)',
+          backgroundColor: 'rgba(15, 23, 42, 0.95)',
+          backdropFilter: 'blur(12px)',
           borderBottom: '1px solid var(--border)',
-          padding: '12px 24px',
+          padding: '12px 28px',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
+          zIndex: 50,
         }}
       >
-        <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
-          <span style={{ fontWeight: 800, fontSize: '1.25rem', letterSpacing: '0.05em', color: 'var(--accent)' }}>
-            SCAMTRACE AI
-          </span>
-          <span style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
-            Explainable Multimodal Digital Forensics
-          </span>
-
-          {activeCaseId && (
-            <span
+        <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+            <div
               style={{
-                marginLeft: '12px',
-                fontSize: '0.75rem',
-                backgroundColor: 'rgba(56, 189, 248, 0.15)',
-                color: 'var(--accent)',
-                padding: '3px 8px',
-                borderRadius: '4px',
-                fontFamily: 'var(--font-mono)',
+                width: '32px',
+                height: '32px',
+                borderRadius: '8px',
+                background: 'linear-gradient(135deg, #38bdf8 0%, #0284c7 100%)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontWeight: 900,
+                color: '#04101e',
+                fontSize: '1.1rem',
+                boxShadow: '0 0 16px rgba(56, 189, 248, 0.5)',
               }}
             >
-              Case: {activeCaseId}
+              ⚡
+            </div>
+            <div>
+              <div style={{ fontWeight: 800, fontSize: '1.15rem', letterSpacing: '0.04em', color: '#f8fafc' }}>
+                SCAMTRACE <span style={{ color: 'var(--accent)' }}>AI</span>
+              </div>
+              <div style={{ fontSize: '0.72rem', color: 'var(--text-secondary)', letterSpacing: '0.02em' }}>
+                Explainable Multimodal Forensics & Correlation
+              </div>
+            </div>
+          </div>
+
+          {activeCaseId ? (
+            <div
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                backgroundColor: 'rgba(30, 41, 59, 0.9)',
+                border: '1px solid rgba(56, 189, 248, 0.3)',
+                padding: '4px 12px',
+                borderRadius: '9999px',
+                marginLeft: '12px',
+              }}
+            >
+              <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: 'var(--accent)', boxShadow: '0 0 8px var(--accent)' }}></span>
+              <span style={{ fontSize: '0.78rem', color: 'var(--text-secondary)' }}>Active Case:</span>
+              <span style={{ fontSize: '0.82rem', fontFamily: 'var(--font-mono)', fontWeight: 700, color: 'var(--accent)' }}>
+                {activeCaseId}
+              </span>
+            </div>
+          ) : (
+            <span style={{ fontSize: '0.78rem', color: 'var(--text-muted)', marginLeft: '12px' }}>
+              No case selected
             </span>
           )}
         </div>
 
-        <nav style={{ display: 'flex', gap: '6px' }}>
-          {(['dashboard', 'evidence', 'graph', 'timeline', 'report'] as Tab[]).map((tab) => {
-            const labels: Record<Tab, string> = {
-              dashboard: 'Dashboard',
-              evidence: 'Evidence Lab',
-              graph: 'Relationships',
-              timeline: 'Timeline',
-              report: 'Report & Audit',
-            };
-            const isActive = activeTab === tab;
+        {/* Navigation Tabs */}
+        <nav style={{ display: 'flex', gap: '8px' }}>
+          {tabs.map((tab) => {
+            const isActive = activeTab === tab.id;
             return (
               <button
-                key={tab}
-                onClick={() => setActiveTab(tab)}
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
                 style={{
-                  backgroundColor: isActive ? 'var(--accent)' : 'transparent',
-                  color: isActive ? '#0f172a' : 'var(--text-primary)',
-                  border: 'none',
-                  padding: '7px 14px',
-                  borderRadius: '5px',
+                  backgroundColor: isActive ? 'rgba(56, 189, 248, 0.15)' : 'transparent',
+                  color: isActive ? 'var(--accent)' : 'var(--text-secondary)',
+                  border: isActive ? '1px solid rgba(56, 189, 248, 0.4)' : '1px solid transparent',
+                  padding: '8px 16px',
+                  borderRadius: '8px',
                   fontWeight: isActive ? 700 : 500,
-                  fontSize: '0.88rem',
-                  cursor: 'pointer',
-                  transition: 'background 0.15s ease',
+                  fontSize: '0.85rem',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '6px',
+                  boxShadow: isActive ? '0 0 12px rgba(56, 189, 248, 0.2)' : 'none',
                 }}
               >
-                {labels[tab]}
+                <span>{tab.icon}</span>
+                <span>{tab.label}</span>
               </button>
             );
           })}

@@ -8,6 +8,7 @@ import joblib
 import numpy as np
 
 from backend.app.analyzers.base import AnalysisResult, BaseAnalyzer
+from backend.app.extraction.entities import extract_entities_from_text
 from backend.app.ml.train_url import FEATURE_NAMES, extract_lexical_url_features
 
 MODEL_PATH = Path(__file__).resolve().parent.parent / "ml" / "artifacts" / "url_model.joblib"
@@ -82,13 +83,19 @@ class URLAnalyzer(BaseAnalyzer):
                 for k, v in features.items() if v > 0
             ][:5]
 
+        extracted_ents = []
+        try:
+            extracted_ents = [e.to_dict() for e in extract_entities_from_text(url)]
+        except Exception:
+            extracted_ents = []
+
         return AnalysisResult(
             label=label,
             score=proba,
             model_name=self.model_name,
             model_version=self.model_version,
             top_factors=top_factors,
-            metadata={"features": features, "url": url},
+            metadata={"features": features, "url": url, "extracted_entities": extracted_ents},
         )
 
     def _explain_prediction(self, features: Dict[str, float], top_k: int = 5) -> List[Dict[str, Any]]:

@@ -73,7 +73,7 @@ def ingest_single_evidence(
     ext = "bin"
     if original_filename and "." in original_filename:
         ext = original_filename.rsplit(".", 1)[-1].lower()
-    elif final_type in {"sms", "chat", "email_text"}:
+    elif final_type in {"sms", "chat", "email_text", "phone_call", "call_log"}:
         ext = "txt"
     elif final_type == "url":
         ext = "url.txt"
@@ -100,7 +100,7 @@ def ingest_single_evidence(
         )
 
     # Determine mime-type
-    mime_type = "text/plain" if final_type in {"sms", "chat", "url", "email_text"} else "application/octet-stream"
+    mime_type = "text/plain" if final_type in {"sms", "chat", "url", "email_text", "phone_call", "call_log"} else "application/octet-stream"
     if final_type == "apk":
         mime_type = "application/vnd.android.package-archive"
     elif final_type == "screenshot":
@@ -115,7 +115,7 @@ def ingest_single_evidence(
             final_ts_source = timestamp_source or "user_entered"
 
     # If raw_text is text type and not provided, decode from raw_bytes
-    if raw_text is None and final_type in {"sms", "chat", "url", "email_text"}:
+    if raw_text is None and final_type in {"sms", "chat", "url", "email_text", "phone_call", "call_log"}:
         try:
             raw_text = raw_bytes.decode("utf-8", errors="replace")
         except Exception:

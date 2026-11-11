@@ -204,11 +204,12 @@ export const EvidenceLab: React.FC<EvidenceLabProps> = ({ activeCaseId }) => {
                       color: 'var(--text-primary)',
                     }}
                   >
-                    <option value="sms">SMS Message</option>
-                    <option value="chat">Chat Transcript</option>
-                    <option value="url">URL Endpoint</option>
-                    <option value="apk">Android APK (Manifest Metadata)</option>
-                    <option value="email_text">Email Message Text</option>
+                    <option value="sms">✉️ SMS Smishing</option>
+                    <option value="phone_call">📞 Phone Call Record / Vishing</option>
+                    <option value="chat">💬 Chat Transcript (WhatsApp / Telegram)</option>
+                    <option value="url">🌐 Phishing URL</option>
+                    <option value="apk">📦 Android APK (Manifest Metadata)</option>
+                    <option value="email_text">📧 Phishing Email Text</option>
                   </select>
                 </div>
 
@@ -304,11 +305,12 @@ export const EvidenceLab: React.FC<EvidenceLabProps> = ({ activeCaseId }) => {
                       color: 'var(--text-primary)',
                     }}
                   >
-                    <option value="screenshot">Screenshot / Image</option>
-                    <option value="apk">Android APK Package</option>
-                    <option value="sms">SMS Text Dump</option>
-                    <option value="chat">Chat Export</option>
-                    <option value="url">URL Text</option>
+                    <option value="screenshot">🖼️ Screenshot / Image</option>
+                    <option value="apk">📦 Android APK Package</option>
+                    <option value="sms">✉️ SMS Text Dump</option>
+                    <option value="phone_call">📞 Phone Call Record / Transcript</option>
+                    <option value="chat">💬 Chat Export (WhatsApp/Telegram)</option>
+                    <option value="url">🌐 URL Text</option>
                   </select>
                 </div>
 

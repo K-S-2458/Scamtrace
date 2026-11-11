@@ -200,7 +200,7 @@ def rule_similar_text_template(
     if not switches.get("SIMILAR_TEXT_TEMPLATE", True):
         return []
 
-    text_evs = [e for e in evidence_list if getattr(e, "raw_text", None) and e.type in {"sms", "chat", "email_text"}]
+    text_evs = [e for e in evidence_list if getattr(e, "raw_text", None) and e.type in {"sms", "chat", "email_text", "phone_call", "call_log"}]
     if len(text_evs) < 2:
         return []
 
@@ -299,7 +299,7 @@ def rule_apk_lure_pattern(
 
     lure_words = {"install", "download", "update app", "apk", "app", "application"}
     apk_evs = [e for e in evidence_list if e.type == "apk"]
-    text_url_evs = [e for e in evidence_list if e.type in {"sms", "chat", "url", "email_text"}]
+    text_url_evs = [e for e in evidence_list if e.type in {"sms", "chat", "url", "email_text", "phone_call", "call_log"}]
 
     if not apk_evs or not text_url_evs:
         return []

@@ -11,6 +11,7 @@ import numpy as np
 
 from backend.app.analyzers.base import AnalysisResult, BaseAnalyzer
 from backend.app.config import ROOT_DIR
+from backend.app.extraction.entities import extract_entities_from_text
 
 MODEL_PATH = Path(__file__).resolve().parent.parent / "ml" / "artifacts" / "sms_model.joblib"
 
@@ -84,13 +85,23 @@ class SMSAnalyzer(BaseAnalyzer):
                 for term in matches
             ]
 
+        extracted_ents = []
+        try:
+            extracted_ents = [e.to_dict() for e in extract_entities_from_text(text)]
+        except Exception:
+            extracted_ents = []
+
         return AnalysisResult(
             label=label,
             score=proba,
             model_name=self.model_name,
             model_version=self.model_version,
             top_factors=top_factors,
-            metadata={"text_length": len(text), "cleaned_length": len(cleaned)},
+            metadata={
+                "text_length": len(text),
+                "cleaned_length": len(cleaned),
+                "extracted_entities": extracted_ents,
+            },
         )
 
     def _explain_prediction(self, cleaned_text: str, top_k: int = 5) -> List[Dict[str, Any]]:

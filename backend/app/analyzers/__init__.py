@@ -13,6 +13,8 @@ _ANALYZERS: Dict[str, BaseAnalyzer] = {
     "apk": APKAnalyzer(),
     "chat": TextAnalyzer(),
     "email_text": TextAnalyzer(),
+    "phone_call": TextAnalyzer(),
+    "call_log": TextAnalyzer(),
     "screenshot": ScreenshotAnalyzer(),
 }
 

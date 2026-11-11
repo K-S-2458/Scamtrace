@@ -75,7 +75,7 @@ def build_case_timeline(db: Session, case_id: str) -> Dict[str, Any]:
             tgt = ev_map.get(edge.target_evidence_id)
             if src and tgt:
                 # Identify which is lure and which is APK
-                lure = src if src.type in {"sms", "chat", "url", "email_text"} else (tgt if tgt.type in {"sms", "chat", "url", "email_text"} else None)
+                lure = src if src.type in {"sms", "chat", "url", "email_text", "phone_call", "call_log"} else (tgt if tgt.type in {"sms", "chat", "url", "email_text", "phone_call", "call_log"} else None)
                 apk = tgt if tgt.type == "apk" else (src if src.type == "apk" else None)
 
                 if lure and apk and lure.source_timestamp and apk.source_timestamp:
