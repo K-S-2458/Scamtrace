@@ -50,3 +50,16 @@
 - **Choice**: TEMPORAL_PROXIMITY confidence is set to 0.2 and explicitly excluded from the "confirmed link" count in the risk scoring engine.
 - **Reason**: Temporal closeness alone is circumstantial; coincidence must not artificially inflate a case's risk score unless corroborated by entity overlap (shared phone, domain, UPI handle, or APK lure).
 
+## DEC-009: Interactive Evidence Correlation Matrix as Primary Relationship Interface
+- **Date**: 2026-11-12
+- **Options**: Cytoscape force-directed network graph as sole relationship view vs Interactive pairwise Evidence Correlation Matrix with side drawer inspector.
+- **Choice**: Evidence Correlation Matrix as primary relationship interface; Cytoscape network graph retained as secondary toggleable view.
+- **Reason**: Complex force-directed network graphs can become cluttered and difficult to inspect as artifact count grows. A pairwise correlation matrix provides an intuitive, sortable grid with restrained strength indicators (`Strong`, `Possible`, `Weak`, `—`) and immediate side-panel inspection showing shared entities, correlation rules, and plain-language explanations.
+
+## DEC-010: Multi-Tier Investigation Findings & Three-Tier Conclusions
+- **Date**: 2026-11-12
+- **Options**: Monolithic conclusion summary vs Rigorous three-tier categorization (Confirmed Observations, System Inferences, Unverified Possibilities).
+- **Choice**: Deterministic compilation of 7 entity categories (phones, domains, UPI, packages, cert hashes, brands, amounts), rule-attributed key findings, and three-tier conclusions.
+- **Reason**: Forensic integrity requires explicit boundaries between verifiable facts (unbroken SHA-256 hashes, exact entity equality across artifacts), algorithmic heuristics (brand impersonation, dropper sequence patterns), and external unknowns (legal ownership, CDR/IPDR subscriber identities).
+
+

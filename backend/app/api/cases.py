@@ -17,6 +17,7 @@ from backend.app.db.models import AuditEntry, Case, Evidence
 from backend.app.db.session import get_db
 from backend.app.integrity.audit_log import record_audit_entry
 from backend.app.integrity.manifest import generate_manifest
+from backend.app.reporting.findings import compile_investigation_findings
 
 router = APIRouter(prefix="/cases", tags=["cases"])
 
@@ -81,6 +82,16 @@ def get_case(case_id: str, db: Session = Depends(get_db)):
     resp = CaseResponse.model_validate(case)
     resp.evidence_count = ev_count
     return resp
+
+
+@router.get("/{case_id}/findings")
+def get_case_findings(case_id: str, db: Session = Depends(get_db)):
+    """Retrieve compiled investigation findings, identified entities, and tiered conclusions."""
+    try:
+        findings = compile_investigation_findings(db, case_id)
+        return findings
+    except ValueError as e:
+        raise HTTPException(status_code=404, detail=str(e))
 
 
 @router.patch("/{case_id}", response_model=CaseResponse)
@@ -189,4 +200,3 @@ def get_case_audit_log(case_id: str, db: Session = Depends(get_db)):
         .all()
     )
     return entries
-

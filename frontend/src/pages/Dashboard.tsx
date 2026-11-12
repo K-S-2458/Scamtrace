@@ -4,6 +4,7 @@ import {
   apiCreateCase,
   apiGetCases,
   apiGetRisk,
+  apiGetFindings,
   apiUploadText,
   apiAnalyzeEvidence,
   apiCorrelate,
@@ -11,7 +12,10 @@ import {
   CaseItem,
   RiskResponse,
   VerificationResponse,
+  FindingsResponse,
 } from '../api/client';
+import { RiskAssessmentCard } from '../components/RiskAssessmentCard';
+import { InvestigationFindingsCard } from '../components/InvestigationFindingsCard';
 
 interface DashboardProps {
   activeCaseId: string | null;
@@ -29,6 +33,8 @@ export const Dashboard: React.FC<DashboardProps> = ({
   const [newDesc, setNewDesc] = useState('');
   const [activeRisk, setActiveRisk] = useState<RiskResponse | null>(null);
   const [activeVerification, setActiveVerification] = useState<VerificationResponse | null>(null);
+  const [findings, setFindings] = useState<FindingsResponse | null>(null);
+  const [findingsLoading, setFindingsLoading] = useState(false);
   const [loadingPreset, setLoadingPreset] = useState<string | null>(null);
 
   // Real-time tester state
@@ -49,18 +55,48 @@ export const Dashboard: React.FC<DashboardProps> = ({
     }
   };
 
+  const refreshCaseIntelligence = async (cid: string) => {
+    setFindingsLoading(true);
+    try {
+      const [riskRes, verifRes, findingsRes] = await Promise.allSettled([
+        apiGetRisk(cid),
+        apiVerifyCase(cid),
+        apiGetFindings(cid),
+      ]);
+
+      if (riskRes.status === 'fulfilled') {
+        setActiveRisk(riskRes.value);
+      } else {
+        setActiveRisk(null);
+      }
+
+      if (verifRes.status === 'fulfilled') {
+        setActiveVerification(verifRes.value);
+      } else {
+        setActiveVerification(null);
+      }
+
+      if (findingsRes.status === 'fulfilled') {
+        setFindings(findingsRes.value);
+      } else {
+        setFindings(null);
+      }
+    } finally {
+      setFindingsLoading(false);
+    }
+  };
+
   useEffect(() => {
     loadCases();
   }, []);
 
   useEffect(() => {
     if (activeCaseId) {
-      apiGetRisk(activeCaseId)
-        .then(setActiveRisk)
-        .catch(() => setActiveRisk(null));
-      apiVerifyCase(activeCaseId)
-        .then(setActiveVerification)
-        .catch(() => setActiveVerification(null));
+      refreshCaseIntelligence(activeCaseId);
+    } else {
+      setActiveRisk(null);
+      setActiveVerification(null);
+      setFindings(null);
     }
   }, [activeCaseId]);
 
@@ -123,7 +159,6 @@ export const Dashboard: React.FC<DashboardProps> = ({
 
       await loadCases();
       onSelectCase(cid);
-      alert('✓ Simple 2-Step Smishing loaded! (1 SMS + 1 URL). Notice how the SMS directly correlates to the URL via SHARED_DOMAIN and BRAND_IMPERSONATION without WhatsApp or APK.');
     } catch (err: any) {
       alert(`Error loading preset: ${err.message}`);
     } finally {
@@ -177,7 +212,6 @@ export const Dashboard: React.FC<DashboardProps> = ({
       await apiCorrelate(cid);
       await loadCases();
       onSelectCase(cid);
-      alert('✓ Vishing & APK incident loaded! (1 Phone Call + 1 APK). Shows voice lure triggering APK_LURE_PATTERN without WhatsApp.');
     } catch (err: any) {
       alert(`Error: ${err.message}`);
     } finally {
@@ -185,13 +219,13 @@ export const Dashboard: React.FC<DashboardProps> = ({
     }
   };
 
-  // 3. Full 4-Step Multimodal Incident (Section 10 Standard)
+  // 3. Full 4-Step Multimodal Incident
   const handleLoadFullMultimodal = async () => {
     setLoadingPreset('full');
     try {
       const c = await apiCreateCase(
         'Comprehensive Multimodal Cybercrime Campaign',
-        'Full 4-tier campaign investigating cross-channel SMS smishing, WhatsApp dropper lure, phishing credential harvester, and accessibility-stealing APK.'
+        'Full 4-tier campaign investigating cross-channel SMS smishing, WhatsApp dropper lure, phishing harvester, and accessibility-stealing APK.'
       );
       const cid = c.id;
 
@@ -250,7 +284,6 @@ export const Dashboard: React.FC<DashboardProps> = ({
       await apiCorrelate(cid);
       await loadCases();
       onSelectCase(cid);
-      alert('✓ Comprehensive 4-artifact campaign loaded with cross-channel correlation graph!');
     } catch (err: any) {
       alert(`Error: ${err.message}`);
     } finally {
@@ -263,7 +296,7 @@ export const Dashboard: React.FC<DashboardProps> = ({
     e.preventDefault();
     if (!testerText.trim()) return;
     if (!activeCaseId) {
-      alert('Please create or select a case first.');
+      alert('Please select or create an active case before testing.');
       return;
     }
     setTesterLoading(true);
@@ -293,9 +326,7 @@ export const Dashboard: React.FC<DashboardProps> = ({
       });
 
       await loadCases();
-      // Refresh risk and integrity
-      apiGetRisk(activeCaseId).then(setActiveRisk).catch(() => {});
-      apiVerifyCase(activeCaseId).then(setActiveVerification).catch(() => {});
+      await refreshCaseIntelligence(activeCaseId);
     } catch (err: any) {
       alert(`Error analyzing message: ${err.message}`);
     } finally {
@@ -313,451 +344,465 @@ export const Dashboard: React.FC<DashboardProps> = ({
   const activeCase = cases.find((c) => c.id === activeCaseId);
 
   return (
-    <div style={{ padding: '24px 32px', maxWidth: '1400px', margin: '0 auto' }}>
-      {/* Header Banner */}
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px' }}>
+    <div style={{ padding: '24px 32px', maxWidth: '1440px', margin: '0 auto' }}>
+      {/* Top Header Banner */}
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px', flexWrap: 'wrap', gap: '16px' }}>
         <div>
-          <h1 style={{ fontSize: '1.75rem', fontWeight: 800, color: '#f8fafc', letterSpacing: '-0.02em' }}>
-            Forensic Investigation Dashboard
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <span className="f-badge f-badge-accent">DIGITAL FORENSICS WORKBENCH</span>
+            <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Offline Air-Gapped Safe</span>
+          </div>
+          <h1 style={{ fontSize: '1.65rem', fontWeight: 800, color: 'var(--text-primary)', letterSpacing: '-0.02em', marginTop: '2px' }}>
+            Forensic Case Dashboard
           </h1>
-          <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginTop: '2px' }}>
-            Single-user digital forensics workbench for multimodal scam correlation, timeline analysis, and tamper-proof audit verification.
+          <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem', marginTop: '2px' }}>
+            Explainable multimodal correlation, risk triage matrix, and tamper-verified evidence ledger.
           </p>
         </div>
 
         {/* Quick Scenario Injection Presets */}
-        <div style={{ display: 'flex', gap: '10px' }}>
+        <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
           <button
             onClick={handleLoadSimpleSmishing}
             disabled={loadingPreset !== null}
-            className="btn-primary"
-            style={{ fontSize: '0.85rem' }}
+            className="f-btn f-btn-primary"
+            style={{ fontSize: '0.82rem' }}
           >
-            {loadingPreset === 'smishing' ? 'Injecting...' : '⚡ Load Simple Smishing (SMS + URL)'}
+            {loadingPreset === 'smishing' ? 'Injecting...' : '⚡ Smishing Preset (SMS + URL)'}
           </button>
 
           <button
             onClick={handleLoadVishingDropper}
             disabled={loadingPreset !== null}
-            className="btn-secondary"
-            style={{ fontSize: '0.85rem' }}
+            className="f-btn f-btn-secondary"
+            style={{ fontSize: '0.82rem' }}
           >
-            {loadingPreset === 'vishing' ? 'Injecting...' : '📞 Vishing (Call + APK)'}
+            {loadingPreset === 'vishing' ? 'Injecting...' : '📞 Vishing Preset (Call + APK)'}
           </button>
 
           <button
             onClick={handleLoadFullMultimodal}
             disabled={loadingPreset !== null}
-            className="btn-secondary"
-            style={{ fontSize: '0.85rem' }}
+            className="f-btn f-btn-secondary"
+            style={{ fontSize: '0.82rem' }}
           >
-            {loadingPreset === 'full' ? 'Injecting...' : '🌐 Full 4-Step Campaign'}
+            {loadingPreset === 'full' ? 'Injecting...' : '🌐 Multimodal Campaign'}
           </button>
         </div>
       </div>
 
       {/* Main 2-Column Responsive Layout */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1.8fr) minmax(360px, 1.2fr)', gap: '24px' }}>
-        {/* LEFT COLUMN: Active Case Intelligence & Live Message Tester */}
+      <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1.9fr) minmax(360px, 1.1fr)', gap: '24px' }}>
+        {/* LEFT COLUMN: Active Case Intelligence, Risk Assessment & Findings */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-          {/* Active Case Intelligence Card */}
           {activeCase ? (
-            <div className="glass-panel" style={{ padding: '24px' }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '16px' }}>
-                <div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '6px' }}>
-                    <span className="badge badge-accent">ACTIVE CASE</span>
-                    <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.8rem', color: 'var(--text-muted)' }}>
+            <>
+              {/* Active Case Summary Card */}
+              <div className="forensic-panel">
+                <div className="forensic-panel-header">
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <span className="f-badge f-badge-accent">ACTIVE INVESTIGATION</span>
+                    <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.75rem', color: 'var(--text-muted)' }}>
                       ID: {activeCase.id}
                     </span>
                   </div>
-                  <h2 style={{ fontSize: '1.4rem', fontWeight: 800, color: '#f8fafc' }}>{activeCase.title}</h2>
-                  <p style={{ color: 'var(--text-secondary)', fontSize: '0.88rem', marginTop: '4px' }}>
+
+                  <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+                    <span className={`f-badge ${activeCase.status === 'open' ? 'f-badge-success' : 'f-badge-low'}`}>
+                      {activeCase.status.toUpperCase()}
+                    </span>
+                    {activeCase.status === 'open' && (
+                      <button
+                        onClick={handleCloseActiveCase}
+                        className="f-btn f-btn-danger"
+                        style={{ fontSize: '0.72rem', padding: '3px 8px' }}
+                      >
+                        Close Case
+                      </button>
+                    )}
+                  </div>
+                </div>
+
+                <div className="forensic-panel-body">
+                  <h2 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--text-primary)' }}>
+                    {activeCase.title}
+                  </h2>
+                  <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem', marginTop: '4px', marginBottom: '16px' }}>
                     {activeCase.description || 'No description provided for this forensic case.'}
                   </p>
-                </div>
 
-                <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
-                  <span
-                    className={`badge ${activeCase.status === 'open' ? 'badge-success' : 'badge-muted'}`}
+                  {/* Cryptographic & Forensic Status Pills */}
+                  <div
+                    style={{
+                      display: 'grid',
+                      gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))',
+                      gap: '12px',
+                      backgroundColor: 'var(--bg-table-header)',
+                      padding: '12px 14px',
+                      borderRadius: '4px',
+                      border: '1px solid var(--border)',
+                      marginBottom: '16px',
+                    }}
                   >
-                    {activeCase.status.toUpperCase()}
-                  </span>
-                  {activeCase.status === 'open' && (
+                    <div>
+                      <div style={{ fontSize: '0.68rem', color: 'var(--text-muted)', textTransform: 'uppercase', fontWeight: 700 }}>
+                        Ingested Artifacts
+                      </div>
+                      <div style={{ fontSize: '1.3rem', fontWeight: 800, color: 'var(--accent)', marginTop: '2px' }}>
+                        {activeCase.evidence_count}
+                      </div>
+                    </div>
+
+                    <div>
+                      <div style={{ fontSize: '0.68rem', color: 'var(--text-muted)', textTransform: 'uppercase', fontWeight: 700 }}>
+                        Cryptographic Verification
+                      </div>
+                      <div
+                        style={{
+                          fontSize: '0.85rem',
+                          fontWeight: 700,
+                          marginTop: '4px',
+                          color: activeVerification?.is_valid ? 'var(--success)' : 'var(--danger)',
+                        }}
+                      >
+                        {activeVerification?.is_valid ? '✓ SHA-256 Intact' : '⚠ Tamper Detected'}
+                      </div>
+                    </div>
+
+                    <div>
+                      <div style={{ fontSize: '0.68rem', color: 'var(--text-muted)', textTransform: 'uppercase', fontWeight: 700 }}>
+                        Audit Log Chain
+                      </div>
+                      <div style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--text-primary)', marginTop: '4px' }}>
+                        {activeVerification?.audit_chain_integrity.entry_count || 0} Blocks Verified
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Navigation Shortcut Strip */}
+                  <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
                     <button
-                      onClick={handleCloseActiveCase}
-                      className="btn-danger"
-                      style={{ fontSize: '0.75rem', padding: '4px 10px' }}
+                      onClick={() => onNavigateTab('evidence')}
+                      className="f-btn f-btn-secondary"
+                      style={{ fontSize: '0.78rem' }}
                     >
-                      Close Case
+                      🔬 Evidence Lab ({activeCase.evidence_count})
                     </button>
-                  )}
-                </div>
-              </div>
-
-              {/* Status Metrics Bar */}
-              <div
-                style={{
-                  display: 'grid',
-                  gridTemplateColumns: 'repeat(4, 1fr)',
-                  gap: '16px',
-                  backgroundColor: 'rgba(15, 23, 42, 0.6)',
-                  padding: '16px',
-                  borderRadius: '8px',
-                  border: '1px solid var(--border)',
-                }}
-              >
-                <div>
-                  <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textTransform: 'uppercase', fontWeight: 700 }}>
-                    Evidence Items
-                  </div>
-                  <div style={{ fontSize: '1.6rem', fontWeight: 800, color: 'var(--accent)', marginTop: '2px' }}>
-                    {activeCase.evidence_count}
-                  </div>
-                </div>
-
-                <div>
-                  <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textTransform: 'uppercase', fontWeight: 700 }}>
-                    Risk Triage Score
-                  </div>
-                  <div
-                    style={{
-                      fontSize: '1.2rem',
-                      fontWeight: 800,
-                      marginTop: '4px',
-                      color:
-                        activeRisk?.risk_band === 'high'
-                          ? 'var(--danger)'
-                          : activeRisk?.risk_band === 'medium'
-                          ? 'var(--warning)'
-                          : 'var(--success)',
-                    }}
-                  >
-                    {activeRisk ? `${activeRisk.risk_band.toUpperCase()} (${(activeRisk.final_score).toFixed(2)})` : 'Calculating...'}
-                  </div>
-                </div>
-
-                <div>
-                  <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textTransform: 'uppercase', fontWeight: 700 }}>
-                    Cryptographic Integrity
-                  </div>
-                  <div
-                    style={{
-                      fontSize: '0.9rem',
-                      fontWeight: 700,
-                      marginTop: '6px',
-                      color: activeVerification?.is_valid ? 'var(--success)' : 'var(--danger)',
-                    }}
-                  >
-                    {activeVerification?.is_valid ? '✓ SHA-256 Unbroken' : '⚠ Tamper Detected'}
-                  </div>
-                </div>
-
-                <div>
-                  <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textTransform: 'uppercase', fontWeight: 700 }}>
-                    Audit Chain Blocks
-                  </div>
-                  <div style={{ fontSize: '1.2rem', fontWeight: 800, color: '#f8fafc', marginTop: '2px' }}>
-                    {activeVerification?.audit_chain_integrity.entry_count || 0}
+                    <button
+                      onClick={() => onNavigateTab('graph')}
+                      className="f-btn f-btn-secondary"
+                      style={{ fontSize: '0.78rem' }}
+                    >
+                      ▦ Correlation Matrix
+                    </button>
+                    <button
+                      onClick={() => onNavigateTab('timeline')}
+                      className="f-btn f-btn-secondary"
+                      style={{ fontSize: '0.78rem' }}
+                    >
+                      ⏱️ Incident Timeline
+                    </button>
+                    <button
+                      onClick={() => onNavigateTab('report')}
+                      className="f-btn f-btn-secondary"
+                      style={{ fontSize: '0.78rem' }}
+                    >
+                      📑 Verified Forensic Report
+                    </button>
                   </div>
                 </div>
               </div>
 
-              {/* Quick Navigation Buttons */}
-              <div style={{ display: 'flex', gap: '10px', marginTop: '20px' }}>
-                <button
-                  onClick={() => onNavigateTab('evidence')}
-                  className="btn-secondary"
-                  style={{ fontSize: '0.85rem' }}
-                >
-                  🔬 View Evidence Lab →
-                </button>
-                <button
-                  onClick={() => onNavigateTab('graph')}
-                  className="btn-secondary"
-                  style={{ fontSize: '0.85rem' }}
-                >
-                  🕸️ Explore Relationships →
-                </button>
-                <button
-                  onClick={() => onNavigateTab('timeline')}
-                  className="btn-secondary"
-                  style={{ fontSize: '0.85rem' }}
-                >
-                  ⏱️ Incident Timeline →
-                </button>
-                <button
-                  onClick={() => onNavigateTab('report')}
-                  className="btn-secondary"
-                  style={{ fontSize: '0.85rem' }}
-                >
-                  📑 Verified Report →
-                </button>
-              </div>
-            </div>
+              {/* 1. CASE RISK ASSESSMENT - REDESIGNED */}
+              <RiskAssessmentCard
+                risk={activeRisk}
+                evidenceCount={activeCase.evidence_count}
+                connectedArtifactsCount={findings?.connected_artifacts_count ?? 0}
+                suspiciousIndicatorsCount={findings?.suspicious_indicators_count ?? 0}
+                evidenceConfidence={findings?.evidence_confidence ?? 85}
+              />
+
+              {/* 3. INVESTIGATION FINDINGS PRESENTATION */}
+              <InvestigationFindingsCard findings={findings} loading={findingsLoading} />
+            </>
           ) : (
-            <div className="glass-panel" style={{ padding: '32px', textAlign: 'center' }}>
+            <div className="forensic-panel" style={{ padding: '48px 24px', textAlign: 'center' }}>
               <div style={{ fontSize: '2rem', marginBottom: '12px' }}>📂</div>
-              <h3 style={{ fontSize: '1.2rem', color: '#f8fafc' }}>No Case Selected</h3>
-              <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', margin: '8px 0 16px' }}>
-                Create a new case below or click one of the quick injection presets above to begin.
+              <h3 style={{ fontSize: '1.2rem', color: 'var(--text-primary)' }}>No Case Selected</h3>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem', margin: '8px 0 20px' }}>
+                Select an existing case from the history panel or inject a quick scenario preset above.
               </p>
             </div>
           )}
 
           {/* Real-Time Live Message & URL Threat Tester */}
-          <div className="glass-panel" style={{ padding: '24px' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
+          <div className="forensic-panel">
+            <div className="forensic-panel-header">
               <div>
-                <span className="badge badge-accent">LIVE THREAT TESTER</span>
-                <h3 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#f8fafc', marginTop: '4px' }}>
-                  ⚡ Test Any Real-World Message, Call, or URL in Real-Time
-                </h3>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem' }}>
-                  Paste an actual SMS, WhatsApp text, phone call record, or URL. The system will immutably hash it, evaluate offline classifiers, and extract entities instantly.
-                </p>
+                <span className="f-badge f-badge-accent">REAL-TIME INGESTION</span>
+                <div style={{ fontWeight: 800, fontSize: '0.95rem', color: 'var(--text-primary)', marginTop: '4px' }}>
+                  Live Threat & Communication Channel Tester
+                </div>
               </div>
               <button
                 type="button"
                 onClick={fillRealScamExample}
-                className="btn-secondary"
-                style={{ fontSize: '0.78rem', whiteSpace: 'nowrap' }}
+                className="f-btn f-btn-outline"
+                style={{ fontSize: '0.72rem' }}
               >
-                Sample SBI Scam Message
+                Insert Sample SBI Scam
               </button>
             </div>
 
-            <form onSubmit={handleTestRealtimeMessage}>
-              <div style={{ display: 'grid', gridTemplateColumns: '180px 1fr', gap: '12px', marginBottom: '12px' }}>
-                <div>
-                  <label style={{ display: 'block', fontSize: '0.75rem', fontWeight: 700, color: 'var(--text-secondary)', marginBottom: '4px' }}>
-                    COMMUNICATION CHANNEL
-                  </label>
-                  <select
-                    className="form-select"
-                    value={testerType}
-                    onChange={(e) => setTesterType(e.target.value)}
-                  >
-                    <option value="sms">✉️ SMS Smishing</option>
-                    <option value="phone_call">📞 Phone Call Record</option>
-                    <option value="chat">💬 WhatsApp / Telegram</option>
-                    <option value="email_text">📧 Phishing Email</option>
-                    <option value="url">🌐 Phishing URL</option>
-                  </select>
-                </div>
+            <div className="forensic-panel-body">
+              <p style={{ color: 'var(--text-secondary)', fontSize: '0.8rem', marginBottom: '14px' }}>
+                Test any suspect text (SMS, WhatsApp/Telegram, phone call transcript, email, or URL). The engine immutably hashes it, runs offline TF-IDF classifiers with attributed n-gram factors, and updates cross-artifact links immediately.
+              </p>
 
-                <div>
-                  <label style={{ display: 'block', fontSize: '0.75rem', fontWeight: 700, color: 'var(--text-secondary)', marginBottom: '4px' }}>
-                    EVIDENCE TEXT CONTENT
-                  </label>
-                  <textarea
-                    className="form-textarea"
-                    rows={3}
-                    placeholder="Paste real SMS, chat text, phone call transcript, or URL here..."
-                    value={testerText}
-                    onChange={(e) => setTesterText(e.target.value)}
-                  />
-                </div>
-              </div>
-
-              <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '10px' }}>
-                <button
-                  type="submit"
-                  disabled={testerLoading || !testerText.trim()}
-                  className="btn-primary"
-                  style={{ fontSize: '0.88rem' }}
-                >
-                  {testerLoading ? 'Running Forensic Pipeline...' : '⚡ Test & Ingest In Real-Time'}
-                </button>
-              </div>
-            </form>
-
-            {/* Live Instant Result Card */}
-            {testerResult && (
-              <div
-                style={{
-                  marginTop: '16px',
-                  padding: '16px',
-                  backgroundColor: 'rgba(15, 23, 42, 0.8)',
-                  borderRadius: '8px',
-                  border: '1px solid rgba(56, 189, 248, 0.3)',
-                }}
-              >
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                    <span className="badge badge-accent">LIVE RESULT: {testerResult.evidence_id}</span>
-                    <span
-                      className={`badge ${
-                        testerResult.label === 'suspicious' ? 'badge-danger' : 'badge-success'
-                      }`}
+              <form onSubmit={handleTestRealtimeMessage}>
+                <div style={{ display: 'grid', gridTemplateColumns: '170px 1fr', gap: '12px', marginBottom: '12px' }}>
+                  <div>
+                    <label style={{ display: 'block', fontSize: '0.7rem', fontWeight: 700, color: 'var(--text-muted)', marginBottom: '4px', textTransform: 'uppercase' }}>
+                      Channel Modality
+                    </label>
+                    <select
+                      className="f-select"
+                      value={testerType}
+                      onChange={(e) => setTesterType(e.target.value)}
                     >
-                      {testerResult.label.toUpperCase()} (Score: {testerResult.score.toFixed(2)})
+                      <option value="sms">✉️ SMS Message</option>
+                      <option value="phone_call">📞 Phone Call Record</option>
+                      <option value="chat">💬 Chat (WhatsApp/TG)</option>
+                      <option value="email_text">📧 Phishing Email</option>
+                      <option value="url">🌐 Phishing URL</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label style={{ display: 'block', fontSize: '0.7rem', fontWeight: 700, color: 'var(--text-muted)', marginBottom: '4px', textTransform: 'uppercase' }}>
+                      Evidence Content
+                    </label>
+                    <textarea
+                      className="f-textarea"
+                      rows={3}
+                      placeholder="Paste suspect SMS, phone transcript, or URL here..."
+                      value={testerText}
+                      onChange={(e) => setTesterText(e.target.value)}
+                    />
+                  </div>
+                </div>
+
+                <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '8px' }}>
+                  <button
+                    type="submit"
+                    disabled={testerLoading || !testerText.trim()}
+                    className="f-btn f-btn-primary"
+                    style={{ fontSize: '0.82rem' }}
+                  >
+                    {testerLoading ? 'Running Offline Pipeline...' : '⚡ Test & Ingest In Real-Time'}
+                  </button>
+                </div>
+              </form>
+
+              {/* Live Instant Result Card */}
+              {testerResult && (
+                <div
+                  style={{
+                    marginTop: '16px',
+                    padding: '14px',
+                    backgroundColor: 'var(--bg-table-header)',
+                    borderRadius: '4px',
+                    border: '1px solid var(--border)',
+                  }}
+                >
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                      <span className="f-badge f-badge-accent">INGESTED: {testerResult.evidence_id}</span>
+                      <span
+                        className={`f-badge ${
+                          testerResult.label === 'suspicious' ? 'f-badge-danger' : 'f-badge-success'
+                        }`}
+                      >
+                        {testerResult.label.toUpperCase()} (Score: {testerResult.score.toFixed(2)})
+                      </span>
+                    </div>
+                    <span style={{ fontSize: '0.72rem', fontFamily: 'var(--font-mono)', color: 'var(--text-muted)' }}>
+                      SHA-256: {testerResult.sha256.substring(0, 16)}...
                     </span>
                   </div>
-                  <span style={{ fontSize: '0.75rem', fontFamily: 'var(--font-mono)', color: 'var(--text-muted)' }}>
-                    SHA-256: {testerResult.sha256.substring(0, 16)}...
-                  </span>
-                </div>
 
-                {/* Extracted Entities */}
-                <div style={{ marginBottom: '10px' }}>
-                  <span style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', fontWeight: 700 }}>
-                    EXTRACTED ENTITIES DETECTED:
-                  </span>
-                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginTop: '6px' }}>
-                    {testerResult.extracted_entities.length > 0 ? (
-                      testerResult.extracted_entities.map((ent: any, idx: number) => (
-                        <span key={idx} className="badge badge-purple" style={{ fontSize: '0.72rem' }}>
-                          {ent.entity_type}: {ent.value}
-                        </span>
-                      ))
-                    ) : (
-                      <span style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>No entities recognized</span>
-                    )}
+                  {/* Extracted Entities */}
+                  <div style={{ marginBottom: '8px' }}>
+                    <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)', fontWeight: 700, textTransform: 'uppercase' }}>
+                      Extracted Entities:
+                    </span>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px', marginTop: '4px' }}>
+                      {testerResult.extracted_entities.length > 0 ? (
+                        testerResult.extracted_entities.map((ent: any, idx: number) => (
+                          <span key={idx} className="f-badge f-badge-accent" style={{ fontSize: '0.7rem' }}>
+                            {ent.entity_type}: {ent.value}
+                          </span>
+                        ))
+                      ) : (
+                        <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>No entities recognized</span>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Top Attributed Risk Factors */}
+                  <div>
+                    <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)', fontWeight: 700, textTransform: 'uppercase' }}>
+                      Attributed N-Gram Risk Factors:
+                    </span>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px', marginTop: '4px' }}>
+                      {testerResult.top_factors && testerResult.top_factors.length > 0 ? (
+                        testerResult.top_factors.map((f: any, idx: number) => (
+                          <span key={idx} className="f-badge f-badge-suspicious" style={{ fontSize: '0.7rem' }}>
+                            "{f.feature}" (+{f.contribution.toFixed(2)})
+                          </span>
+                        ))
+                      ) : (
+                        <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Baseline vocabulary</span>
+                      )}
+                    </div>
                   </div>
                 </div>
-
-                {/* Top Contributing Factors */}
-                <div>
-                  <span style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', fontWeight: 700 }}>
-                    TOP ATTRIBUTED RISK N-GRAMS:
-                  </span>
-                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginTop: '6px' }}>
-                    {testerResult.top_factors && testerResult.top_factors.length > 0 ? (
-                      testerResult.top_factors.map((f: any, idx: number) => (
-                        <span key={idx} className="badge badge-warning" style={{ fontSize: '0.72rem' }}>
-                          "{f.feature}" (+{f.contribution.toFixed(2)})
-                        </span>
-                      ))
-                    ) : (
-                      <span style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>Standard baseline language</span>
-                    )}
-                  </div>
-                </div>
-              </div>
-            )}
+              )}
+            </div>
           </div>
         </div>
 
-        {/* RIGHT COLUMN: Test Sample Explained & Investigation History */}
+        {/* RIGHT COLUMN: Incident Intelligence & Investigation History */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-          {/* Test Sample Explained Card */}
-          <div className="glass-panel" style={{ padding: '24px' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
-              <span className="badge badge-warning">INCIDENT INTELLIGENCE</span>
-              <h3 style={{ fontSize: '1.15rem', fontWeight: 800, color: '#f8fafc' }}>
-                Test Sample Explained
-              </h3>
+          {/* Forensic System Architecture & Clarifications */}
+          <div className="forensic-panel">
+            <div className="forensic-panel-header">
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <span className="f-badge f-badge-accent">INVESTIGATION ARCHITECTURE</span>
+              </div>
             </div>
 
-            <div style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', lineHeight: 1.6 }}>
-              <p style={{ marginBottom: '10px' }}>
-                <strong style={{ color: '#f8fafc' }}>How It Works:</strong> Modern cybercriminals operate across multiple channels (SMS, phone calls, WhatsApp, web domains, and APK apps). SCAMTRACE ingests heterogeneous evidence and proves attribution using explicit deterministic rules.
-              </p>
-
-              <div style={{ backgroundColor: 'rgba(15, 23, 42, 0.6)', padding: '12px', borderRadius: '6px', border: '1px solid var(--border)', marginBottom: '12px' }}>
-                <div style={{ fontWeight: 700, color: 'var(--accent)', marginBottom: '4px' }}>
-                  Frequently Asked: Is WhatsApp Mandatory?
-                </div>
-                <div>
-                  <strong style={{ color: '#f8fafc' }}>No, absolutely not!</strong> A case can be a single SMS, a phone call transcript, an email, or any combination. WhatsApp is merely one optional communication channel among many.
-                </div>
+            <div className="forensic-panel-body" style={{ fontSize: '0.82rem', color: 'var(--text-secondary)', lineHeight: 1.6 }}>
+              <div style={{ marginBottom: '12px' }}>
+                <strong style={{ color: 'var(--text-primary)' }}>Is WhatsApp Mandatory?</strong>
+                <p style={{ marginTop: '2px', color: 'var(--text-secondary)' }}>
+                  <strong style={{ color: 'var(--success)' }}>No.</strong> An incident may originate through an SMS alone, a voice call (vishing), a malicious APK dropper, an email, or any combination. WhatsApp is merely one optional communication channel among many.
+                </p>
               </div>
 
-              <div style={{ backgroundColor: 'rgba(15, 23, 42, 0.6)', padding: '12px', borderRadius: '6px', border: '1px solid var(--border)' }}>
-                <div style={{ fontWeight: 700, color: 'var(--accent)', marginBottom: '4px' }}>
-                  Real-Time Messages Supported
-                </div>
-                <div>
-                  Yes! Any live message or URL entered above is instantly evaluated using trained scikit-learn models, 100% offline with zero live network calls or privacy leakage.
-                </div>
+              <div style={{ marginBottom: '12px', borderTop: '1px solid var(--border-subtle)', paddingTop: '10px' }}>
+                <strong style={{ color: 'var(--text-primary)' }}>Can Real-Time Messages Be Tested?</strong>
+                <p style={{ marginTop: '2px', color: 'var(--text-secondary)' }}>
+                  Yes. Paste any live message or URL in the tester. The analyzer computes offline scikit-learn scores, extracts entities, and cross-references them against all existing evidence in the active case.
+                </p>
+              </div>
+
+              <div style={{ borderTop: '1px solid var(--border-subtle)', paddingTop: '10px' }}>
+                <strong style={{ color: 'var(--text-primary)' }}>Evidence Tamper Protection</strong>
+                <p style={{ marginTop: '2px', color: 'var(--text-secondary)' }}>
+                  Every raw file is hashed with SHA-256 upon ingestion and recorded in an append-only cryptographic audit chain. Any tampering is detected immediately during verification.
+                </p>
               </div>
             </div>
           </div>
 
           {/* Create New Case Form */}
-          <div className="glass-panel" style={{ padding: '20px' }}>
-            <h3 style={{ fontSize: '1.05rem', fontWeight: 800, color: '#f8fafc', marginBottom: '12px' }}>
-              ➕ Create New Investigation Case
-            </h3>
-            <form onSubmit={handleCreateCase}>
-              <div style={{ marginBottom: '10px' }}>
-                <input
-                  type="text"
-                  placeholder="Case Title (e.g. Incident #482 - SBI Smishing)"
-                  className="form-input"
-                  value={newTitle}
-                  onChange={(e) => setNewTitle(e.target.value)}
-                />
-              </div>
-              <div style={{ marginBottom: '12px' }}>
-                <textarea
-                  placeholder="Case Description or Victim Statement..."
-                  className="form-textarea"
-                  rows={2}
-                  value={newDesc}
-                  onChange={(e) => setNewDesc(e.target.value)}
-                />
-              </div>
-              <button type="submit" className="btn-primary" style={{ width: '100%', fontSize: '0.85rem' }}>
-                Create Blank Case
-              </button>
-            </form>
+          <div className="forensic-panel">
+            <div className="forensic-panel-header">
+              <span style={{ fontWeight: 700, fontSize: '0.85rem', color: 'var(--text-primary)', textTransform: 'uppercase' }}>
+                ➕ Create Investigation Case
+              </span>
+            </div>
+
+            <div className="forensic-panel-body">
+              <form onSubmit={handleCreateCase}>
+                <div style={{ marginBottom: '10px' }}>
+                  <label style={{ display: 'block', fontSize: '0.7rem', color: 'var(--text-muted)', fontWeight: 700, marginBottom: '4px', textTransform: 'uppercase' }}>
+                    Case Title
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="e.g. Incident #104 - SBI Smishing"
+                    className="f-input"
+                    value={newTitle}
+                    onChange={(e) => setNewTitle(e.target.value)}
+                  />
+                </div>
+                <div style={{ marginBottom: '12px' }}>
+                  <label style={{ display: 'block', fontSize: '0.7rem', color: 'var(--text-muted)', fontWeight: 700, marginBottom: '4px', textTransform: 'uppercase' }}>
+                    Incident Notes / Intake Context
+                  </label>
+                  <textarea
+                    placeholder="Brief description of incident..."
+                    className="f-textarea"
+                    rows={2}
+                    value={newDesc}
+                    onChange={(e) => setNewDesc(e.target.value)}
+                  />
+                </div>
+                <button type="submit" className="f-btn f-btn-primary" style={{ width: '100%', fontSize: '0.82rem' }}>
+                  Create Case Record
+                </button>
+              </form>
+            </div>
           </div>
 
           {/* Investigation History Column */}
-          <div className="glass-panel" style={{ padding: '20px' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
-              <h3 style={{ fontSize: '1.05rem', fontWeight: 800, color: '#f8fafc' }}>
+          <div className="forensic-panel">
+            <div className="forensic-panel-header">
+              <span style={{ fontWeight: 700, fontSize: '0.85rem', color: 'var(--text-primary)', textTransform: 'uppercase' }}>
                 📜 Investigation History ({cases.length})
-              </h3>
-              <button onClick={loadCases} className="btn-secondary" style={{ fontSize: '0.72rem', padding: '3px 8px' }}>
+              </span>
+              <button onClick={loadCases} className="f-btn f-btn-outline" style={{ fontSize: '0.72rem', padding: '2px 8px' }}>
                 Refresh
               </button>
             </div>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', maxHeight: '360px', overflowY: 'auto' }}>
+            <div className="forensic-panel-body" style={{ padding: '8px', maxHeight: '420px', overflowY: 'auto' }}>
               {cases.length === 0 ? (
-                <div style={{ color: 'var(--text-muted)', fontSize: '0.85rem', textAlign: 'center', padding: '16px' }}>
+                <div style={{ color: 'var(--text-muted)', fontSize: '0.82rem', textAlign: 'center', padding: '24px' }}>
                   No cases recorded yet.
                 </div>
               ) : (
-                cases.map((c) => {
-                  const isCurrent = c.id === activeCaseId;
-                  return (
-                    <div
-                      key={c.id}
-                      onClick={() => onSelectCase(c.id)}
-                      className="glass-panel-interactive"
-                      style={{
-                        padding: '12px',
-                        cursor: 'pointer',
-                        borderColor: isCurrent ? 'var(--accent)' : 'var(--border)',
-                        backgroundColor: isCurrent ? 'rgba(56, 189, 248, 0.08)' : 'rgba(30, 41, 59, 0.5)',
-                      }}
-                    >
-                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                        <span style={{ fontWeight: 700, fontSize: '0.9rem', color: isCurrent ? 'var(--accent)' : '#f8fafc' }}>
-                          {c.title}
-                        </span>
-                        <span
-                          className={`badge ${c.status === 'open' ? 'badge-success' : 'badge-muted'}`}
-                          style={{ fontSize: '0.65rem' }}
-                        >
-                          {c.status}
-                        </span>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                  {cases.map((c) => {
+                    const isCurrent = c.id === activeCaseId;
+                    return (
+                      <div
+                        key={c.id}
+                        onClick={() => onSelectCase(c.id)}
+                        style={{
+                          padding: '10px 12px',
+                          borderRadius: '4px',
+                          cursor: 'pointer',
+                          border: isCurrent ? '1px solid var(--accent)' : '1px solid var(--border)',
+                          backgroundColor: isCurrent ? 'rgba(56, 189, 248, 0.08)' : 'var(--bg-table-header)',
+                          transition: 'all 0.15s ease',
+                        }}
+                      >
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                          <span style={{ fontWeight: 700, fontSize: '0.85rem', color: isCurrent ? 'var(--accent)' : 'var(--text-primary)' }}>
+                            {c.title}
+                          </span>
+                          <span
+                            className={`f-badge ${c.status === 'open' ? 'f-badge-success' : 'f-badge-low'}`}
+                            style={{ fontSize: '0.62rem' }}
+                          >
+                            {c.status}
+                          </span>
+                        </div>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '4px' }}>
+                          <span style={{ fontSize: '0.72rem', color: 'var(--text-muted)' }}>
+                            {c.evidence_count} evidence items
+                          </span>
+                          <span style={{ fontSize: '0.7rem', fontFamily: 'var(--font-mono)', color: 'var(--text-muted)' }}>
+                            {c.created_at.substring(0, 10)}
+                          </span>
+                        </div>
                       </div>
-                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '6px' }}>
-                        <span style={{ fontSize: '0.75rem', color: 'var(--text-secondary)' }}>
-                          {c.evidence_count} evidence items
-                        </span>
-                        <span style={{ fontSize: '0.72rem', fontFamily: 'var(--font-mono)', color: 'var(--text-muted)' }}>
-                          {c.created_at.substring(0, 10)}
-                        </span>
-                      </div>
-                    </div>
-                  );
-                })
+                    );
+                  })}
+                </div>
               )}
             </div>
           </div>

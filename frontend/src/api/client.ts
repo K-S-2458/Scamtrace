@@ -236,3 +236,50 @@ export const apiVerifyCase = (caseId: string) =>
 // Report
 export const apiGetReportJson = (caseId: string) =>
   fetchJson<any>(`/cases/${caseId}/report.json`);
+
+// Findings
+export interface IdentifiedEntityItem {
+  value: string;
+  raw_value: string;
+  evidence_ids: string[];
+}
+
+export interface KeyFindingItem {
+  id: string;
+  title: string;
+  explanation: string;
+  evidence_ids: string[];
+  confidence: number;
+  strength: string;
+  rule_id: string;
+}
+
+export interface FindingsResponse {
+  case_id: string;
+  title: string;
+  evidence_count: number;
+  connected_artifacts_count?: number;
+  suspicious_indicators_count?: number;
+  evidence_confidence?: number;
+  risk_score: number;
+  risk_band: string;
+  identified_entities: {
+    phone_numbers: IdentifiedEntityItem[];
+    domains: IdentifiedEntityItem[];
+    upi_handles: IdentifiedEntityItem[];
+    package_names: IdentifiedEntityItem[];
+    certificate_hashes: IdentifiedEntityItem[];
+    brand_names: IdentifiedEntityItem[];
+    amounts: IdentifiedEntityItem[];
+  };
+  key_findings: KeyFindingItem[];
+  conclusion: {
+    summary: string;
+    confirmed_observations: string[];
+    system_inferences: string[];
+    unverified_possibilities: string[];
+  };
+}
+
+export const apiGetFindings = (caseId: string) =>
+  fetchJson<FindingsResponse>(`/cases/${caseId}/findings`);
