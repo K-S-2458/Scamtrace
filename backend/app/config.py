@@ -5,8 +5,13 @@ from pathlib import Path
 from typing import Dict, List
 
 # Base Directories
+import os
 ROOT_DIR = Path(__file__).resolve().parent.parent.parent
-STORAGE_DIR = ROOT_DIR / "storage"
+# Support Vercel and serverless read-only filesystems by routing storage to /tmp
+if os.environ.get("VERCEL"):
+    STORAGE_DIR = Path("/tmp/storage")
+else:
+    STORAGE_DIR = Path(os.environ.get("STORAGE_DIR", str(ROOT_DIR / "storage")))
 CASES_DIR = STORAGE_DIR / "cases"
 DATABASE_PATH = STORAGE_DIR / "scamtrace.db"
 DATABASE_URL = f"sqlite:///{DATABASE_PATH.as_posix()}"

@@ -1,0 +1,10 @@
+{
+  "buildCommand": "cd frontend && npm install && npm run build && cd ..",
+  "outputDirectory": "frontend/dist",
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/index.py"
+    }
+  ]
+}

@@ -36,6 +36,7 @@ frontend/dist/
 frontend/node_modules/
 
 # SCAMTRACE specific
+cloudflared.exe
 data/raw/
 data/samples_restricted/
 uploads/
