@@ -46,3 +46,14 @@ def on_startup():
 def health_check():
     """System health check endpoint."""
     return {"status": "ok", "service": "scamtrace-ai", "version": "0.1.0"}
+
+
+import os
+from fastapi.staticfiles import StaticFiles
+
+frontend_dist = os.path.abspath(
+    os.path.join(os.path.dirname(__file__), "..", "..", "frontend", "dist")
+)
+if os.path.exists(frontend_dist):
+    app.mount("/", StaticFiles(directory=frontend_dist, html=True), name="frontend")
+
