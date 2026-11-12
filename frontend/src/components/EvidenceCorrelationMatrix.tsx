@@ -302,29 +302,29 @@ export const EvidenceCorrelationMatrix: React.FC<EvidenceCorrelationMatrixProps>
                         ((selectedPair.rowEv.id === rowEv.id && selectedPair.colEv.id === colEv.id) ||
                           (selectedPair.rowEv.id === colEv.id && selectedPair.colEv.id === rowEv.id));
 
-                      let bgColor = 'var(--bg-input)';
+                      let bgColor = '#ffffff';
                       let textColor = 'var(--text-muted)';
-                      let borderColor = 'transparent';
+                      let borderColor = '#f1f5f9';
 
                       if (isSelf) {
-                        bgColor = 'rgba(15, 23, 42, 0.4)';
+                        bgColor = '#f8fafc';
                       } else if (isStrong) {
-                        bgColor = 'rgba(16, 185, 129, 0.12)';
-                        textColor = '#34d399';
-                        borderColor = 'rgba(16, 185, 129, 0.3)';
+                        bgColor = '#ecfdf5';
+                        textColor = '#065f46';
+                        borderColor = '#a7f3d0';
                       } else if (isPossible) {
-                        bgColor = 'rgba(245, 158, 11, 0.12)';
-                        textColor = '#fbbf24';
-                        borderColor = 'rgba(245, 158, 11, 0.3)';
+                        bgColor = '#fffbeb';
+                        textColor = '#92400e';
+                        borderColor = '#fde68a';
                       } else if (isWeak) {
-                        bgColor = 'rgba(100, 116, 139, 0.12)';
-                        textColor = '#94a3b8';
-                        borderColor = 'rgba(100, 116, 139, 0.25)';
+                        bgColor = '#f8fafc';
+                        textColor = '#64748b';
+                        borderColor = '#e2e8f0';
                       }
 
                       if (isSelected) {
                         borderColor = 'var(--accent)';
-                        bgColor = 'rgba(56, 189, 248, 0.18)';
+                        bgColor = '#eef2ff';
                       }
 
                       return (
@@ -477,8 +477,8 @@ export const EvidenceCorrelationMatrix: React.FC<EvidenceCorrelationMatrixProps>
                           padding: '12px',
                         }}
                       >
-                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '6px' }}>
-                          <span style={{ fontWeight: 700, fontSize: '0.82rem', color: 'var(--text-primary)' }}>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
+                          <span style={{ fontWeight: 700, fontSize: '0.88rem', color: 'var(--text-primary)' }}>
                             {edge.link_type.replace(/_/g, ' ')}
                           </span>
                           <span className={`f-badge ${strengthClass}`} style={{ fontSize: '0.68rem' }}>
@@ -487,9 +487,27 @@ export const EvidenceCorrelationMatrix: React.FC<EvidenceCorrelationMatrixProps>
                         </div>
 
                         {/* Plain Language Explanation */}
-                        <p style={{ fontSize: '0.78rem', color: 'var(--text-secondary)', lineHeight: 1.45, marginBottom: '8px' }}>
+                        <p style={{ fontSize: '0.78rem', color: 'var(--text-secondary)', lineHeight: 1.45, marginBottom: '10px' }}>
                           {edge.reason}
                         </p>
+
+                        {/* Spec Rows Matching Image 2 */}
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', marginBottom: '10px' }}>
+                          <div className="spec-row">
+                            <span className="spec-label">Correlation Rule</span>
+                            <span className="spec-value" style={{ fontSize: '0.78rem' }}>{edge.link_type}</span>
+                          </div>
+                          <div className="spec-row">
+                            <span className="spec-label">Confidence Score</span>
+                            <span className="spec-value" style={{ fontSize: '0.78rem' }}>{confPct}%</span>
+                          </div>
+                          <div className="spec-row">
+                            <span className="spec-label">Evidence Citation</span>
+                            <span className="spec-value" style={{ fontSize: '0.75rem', fontFamily: 'var(--font-mono)' }}>
+                              [{selectedPair.rowEv.id}, {selectedPair.colEv.id}]
+                            </span>
+                          </div>
+                        </div>
 
                         {/* Shared Entity Tags */}
                         {supp && Object.keys(supp).length > 0 && (

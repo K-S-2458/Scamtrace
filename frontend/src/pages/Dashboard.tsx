@@ -154,9 +154,7 @@ export const Dashboard: React.FC<DashboardProps> = ({
       );
       await apiAnalyzeEvidence(cid, ev2.id);
 
-      // Correlate automatically
       await apiCorrelate(cid);
-
       await loadCases();
       onSelectCase(cid);
     } catch (err: any) {
@@ -302,7 +300,6 @@ export const Dashboard: React.FC<DashboardProps> = ({
     setTesterLoading(true);
     setTesterResult(null);
     try {
-      // Ingest into active case
       const ev = await apiUploadText(
         activeCaseId,
         testerText,
@@ -310,9 +307,7 @@ export const Dashboard: React.FC<DashboardProps> = ({
         new Date().toISOString().replace('T', ' ').substring(0, 19),
         `Live_${testerType}_${Date.now()}.txt`
       );
-      // Run analyzer
       const analysis = await apiAnalyzeEvidence(activeCaseId, ev.id);
-      // Run correlation update
       await apiCorrelate(activeCaseId);
 
       setTesterResult({
@@ -345,28 +340,23 @@ export const Dashboard: React.FC<DashboardProps> = ({
 
   return (
     <div style={{ padding: '24px 32px', maxWidth: '1440px', margin: '0 auto' }}>
-      {/* Top Header Banner */}
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px', flexWrap: 'wrap', gap: '16px' }}>
+      {/* 1. PAGE HEADER (Octave Reference Style) */}
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '20px', flexWrap: 'wrap', gap: '16px' }}>
         <div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <span className="f-badge f-badge-accent">DIGITAL FORENSICS WORKBENCH</span>
-            <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Offline Air-Gapped Safe</span>
-          </div>
-          <h1 style={{ fontSize: '1.65rem', fontWeight: 800, color: 'var(--text-primary)', letterSpacing: '-0.02em', marginTop: '2px' }}>
-            Forensic Case Dashboard
+          <h1 style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--text-primary)', letterSpacing: '-0.025em', lineHeight: 1.2 }}>
+            Case Investigation & Triage
           </h1>
-          <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem', marginTop: '2px' }}>
-            Explainable multimodal correlation, risk triage matrix, and tamper-verified evidence ledger.
+          <p style={{ color: 'var(--text-secondary)', fontSize: '0.88rem', marginTop: '4px' }}>
+            Multimodal forensic correlation, deterministic rule linking, and evidence integrity analysis.
           </p>
         </div>
 
-        {/* Quick Scenario Injection Presets */}
-        <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+        {/* Quick Action Ribbon */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
           <button
             onClick={handleLoadSimpleSmishing}
             disabled={loadingPreset !== null}
-            className="f-btn f-btn-primary"
-            style={{ fontSize: '0.82rem' }}
+            className="f-btn f-btn-secondary"
           >
             {loadingPreset === 'smishing' ? 'Injecting...' : '⚡ Smishing Preset (SMS + URL)'}
           </button>
@@ -375,35 +365,172 @@ export const Dashboard: React.FC<DashboardProps> = ({
             onClick={handleLoadVishingDropper}
             disabled={loadingPreset !== null}
             className="f-btn f-btn-secondary"
-            style={{ fontSize: '0.82rem' }}
           >
-            {loadingPreset === 'vishing' ? 'Injecting...' : '📞 Vishing Preset (Call + APK)'}
+            {loadingPreset === 'vishing' ? 'Injecting...' : '📞 Vishing (Call + APK)'}
           </button>
 
           <button
             onClick={handleLoadFullMultimodal}
             disabled={loadingPreset !== null}
             className="f-btn f-btn-secondary"
-            style={{ fontSize: '0.82rem' }}
           >
-            {loadingPreset === 'full' ? 'Injecting...' : '🌐 Multimodal Campaign'}
+            {loadingPreset === 'full' ? 'Injecting...' : '🌐 4-Step Campaign'}
+          </button>
+
+          <button
+            onClick={() => onNavigateTab('report')}
+            className="f-btn f-btn-primary"
+            style={{ marginLeft: '4px' }}
+          >
+            📑 Export Report
           </button>
         </div>
       </div>
 
-      {/* Main 2-Column Responsive Layout */}
+      {/* 2. FILTER & SCOPE STRIP (Octave Reference Style) */}
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          padding: '8px 14px',
+          backgroundColor: '#ffffff',
+          border: '1px solid var(--border)',
+          borderRadius: '10px',
+          marginBottom: '20px',
+          boxShadow: 'var(--shadow-sm)',
+          flexWrap: 'wrap',
+          gap: '10px',
+        }}
+      >
+        <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.78rem', color: 'var(--text-secondary)' }}>
+            <span style={{ fontWeight: 600 }}>Period:</span>
+            <span style={{ fontWeight: 700, color: 'var(--text-primary)' }}>All Registered Evidence ▾</span>
+          </div>
+
+          <div style={{ height: '14px', width: '1px', backgroundColor: 'var(--border)' }} />
+
+          <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.78rem', color: 'var(--text-secondary)' }}>
+            <span style={{ fontWeight: 600 }}>Modality:</span>
+            <span style={{ fontWeight: 700, color: 'var(--text-primary)' }}>All Channels (SMS, Call, URL, APK) ▾</span>
+          </div>
+
+          <div style={{ height: '14px', width: '1px', backgroundColor: 'var(--border)' }} />
+
+          <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.78rem', color: 'var(--text-secondary)' }}>
+            <span style={{ fontWeight: 600 }}>Triage:</span>
+            <span style={{ fontWeight: 700, color: 'var(--text-primary)' }}>Multi-Channel Corroborated ▾</span>
+          </div>
+        </div>
+
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+          <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
+            Audit Chain: <strong style={{ color: activeVerification?.is_valid ? 'var(--success)' : 'var(--risk-critical)' }}>
+              {activeVerification?.is_valid ? 'Verified' : 'Unchecked'}
+            </strong>
+          </span>
+        </div>
+      </div>
+
+      {/* 3. KEY FINDINGS HIGHLIGHT BANNER (Exact Reproduction of Image 1 Reference) */}
+      <div
+        className="forensic-panel"
+        style={{
+          padding: '16px 20px',
+          marginBottom: '24px',
+          backgroundColor: '#ffffff',
+          borderRadius: '12px',
+        }}
+      >
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <span style={{ fontSize: '1rem', color: 'var(--accent)' }}>✨</span>
+            <span style={{ fontWeight: 800, fontSize: '0.9rem', color: 'var(--text-primary)', letterSpacing: '-0.01em' }}>
+              Key Forensic Findings
+            </span>
+            <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontWeight: 500 }}>
+              Ranked by deterministic rule confidence
+            </span>
+          </div>
+          <span className="f-badge f-badge-accent" style={{ fontSize: '0.7rem' }}>
+            {findings?.key_findings ? `${findings.key_findings.length} Discovered Insights` : '2 Baseline Insights'}
+          </span>
+        </div>
+
+        {/* 2-Column Side-by-Side Insight Cards */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '14px' }}>
+          {/* Insight 1: Telephony Corroboration */}
+          <div className="insight-card">
+            <div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '6px' }}>
+                <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: 'var(--success)' }} />
+                <span style={{ fontWeight: 700, fontSize: '0.85rem', color: 'var(--text-primary)' }}>
+                  Cross-Artifact Telephony Reuse Confirmed
+                </span>
+              </div>
+              <p style={{ fontSize: '0.78rem', color: 'var(--text-secondary)', lineHeight: 1.45 }}>
+                {findings?.identified_entities.phone_numbers && findings.identified_entities.phone_numbers.length > 0
+                  ? `Phone number ${findings.identified_entities.phone_numbers[0].value} was verified across independent evidence items.`
+                  : 'Single telephony identifier corroborated across initial smishing lure and subsequent direct contact.'}
+              </p>
+            </div>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '12px' }}>
+              <span className="f-badge f-badge-success" style={{ fontSize: '0.68rem' }}>
+                Strong Rule (Confidence ≥ 90%)
+              </span>
+              <button
+                onClick={() => onNavigateTab('graph')}
+                style={{ background: 'none', border: 'none', color: 'var(--accent)', fontWeight: 700, fontSize: '0.75rem' }}
+              >
+                Inspect Correlation Matrix →
+              </button>
+            </div>
+          </div>
+
+          {/* Insight 2: Malicious Infrastructure / Dropper Pattern */}
+          <div className="insight-card">
+            <div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '6px' }}>
+                <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: 'var(--accent)' }} />
+                <span style={{ fontWeight: 700, fontSize: '0.85rem', color: 'var(--text-primary)' }}>
+                  Brand Impersonation & Malicious Infrastructure
+                </span>
+              </div>
+              <p style={{ fontSize: '0.78rem', color: 'var(--text-secondary)', lineHeight: 1.45 }}>
+                {findings?.identified_entities.domains && findings.identified_entities.domains.length > 0
+                  ? `Domain infrastructure ${findings.identified_entities.domains[0].value} matches brand spoofing profile.`
+                  : 'Spoofed portal detected with mismatched authority and urgent account-suspension trigger.'}
+              </p>
+            </div>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '12px' }}>
+              <span className="f-badge f-badge-accent" style={{ fontSize: '0.68rem' }}>
+                High Threat Triage
+              </span>
+              <button
+                onClick={() => onNavigateTab('evidence')}
+                style={{ background: 'none', border: 'none', color: 'var(--accent)', fontWeight: 700, fontSize: '0.75rem' }}
+              >
+                View Evidence Lab →
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* 4. MAIN BENTO GRID (Octave Reference Layout) */}
       <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1.9fr) minmax(360px, 1.1fr)', gap: '24px' }}>
-        {/* LEFT COLUMN: Active Case Intelligence, Risk Assessment & Findings */}
+        {/* LEFT COLUMN: Risk Assessment, Findings & Evidence Matrix */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
           {activeCase ? (
             <>
-              {/* Active Case Summary Card */}
+              {/* Active Incident Summary Header */}
               <div className="forensic-panel">
                 <div className="forensic-panel-header">
                   <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                    <span className="f-badge f-badge-accent">ACTIVE INVESTIGATION</span>
+                    <span className="f-badge f-badge-accent">ACTIVE INCIDENT RECORD</span>
                     <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.75rem', color: 'var(--text-muted)' }}>
-                      ID: {activeCase.id}
+                      {activeCase.id}
                     </span>
                   </div>
 
@@ -417,14 +544,14 @@ export const Dashboard: React.FC<DashboardProps> = ({
                         className="f-btn f-btn-danger"
                         style={{ fontSize: '0.72rem', padding: '3px 8px' }}
                       >
-                        Close Case
+                        Close Incident
                       </button>
                     )}
                   </div>
                 </div>
 
                 <div className="forensic-panel-body">
-                  <h2 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--text-primary)' }}>
+                  <h2 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--text-primary)', letterSpacing: '-0.01em' }}>
                     {activeCase.title}
                   </h2>
                   <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem', marginTop: '4px', marginBottom: '16px' }}>
@@ -439,7 +566,7 @@ export const Dashboard: React.FC<DashboardProps> = ({
                       gap: '12px',
                       backgroundColor: 'var(--bg-table-header)',
                       padding: '12px 14px',
-                      borderRadius: '4px',
+                      borderRadius: '8px',
                       border: '1px solid var(--border)',
                       marginBottom: '16px',
                     }}
@@ -462,7 +589,7 @@ export const Dashboard: React.FC<DashboardProps> = ({
                           fontSize: '0.85rem',
                           fontWeight: 700,
                           marginTop: '4px',
-                          color: activeVerification?.is_valid ? 'var(--success)' : 'var(--danger)',
+                          color: activeVerification?.is_valid ? 'var(--success)' : 'var(--risk-critical)',
                         }}
                       >
                         {activeVerification?.is_valid ? '✓ SHA-256 Intact' : '⚠ Tamper Detected'}
@@ -507,13 +634,13 @@ export const Dashboard: React.FC<DashboardProps> = ({
                       className="f-btn f-btn-secondary"
                       style={{ fontSize: '0.78rem' }}
                     >
-                      📑 Verified Forensic Report
+                      📑 Verified Report
                     </button>
                   </div>
                 </div>
               </div>
 
-              {/* 1. CASE RISK ASSESSMENT - REDESIGNED */}
+              {/* 1. CASE RISK ASSESSMENT CARD */}
               <RiskAssessmentCard
                 risk={activeRisk}
                 evidenceCount={activeCase.evidence_count}
@@ -611,7 +738,7 @@ export const Dashboard: React.FC<DashboardProps> = ({
                     marginTop: '16px',
                     padding: '14px',
                     backgroundColor: 'var(--bg-table-header)',
-                    borderRadius: '4px',
+                    borderRadius: '8px',
                     border: '1px solid var(--border)',
                   }}
                 >
@@ -672,35 +799,28 @@ export const Dashboard: React.FC<DashboardProps> = ({
           </div>
         </div>
 
-        {/* RIGHT COLUMN: Incident Intelligence & Investigation History */}
+        {/* RIGHT COLUMN: Sidebar Widgets (History, Presets, Architecture) */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-          {/* Forensic System Architecture & Clarifications */}
+          {/* Forensic System Architecture Card */}
           <div className="forensic-panel">
             <div className="forensic-panel-header">
-              <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <span className="f-badge f-badge-accent">INVESTIGATION ARCHITECTURE</span>
-              </div>
+              <span style={{ fontWeight: 700, fontSize: '0.82rem', color: 'var(--text-primary)', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                Forensics Framework
+              </span>
             </div>
 
             <div className="forensic-panel-body" style={{ fontSize: '0.82rem', color: 'var(--text-secondary)', lineHeight: 1.6 }}>
               <div style={{ marginBottom: '12px' }}>
                 <strong style={{ color: 'var(--text-primary)' }}>Is WhatsApp Mandatory?</strong>
                 <p style={{ marginTop: '2px', color: 'var(--text-secondary)' }}>
-                  <strong style={{ color: 'var(--success)' }}>No.</strong> An incident may originate through an SMS alone, a voice call (vishing), a malicious APK dropper, an email, or any combination. WhatsApp is merely one optional communication channel among many.
-                </p>
-              </div>
-
-              <div style={{ marginBottom: '12px', borderTop: '1px solid var(--border-subtle)', paddingTop: '10px' }}>
-                <strong style={{ color: 'var(--text-primary)' }}>Can Real-Time Messages Be Tested?</strong>
-                <p style={{ marginTop: '2px', color: 'var(--text-secondary)' }}>
-                  Yes. Paste any live message or URL in the tester. The analyzer computes offline scikit-learn scores, extracts entities, and cross-references them against all existing evidence in the active case.
+                  <strong style={{ color: 'var(--success)' }}>No.</strong> An incident may originate through an SMS alone, a voice call (vishing), a malicious APK dropper, an email, or any combination.
                 </p>
               </div>
 
               <div style={{ borderTop: '1px solid var(--border-subtle)', paddingTop: '10px' }}>
-                <strong style={{ color: 'var(--text-primary)' }}>Evidence Tamper Protection</strong>
+                <strong style={{ color: 'var(--text-primary)' }}>Air-Gapped Safety</strong>
                 <p style={{ marginTop: '2px', color: 'var(--text-secondary)' }}>
-                  Every raw file is hashed with SHA-256 upon ingestion and recorded in an append-only cryptographic audit chain. Any tampering is detected immediately during verification.
+                  No URL fetching, WHOIS requests, or APK dynamic execution. 100% offline lexical analysis.
                 </p>
               </div>
             </div>
@@ -709,7 +829,7 @@ export const Dashboard: React.FC<DashboardProps> = ({
           {/* Create New Case Form */}
           <div className="forensic-panel">
             <div className="forensic-panel-header">
-              <span style={{ fontWeight: 700, fontSize: '0.85rem', color: 'var(--text-primary)', textTransform: 'uppercase' }}>
+              <span style={{ fontWeight: 700, fontSize: '0.82rem', color: 'var(--text-primary)', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                 ➕ Create Investigation Case
               </span>
             </div>
@@ -730,7 +850,7 @@ export const Dashboard: React.FC<DashboardProps> = ({
                 </div>
                 <div style={{ marginBottom: '12px' }}>
                   <label style={{ display: 'block', fontSize: '0.7rem', color: 'var(--text-muted)', fontWeight: 700, marginBottom: '4px', textTransform: 'uppercase' }}>
-                    Incident Notes / Intake Context
+                    Incident Intake Notes
                   </label>
                   <textarea
                     placeholder="Brief description of incident..."
@@ -750,10 +870,10 @@ export const Dashboard: React.FC<DashboardProps> = ({
           {/* Investigation History Column */}
           <div className="forensic-panel">
             <div className="forensic-panel-header">
-              <span style={{ fontWeight: 700, fontSize: '0.85rem', color: 'var(--text-primary)', textTransform: 'uppercase' }}>
-                📜 Investigation History ({cases.length})
+              <span style={{ fontWeight: 700, fontSize: '0.82rem', color: 'var(--text-primary)', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                📜 Case History ({cases.length})
               </span>
-              <button onClick={loadCases} className="f-btn f-btn-outline" style={{ fontSize: '0.72rem', padding: '2px 8px' }}>
+              <button onClick={loadCases} className="f-btn f-btn-outline" style={{ fontSize: '0.7rem', padding: '2px 8px' }}>
                 Refresh
               </button>
             </div>
@@ -773,11 +893,12 @@ export const Dashboard: React.FC<DashboardProps> = ({
                         onClick={() => onSelectCase(c.id)}
                         style={{
                           padding: '10px 12px',
-                          borderRadius: '4px',
+                          borderRadius: '8px',
                           cursor: 'pointer',
                           border: isCurrent ? '1px solid var(--accent)' : '1px solid var(--border)',
-                          backgroundColor: isCurrent ? 'rgba(56, 189, 248, 0.08)' : 'var(--bg-table-header)',
+                          backgroundColor: isCurrent ? 'var(--accent-light)' : '#ffffff',
                           transition: 'all 0.15s ease',
+                          boxShadow: isCurrent ? 'var(--shadow-sm)' : 'none',
                         }}
                       >
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>

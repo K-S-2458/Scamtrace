@@ -269,15 +269,16 @@ export const InvestigationFindingsCard: React.FC<InvestigationFindingsCardProps>
             {/* 1. Confirmed Observations */}
             <div
               style={{
-                backgroundColor: 'var(--bg-secondary)',
-                border: '1px solid rgba(16, 185, 129, 0.3)',
-                borderRadius: '4px',
-                padding: '12px 14px',
+                backgroundColor: '#ffffff',
+                border: '1px solid #a7f3d0',
+                borderRadius: '8px',
+                padding: '14px 16px',
+                boxShadow: 'var(--shadow-sm)',
               }}
             >
               <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '8px' }}>
                 <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#10b981' }} />
-                <span style={{ fontSize: '0.75rem', fontWeight: 700, color: '#6ee7b7', textTransform: 'uppercase' }}>
+                <span style={{ fontSize: '0.75rem', fontWeight: 700, color: '#065f46', textTransform: 'uppercase' }}>
                   Confirmed Observations ({conclusion.confirmed_observations.length})
                 </span>
               </div>
@@ -293,15 +294,16 @@ export const InvestigationFindingsCard: React.FC<InvestigationFindingsCardProps>
             {/* 2. System-Generated Inferences */}
             <div
               style={{
-                backgroundColor: 'var(--bg-secondary)',
-                border: '1px solid rgba(245, 158, 11, 0.3)',
-                borderRadius: '4px',
-                padding: '12px 14px',
+                backgroundColor: '#ffffff',
+                border: '1px solid #fde68a',
+                borderRadius: '8px',
+                padding: '14px 16px',
+                boxShadow: 'var(--shadow-sm)',
               }}
             >
               <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '8px' }}>
                 <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#f59e0b' }} />
-                <span style={{ fontSize: '0.75rem', fontWeight: 700, color: '#fde68a', textTransform: 'uppercase' }}>
+                <span style={{ fontSize: '0.75rem', fontWeight: 700, color: '#92400e', textTransform: 'uppercase' }}>
                   System-Generated Inferences ({conclusion.system_inferences.length})
                 </span>
               </div>
@@ -317,15 +319,16 @@ export const InvestigationFindingsCard: React.FC<InvestigationFindingsCardProps>
             {/* 3. Unverified Possibilities */}
             <div
               style={{
-                backgroundColor: 'var(--bg-secondary)',
-                border: '1px solid rgba(100, 116, 139, 0.3)',
-                borderRadius: '4px',
-                padding: '12px 14px',
+                backgroundColor: '#ffffff',
+                border: '1px solid #e2e8f0',
+                borderRadius: '8px',
+                padding: '14px 16px',
+                boxShadow: 'var(--shadow-sm)',
               }}
             >
               <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '8px' }}>
                 <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#64748b' }} />
-                <span style={{ fontSize: '0.75rem', fontWeight: 700, color: '#94a3b8', textTransform: 'uppercase' }}>
+                <span style={{ fontSize: '0.75rem', fontWeight: 700, color: '#475569', textTransform: 'uppercase' }}>
                   Unverified Possibilities ({conclusion.unverified_possibilities.length})
                 </span>
               </div>

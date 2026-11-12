@@ -1,42 +1,71 @@
-/* SCAMTRACE AI - Enterprise Digital Forensics & Cybercrime Investigation Theme */
+/* SCAMTRACE AI - Modern Enterprise SaaS Design System (Octave / Dribbble Reference) */
 
 :root {
-  --bg-primary: #0b0f19;
-  --bg-secondary: #111827;
-  --bg-card: #151e2e;
-  --bg-card-hover: #1c2638;
-  --bg-input: #0f172a;
-  --bg-table-header: #0f172a;
-  --bg-table-row-alt: #101725;
+  /* Canvas & Surface Colors */
+  --bg-primary: #f8fafc;        /* App Canvas background: Slate 50 */
+  --bg-secondary: #ffffff;      /* Sidebar, Topbar, Modals: Pure White */
+  --bg-card: #ffffff;           /* Cards & Panels: Pure White */
+  --bg-card-hover: #f8fafc;
+  --bg-input: #ffffff;
+  --bg-table-header: #f8fafc;
+  --bg-table-row-alt: #fcfdfe;
+  --bg-sidebar: #ffffff;
+  --bg-drawer: #ffffff;
 
-  --border: #263345;
-  --border-subtle: #1e293b;
-  --border-focus: #38bdf8;
+  /* Refined Borders */
+  --border: #e2e8f0;            /* Slate 200 */
+  --border-subtle: #f1f5f9;     /* Slate 100 */
+  --border-focus: #5236ec;      /* Vibrant Indigo */
 
-  --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
+  /* Typography */
+  --text-primary: #0f172a;      /* Slate 900 */
+  --text-secondary: #475569;    /* Slate 600 */
+  --text-muted: #94a3b8;        /* Slate 400 */
+  --text-link: #5236ec;
 
-  --accent: #38bdf8;
-  --accent-hover: #0284c7;
-  --accent-bg: rgba(56, 189, 248, 0.08);
+  /* Primary Brand Accent (Vibrant Indigo / Purple) */
+  --accent: #5236ec;
+  --accent-hover: #4329d4;
+  --accent-light: #f5f3ff;
+  --accent-border: #ddd6fe;
 
-  /* Five-tier risk scale */
-  --risk-low: #64748b;
-  --risk-low-bg: rgba(100, 116, 139, 0.12);
-  --risk-guarded: #0ea5e9;
-  --risk-guarded-bg: rgba(14, 165, 233, 0.12);
+  /* Five-tier Forensic Risk Scale */
+  --risk-low: #10b981;
+  --risk-low-bg: #ecfdf5;
+  --risk-low-text: #065f46;
+  --risk-low-border: #a7f3d0;
+
+  --risk-guarded: #0284c7;
+  --risk-guarded-bg: #f0f9ff;
+  --risk-guarded-text: #0369a1;
+  --risk-guarded-border: #bae6fd;
+
   --risk-suspicious: #f59e0b;
-  --risk-suspicious-bg: rgba(245, 158, 11, 0.12);
+  --risk-suspicious-bg: #fffbeb;
+  --risk-suspicious-text: #92400e;
+  --risk-suspicious-border: #fde68a;
+
   --risk-high: #ea580c;
-  --risk-high-bg: rgba(234, 88, 12, 0.12);
-  --risk-critical: #dc2626;
-  --risk-critical-bg: rgba(220, 38, 38, 0.12);
+  --risk-high-bg: #fff7ed;
+  --risk-high-text: #9a3412;
+  --risk-high-border: #fed7aa;
+
+  --risk-critical: #ef4444;
+  --risk-critical-bg: #fef2f2;
+  --risk-critical-text: #991b1b;
+  --risk-critical-border: #fecaca;
 
   --success: #10b981;
-  --success-bg: rgba(16, 185, 129, 0.1);
+  --success-bg: #ecfdf5;
+  --success-border: #a7f3d0;
+  --success-text: #065f46;
 
-  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', Roboto, sans-serif;
+  /* Modern Subtle Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.02);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.06), 0 4px 6px -4px rgba(0, 0, 0, 0.02);
+
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
 }
 
@@ -67,7 +96,7 @@ a:hover {
 button {
   cursor: pointer;
   font-family: inherit;
-  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  transition: all 0.15s ease;
 }
 
 code, pre {
@@ -83,174 +112,268 @@ code, pre {
   background: var(--bg-primary);
 }
 ::-webkit-scrollbar-thumb {
-  background: #263345;
+  background: #cbd5e1;
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #374151;
+  background: #94a3b8;
 }
 
-/* Enterprise Panels and Cards */
+/* Enterprise Bento Cards & Panels */
 .forensic-panel {
   background-color: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: 6px;
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.forensic-panel:hover {
+  box-shadow: var(--shadow-md);
 }
 
 .forensic-panel-header {
   padding: 14px 18px;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--border-subtle);
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
 }
 
 .forensic-panel-body {
   padding: 18px;
 }
 
-/* Forensic Badges */
-.f-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  padding: 2px 8px;
-  border-radius: 4px;
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-}
-
-.f-badge-low {
-  background: var(--risk-low-bg);
-  color: #94a3b8;
-  border: 1px solid rgba(148, 163, 184, 0.25);
-}
-
-.f-badge-guarded {
-  background: var(--risk-guarded-bg);
-  color: #7dd3fc;
-  border: 1px solid rgba(14, 165, 233, 0.25);
-}
-
-.f-badge-suspicious {
-  background: var(--risk-suspicious-bg);
-  color: #fde68a;
-  border: 1px solid rgba(245, 158, 11, 0.25);
-}
-
-.f-badge-high {
-  background: var(--risk-high-bg);
-  color: #fdba74;
-  border: 1px solid rgba(234, 88, 12, 0.25);
-}
-
-.f-badge-critical {
-  background: var(--risk-critical-bg);
-  color: #fca5a5;
-  border: 1px solid rgba(220, 38, 38, 0.25);
-}
-
-.f-badge-accent {
-  background: var(--accent-bg);
-  color: var(--accent);
-  border: 1px solid rgba(56, 189, 248, 0.25);
-}
-
-.f-badge-success {
-  background: var(--success-bg);
-  color: #6ee7b7;
-  border: 1px solid rgba(16, 185, 129, 0.25);
-}
-
-/* Form Controls */
-.f-input, .f-select, .f-textarea {
-  width: 100%;
-  background: var(--bg-input);
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  padding: 8px 12px;
-  color: var(--text-primary);
-  font-size: 0.85rem;
-  outline: none;
-  transition: border-color 0.15s ease;
-}
-
-.f-input:focus, .f-select:focus, .f-textarea:focus {
-  border-color: var(--border-focus);
-}
-
-/* Button System */
+/* Buttons */
 .f-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 6px;
-  padding: 8px 14px;
-  border-radius: 4px;
+  padding: 7px 14px;
+  border-radius: 8px;
   font-size: 0.82rem;
   font-weight: 600;
-  border: 1px solid transparent;
+  transition: all 0.15s ease;
+  white-space: nowrap;
 }
 
 .f-btn-primary {
-  background: #0284c7;
+  background-color: var(--accent);
   color: #ffffff;
-  border-color: #0369a1;
+  border: 1px solid var(--accent);
+  box-shadow: 0 1px 2px 0 rgba(82, 54, 236, 0.25);
 }
 
-.f-btn-primary:hover {
-  background: #0369a1;
+.f-btn-primary:hover:not(:disabled) {
+  background-color: var(--accent-hover);
+  border-color: var(--accent-hover);
+  box-shadow: 0 2px 4px 0 rgba(82, 54, 236, 0.35);
+}
+
+.f-btn-primary:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
 }
 
 .f-btn-secondary {
-  background: #1e293b;
+  background-color: #ffffff;
   color: var(--text-primary);
-  border-color: var(--border);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
 }
 
-.f-btn-secondary:hover {
-  background: #273549;
-  border-color: #475569;
+.f-btn-secondary:hover:not(:disabled) {
+  background-color: #f8fafc;
+  border-color: #cbd5e1;
 }
 
 .f-btn-outline {
-  background: transparent;
+  background-color: transparent;
   color: var(--text-secondary);
-  border-color: var(--border);
+  border: 1px solid var(--border);
 }
 
-.f-btn-outline:hover {
-  background: #1e293b;
+.f-btn-outline:hover:not(:disabled) {
+  background-color: #f1f5f9;
   color: var(--text-primary);
 }
 
-/* Table */
+.f-btn-danger {
+  background-color: #ffffff;
+  color: #dc2626;
+  border: 1px solid #fecaca;
+}
+
+.f-btn-danger:hover {
+  background-color: #fef2f2;
+}
+
+/* Form Controls */
+.f-input, .f-select, .f-textarea {
+  width: 100%;
+  padding: 8px 12px;
+  background-color: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-size: 0.85rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.f-input:focus, .f-select:focus, .f-textarea:focus {
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 3px rgba(82, 54, 236, 0.12);
+}
+
+.f-input::placeholder, .f-textarea::placeholder {
+  color: var(--text-muted);
+}
+
+/* Badges & Pills */
+.f-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: 9999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.f-badge-accent {
+  background-color: var(--accent-light);
+  color: var(--accent);
+  border: 1px solid var(--accent-border);
+}
+
+.f-badge-success {
+  background-color: var(--success-bg);
+  color: var(--success-text);
+  border: 1px solid var(--success-border);
+}
+
+.f-badge-danger {
+  background-color: var(--risk-critical-bg);
+  color: var(--risk-critical-text);
+  border: 1px solid var(--risk-critical-border);
+}
+
+.f-badge-warning {
+  background-color: var(--risk-suspicious-bg);
+  color: var(--risk-suspicious-text);
+  border: 1px solid var(--risk-suspicious-border);
+}
+
+/* Five-tier Risk Badges */
+.f-badge-low {
+  background-color: var(--risk-low-bg);
+  color: var(--risk-low-text);
+  border: 1px solid var(--risk-low-border);
+}
+
+.f-badge-guarded {
+  background-color: var(--risk-guarded-bg);
+  color: var(--risk-guarded-text);
+  border: 1px solid var(--risk-guarded-border);
+}
+
+.f-badge-suspicious {
+  background-color: var(--risk-suspicious-bg);
+  color: var(--risk-suspicious-text);
+  border: 1px solid var(--risk-suspicious-border);
+}
+
+.f-badge-high {
+  background-color: var(--risk-high-bg);
+  color: var(--risk-high-text);
+  border: 1px solid var(--risk-high-border);
+}
+
+.f-badge-critical {
+  background-color: var(--risk-critical-bg);
+  color: var(--risk-critical-text);
+  border: 1px solid var(--risk-critical-border);
+}
+
+/* Tables */
 .f-table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
   font-size: 0.82rem;
 }
 
 .f-table th {
-  background: var(--bg-table-header);
-  color: var(--text-muted);
-  font-weight: 700;
+  background-color: var(--bg-table-header);
+  color: var(--text-secondary);
+  font-weight: 600;
   text-transform: uppercase;
-  font-size: 0.72rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
   padding: 10px 14px;
-  text-align: left;
   border-bottom: 1px solid var(--border);
+  text-align: left;
 }
 
 .f-table td {
   padding: 10px 14px;
   border-bottom: 1px solid var(--border-subtle);
-  color: var(--text-secondary);
+  color: var(--text-primary);
+  background-color: #ffffff;
 }
 
 .f-table tr:hover td {
-  background: var(--bg-card-hover);
+  background-color: #f8fafc;
+}
+
+/* Key Findings Card in Image 1 style */
+.insight-card {
+  background-color: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.2s ease;
+}
+
+.insight-card:hover {
+  border-color: #cbd5e1;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Spec sheet rows matching Image 2 drawer */
+.spec-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px 12px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+}
+
+.spec-row:nth-child(odd) {
+  background-color: #f8fafc;
+}
+
+.spec-label {
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.spec-value {
   color: var(--text-primary);
+  font-weight: 600;
 }

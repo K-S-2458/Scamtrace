@@ -77,16 +77,16 @@ export const RiskAssessmentCard: React.FC<RiskAssessmentCardProps> = ({
               gridTemplateColumns: 'repeat(5, 1fr)',
               gap: '4px',
               height: '10px',
-              borderRadius: '4px',
+              borderRadius: '6px',
               overflow: 'hidden',
-              backgroundColor: 'rgba(0, 0, 0, 0.4)',
+              backgroundColor: '#f1f5f9',
             }}
           >
-            <div style={{ backgroundColor: 'var(--risk-low)', opacity: score >= 0 && score <= 19 ? 1 : 0.4 }} title="Low: 0–19" />
-            <div style={{ backgroundColor: 'var(--risk-guarded)', opacity: score >= 20 && score <= 39 ? 1 : 0.4 }} title="Guarded: 20–39" />
-            <div style={{ backgroundColor: 'var(--risk-suspicious)', opacity: score >= 40 && score <= 59 ? 1 : 0.4 }} title="Suspicious: 40–59" />
-            <div style={{ backgroundColor: 'var(--risk-high)', opacity: score >= 60 && score <= 79 ? 1 : 0.4 }} title="High: 60–79" />
-            <div style={{ backgroundColor: 'var(--risk-critical)', opacity: score >= 80 ? 1 : 0.4 }} title="Critical: 80–100" />
+            <div style={{ backgroundColor: 'var(--risk-low)', opacity: score >= 0 && score <= 19 ? 1 : 0.25 }} title="Low: 0–19" />
+            <div style={{ backgroundColor: 'var(--risk-guarded)', opacity: score >= 20 && score <= 39 ? 1 : 0.25 }} title="Guarded: 20–39" />
+            <div style={{ backgroundColor: 'var(--risk-suspicious)', opacity: score >= 40 && score <= 59 ? 1 : 0.25 }} title="Suspicious: 40–59" />
+            <div style={{ backgroundColor: 'var(--risk-high)', opacity: score >= 60 && score <= 79 ? 1 : 0.25 }} title="High: 60–79" />
+            <div style={{ backgroundColor: 'var(--risk-critical)', opacity: score >= 80 ? 1 : 0.25 }} title="Critical: 80–100" />
           </div>
 
           {/* Marker Needle / Pin */}
@@ -105,15 +105,15 @@ export const RiskAssessmentCard: React.FC<RiskAssessmentCardProps> = ({
           >
             <div
               style={{
-                width: '12px',
-                height: '12px',
+                width: '14px',
+                height: '14px',
                 backgroundColor: '#ffffff',
-                border: `2px solid ${tier.color}`,
+                border: `3px solid ${tier.color}`,
                 borderRadius: '50%',
-                boxShadow: '0 0 6px rgba(0,0,0,0.8)',
+                boxShadow: '0 1px 4px rgba(0,0,0,0.25)',
               }}
             />
-            <div style={{ width: '2px', height: '10px', backgroundColor: '#ffffff' }} />
+            <div style={{ width: '2px', height: '10px', backgroundColor: tier.color }} />
           </div>
 
           {/* Scale Labels */}
