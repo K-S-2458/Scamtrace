@@ -530,7 +530,7 @@ async def quick_analyze_message(
         "score": analysis_record.score,
         "top_factors": result.top_factors,
         "extracted_entities": [
-            {"entity_type": ent.entity_type, "value": ent.value, "confidence": ent.confidence}
+            {"entity_type": ent.entity_type, "value": ent.value, "confidence": getattr(ent, "confidence", 1.0)}
             for ent in ents
         ],
         "case_id": case_id,

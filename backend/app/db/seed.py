@@ -278,8 +278,9 @@ def _ingest_and_analyze(
             evidence_id=evidence_id,
             entity_type=ent.entity_type,
             value=ent.value,
-            normalized_value=ent.normalized_value,
-            confidence=ent.confidence,
+            raw_value=getattr(ent, "raw_value", ent.value) or ent.value,
+            span_start=getattr(ent, "span_start", None),
+            span_end=getattr(ent, "span_end", None),
         )
         db.add(ent_record)
 
