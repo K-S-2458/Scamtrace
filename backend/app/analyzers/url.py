@@ -4,12 +4,11 @@ Strictly offline: Zero DNS, WHOIS, or HTTP requests.
 """
 from pathlib import Path
 from typing import Any, Dict, List, Optional
-import joblib
 import numpy as np
 
 from backend.app.analyzers.base import AnalysisResult, BaseAnalyzer
 from backend.app.extraction.entities import extract_entities_from_text
-from backend.app.ml.train_url import FEATURE_NAMES, extract_lexical_url_features
+from backend.app.extraction.url_features import FEATURE_NAMES, extract_lexical_url_features
 
 MODEL_PATH = Path(__file__).resolve().parent.parent / "ml" / "artifacts" / "url_model.joblib"
 
@@ -24,11 +23,15 @@ class URLAnalyzer(BaseAnalyzer):
         self.medians = {}
         self.model_name = "Lexical_RandomForest"
         self.model_version = "1.0.0"
-        self._load_model()
+        self._loaded = False
 
     def _load_model(self):
+        if self._loaded:
+            return
+        self._loaded = True
         if self.model_path.exists():
             try:
+                import joblib
                 bundle = joblib.load(self.model_path)
                 self.model = bundle["model"]
                 self.feature_names = bundle.get("feature_names", FEATURE_NAMES)
@@ -39,6 +42,8 @@ class URLAnalyzer(BaseAnalyzer):
 
     def analyze(self, raw_bytes: bytes, raw_text: Optional[str] = None, metadata: Optional[Dict[str, Any]] = None) -> AnalysisResult:
         """Analyze URL and produce risk probability score and feature explanations."""
+        if not self._loaded:
+            self._load_model()
         url = (raw_text or "").strip()
         if not url and raw_bytes:
             try:

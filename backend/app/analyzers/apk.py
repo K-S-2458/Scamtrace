@@ -10,12 +10,11 @@ import xml.etree.ElementTree as ET
 import zipfile
 from pathlib import Path
 from typing import Any, Dict, List, Optional
-import joblib
 import numpy as np
 
 from backend.app.analyzers.base import AnalysisResult, BaseAnalyzer
 from backend.app.config import APK_SUSPICIOUS_PERMISSIONS
-from backend.app.ml.train_apk import APK_FEATURE_NAMES, extract_apk_features
+from backend.app.extraction.apk_features import APK_FEATURE_NAMES, extract_apk_features
 
 MODEL_PATH = Path(__file__).resolve().parent.parent / "ml" / "artifacts" / "apk_model.joblib"
 
@@ -29,11 +28,11 @@ class APKAnalyzer(BaseAnalyzer):
         self.feature_names = APK_FEATURE_NAMES
         self.model_name = "StaticAPK_RandomForest"
         self.model_version = "1.0.0"
-        self._load_model()
 
     def _load_model(self):
         if self.model_path.exists():
             try:
+                import joblib
                 bundle = joblib.load(self.model_path)
                 self.model = bundle["model"]
                 self.feature_names = bundle.get("feature_names", APK_FEATURE_NAMES)

@@ -1,25 +1,35 @@
-"""Analyzer factory module for SCAMTRACE AI."""
-from typing import Dict
+"""Analyzer factory module for SCAMTRACE AI.
+Analyzers are lazily instantiated to ensure instant cold starts.
+"""
+from typing import Dict, Optional
 from backend.app.analyzers.base import BaseAnalyzer, AnalysisResult
-from backend.app.analyzers.sms import SMSAnalyzer
-from backend.app.analyzers.url import URLAnalyzer
-from backend.app.analyzers.apk import APKAnalyzer
-from backend.app.analyzers.text import TextAnalyzer
-from backend.app.analyzers.screenshot import ScreenshotAnalyzer
 
-_ANALYZERS: Dict[str, BaseAnalyzer] = {
-    "sms": SMSAnalyzer(),
-    "url": URLAnalyzer(),
-    "apk": APKAnalyzer(),
-    "chat": TextAnalyzer(),
-    "email_text": TextAnalyzer(),
-    "phone_call": TextAnalyzer(),
-    "call_log": TextAnalyzer(),
-    "screenshot": ScreenshotAnalyzer(),
-}
+_ANALYZER_INSTANCES: Dict[str, BaseAnalyzer] = {}
 
 
 def get_analyzer(evidence_type: str) -> BaseAnalyzer:
-    """Return the appropriate forensic analyzer instance for an evidence type."""
-    norm_type = evidence_type.lower().strip()
-    return _ANALYZERS.get(norm_type, _ANALYZERS["sms"])
+    """Return the appropriate forensic analyzer instance for an evidence type (lazily loaded)."""
+    norm_type = (evidence_type or "sms").lower().strip()
+
+    if norm_type not in _ANALYZER_INSTANCES:
+        if norm_type == "sms":
+            from backend.app.analyzers.sms import SMSAnalyzer
+            _ANALYZER_INSTANCES[norm_type] = SMSAnalyzer()
+        elif norm_type == "url":
+            from backend.app.analyzers.url import URLAnalyzer
+            _ANALYZER_INSTANCES[norm_type] = URLAnalyzer()
+        elif norm_type == "apk":
+            from backend.app.analyzers.apk import APKAnalyzer
+            _ANALYZER_INSTANCES[norm_type] = APKAnalyzer()
+        elif norm_type in ("chat", "email_text", "phone_call", "call_log"):
+            from backend.app.analyzers.text import TextAnalyzer
+            _ANALYZER_INSTANCES[norm_type] = TextAnalyzer()
+        elif norm_type == "screenshot":
+            from backend.app.analyzers.screenshot import ScreenshotAnalyzer
+            _ANALYZER_INSTANCES[norm_type] = ScreenshotAnalyzer()
+        else:
+            from backend.app.analyzers.sms import SMSAnalyzer
+            _ANALYZER_INSTANCES[norm_type] = SMSAnalyzer()
+
+    return _ANALYZER_INSTANCES[norm_type]
+

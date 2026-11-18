@@ -6,7 +6,6 @@ import unicodedata
 import re
 from pathlib import Path
 from typing import Any, Dict, List, Optional
-import joblib
 import numpy as np
 
 from backend.app.analyzers.base import AnalysisResult, BaseAnalyzer
@@ -33,11 +32,15 @@ class SMSAnalyzer(BaseAnalyzer):
         self.model = None
         self.model_name = "TFIDF_LogisticRegression"
         self.model_version = "1.0.0"
-        self._load_model()
+        self._loaded = False
 
     def _load_model(self):
+        if self._loaded:
+            return
+        self._loaded = True
         if self.model_path.exists():
             try:
+                import joblib
                 self.model = joblib.load(self.model_path)
             except Exception as e:
                 print(f"[SMSAnalyzer] Error loading model: {e}")
@@ -45,6 +48,8 @@ class SMSAnalyzer(BaseAnalyzer):
 
     def analyze(self, raw_bytes: bytes, raw_text: Optional[str] = None, metadata: Optional[Dict[str, Any]] = None) -> AnalysisResult:
         """Analyze text and produce probability score and top n-gram explanations."""
+        if not self._loaded:
+            self._load_model()
         text = raw_text or ""
         if not text and raw_bytes:
             try:

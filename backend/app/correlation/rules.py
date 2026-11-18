@@ -5,8 +5,6 @@ returning zero or more attributed EdgeProposal instances.
 from dataclasses import dataclass, field
 from datetime import datetime
 from typing import Any, Dict, List, Optional, Set, Tuple
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import cosine_similarity
 
 from backend.app.config import (
     APK_HIGH_RISK_LURE_PERMS,
@@ -205,8 +203,10 @@ def rule_similar_text_template(
         return []
 
     texts = [e.raw_text for e in text_evs]
-    vectorizer = TfidfVectorizer(ngram_range=(1, 2), min_df=1)
     try:
+        from sklearn.feature_extraction.text import TfidfVectorizer
+        from sklearn.metrics.pairwise import cosine_similarity
+        vectorizer = TfidfVectorizer(ngram_range=(1, 2), min_df=1)
         tfidf_matrix = vectorizer.fit_transform(texts)
         sim_matrix = cosine_similarity(tfidf_matrix)
     except Exception:
