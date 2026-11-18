@@ -5,10 +5,9 @@ import {
   apiGetCases,
   apiGetRisk,
   apiGetFindings,
-  apiUploadText,
-  apiAnalyzeEvidence,
-  apiCorrelate,
   apiVerifyCase,
+  apiLoadPreset,
+  apiQuickAnalyze,
   CaseItem,
   RiskResponse,
   VerificationResponse,
@@ -47,8 +46,10 @@ export const Dashboard: React.FC<DashboardProps> = ({
     try {
       const data = await apiGetCases();
       setCases(data);
-      if (!activeCaseId && data.length > 0) {
-        onSelectCase(data[0].id);
+      if (data.length > 0) {
+        if (!activeCaseId || !data.some((c) => c.id === activeCaseId)) {
+          onSelectCase(data[0].id);
+        }
       }
     } catch (e: any) {
       console.error(e);
@@ -128,35 +129,9 @@ export const Dashboard: React.FC<DashboardProps> = ({
   const handleLoadSimpleSmishing = async () => {
     setLoadingPreset('smishing');
     try {
-      const c = await apiCreateCase(
-        'Simple Banking Smishing Incident',
-        'Minimal 2-artifact case: SMS KYC suspension threat referencing a spoofed phishing domain.'
-      );
-      const cid = c.id;
-
-      // E1: SMS
-      const ev1 = await apiUploadText(
-        cid,
-        'URGENT: Your Example Bank account has been restricted due to expired KYC. Update immediately at https://login.example-bank-secure.test or call +91 99999 00001.',
-        'sms',
-        '2026-03-10 10:00:00',
-        'E1_smishing_sms.txt'
-      );
-      await apiAnalyzeEvidence(cid, ev1.id);
-
-      // E2: Phishing URL
-      const ev2 = await apiUploadText(
-        cid,
-        'https://login.example-bank-secure.test/verify-kyc?utm_source=sms',
-        'url',
-        '2026-03-10 10:05:00',
-        'E2_phishing_link.txt'
-      );
-      await apiAnalyzeEvidence(cid, ev2.id);
-
-      await apiCorrelate(cid);
+      const res = await apiLoadPreset('smishing');
       await loadCases();
-      onSelectCase(cid);
+      onSelectCase(res.case_id);
     } catch (err: any) {
       alert(`Error loading preset: ${err.message}`);
     } finally {
@@ -168,50 +143,11 @@ export const Dashboard: React.FC<DashboardProps> = ({
   const handleLoadVishingDropper = async () => {
     setLoadingPreset('vishing');
     try {
-      const c = await apiCreateCase(
-        'Vishing Phone Call & Remote Access APK',
-        'Voice social engineering incident: scammer calls victim and commands installation of privileged remote helper APK.'
-      );
-      const cid = c.id;
-
-      // E1: Phone Call Record
-      const ev1 = await apiUploadText(
-        cid,
-        'Call from: +91 99999 00001\nCaller claimed to be Example Bank fraud manager: "Your debit card has unauthorized international transactions. Install our official quick-support safety app immediately to block charges."',
-        'phone_call',
-        '2026-03-10 11:00:00',
-        'E1_support_call.txt'
-      );
-      await apiAnalyzeEvidence(cid, ev1.id);
-
-      // E2: APK Metadata
-      const apkMeta = {
-        package_name: 'com.examplebank.safetyapp',
-        min_sdk: 24,
-        target_sdk: 33,
-        requested_permissions: [
-          'android.permission.INTERNET',
-          'android.permission.READ_SMS',
-          'android.permission.SEND_SMS',
-          'android.permission.RECEIVE_SMS',
-          'android.permission.BIND_ACCESSIBILITY_SERVICE',
-        ],
-        cert_sha256: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855',
-      };
-      const ev2 = await apiUploadText(
-        cid,
-        JSON.stringify(apkMeta),
-        'apk',
-        '2026-03-10 11:15:00',
-        'E2_safety_app.apk'
-      );
-      await apiAnalyzeEvidence(cid, ev2.id);
-
-      await apiCorrelate(cid);
+      const res = await apiLoadPreset('vishing');
       await loadCases();
-      onSelectCase(cid);
+      onSelectCase(res.case_id);
     } catch (err: any) {
-      alert(`Error: ${err.message}`);
+      alert(`Error loading preset: ${err.message}`);
     } finally {
       setLoadingPreset(null);
     }
@@ -221,69 +157,11 @@ export const Dashboard: React.FC<DashboardProps> = ({
   const handleLoadFullMultimodal = async () => {
     setLoadingPreset('full');
     try {
-      const c = await apiCreateCase(
-        'Comprehensive Multimodal Cybercrime Campaign',
-        'Full 4-tier campaign investigating cross-channel SMS smishing, WhatsApp dropper lure, phishing harvester, and accessibility-stealing APK.'
-      );
-      const cid = c.id;
-
-      // E1: SMS
-      const ev1 = await apiUploadText(
-        cid,
-        'Your KYC is expiring. Update now at https://kyc-update.example-bank-secure.test/verify to avoid account block. Call +91 99999 00001.',
-        'sms',
-        '2026-03-10 10:00:00',
-        'E1_sms.txt'
-      );
-      await apiAnalyzeEvidence(cid, ev1.id);
-
-      // E2: Chat
-      const ev2 = await apiUploadText(
-        cid,
-        'From: +919999900001\nDear customer, complete KYC here: https://kyc-update.example-bank-secure.test/verify and download the app: https://files.example-bank-secure.test/app.apk',
-        'chat',
-        '2026-03-10 10:03:00',
-        'E2_chat.txt'
-      );
-      await apiAnalyzeEvidence(cid, ev2.id);
-
-      // E3: URL
-      const ev3 = await apiUploadText(
-        cid,
-        'https://login.example-bank-secure.test/signin?utm_source=sms',
-        'url',
-        '2026-03-10 10:05:00',
-        'E3_url.txt'
-      );
-      await apiAnalyzeEvidence(cid, ev3.id);
-
-      // E4: APK
-      const apkMeta = {
-        package_name: 'com.fake.kycupdate',
-        min_sdk: 21,
-        target_sdk: 33,
-        requested_permissions: [
-          'android.permission.INTERNET',
-          'android.permission.READ_SMS',
-          'android.permission.RECEIVE_SMS',
-          'android.permission.BIND_ACCESSIBILITY_SERVICE',
-        ],
-        cert_sha256: 'a1b2c3d4e5f67890123456789abcdef0123456789abcdef0123456789abcdef01',
-      };
-      const ev4 = await apiUploadText(
-        cid,
-        JSON.stringify(apkMeta),
-        'apk',
-        '2026-03-10 10:08:00',
-        'E4_app.apk'
-      );
-      await apiAnalyzeEvidence(cid, ev4.id);
-
-      await apiCorrelate(cid);
+      const res = await apiLoadPreset('full');
       await loadCases();
-      onSelectCase(cid);
+      onSelectCase(res.case_id);
     } catch (err: any) {
-      alert(`Error: ${err.message}`);
+      alert(`Error loading preset: ${err.message}`);
     } finally {
       setLoadingPreset(null);
     }
@@ -293,35 +171,24 @@ export const Dashboard: React.FC<DashboardProps> = ({
   const handleTestRealtimeMessage = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!testerText.trim()) return;
-    if (!activeCaseId) {
-      alert('Please select or create an active case before testing.');
-      return;
-    }
+    const targetCaseId = activeCaseId || 'CASE-CAMPAIGN-03';
     setTesterLoading(true);
     setTesterResult(null);
     try {
-      const ev = await apiUploadText(
-        activeCaseId,
-        testerText,
-        testerType,
-        new Date().toISOString().replace('T', ' ').substring(0, 19),
-        `Live_${testerType}_${Date.now()}.txt`
-      );
-      const analysis = await apiAnalyzeEvidence(activeCaseId, ev.id);
-      await apiCorrelate(activeCaseId);
+      const analysis = await apiQuickAnalyze(targetCaseId, testerText, testerType);
 
       setTesterResult({
-        evidence_id: ev.id,
-        type: ev.type,
-        sha256: ev.sha256,
+        evidence_id: analysis.evidence_id,
+        type: analysis.type,
+        sha256: analysis.sha256,
         label: analysis.label,
         score: analysis.score,
         top_factors: analysis.top_factors,
-        extracted_entities: analysis.metadata?.extracted_entities || [],
+        extracted_entities: analysis.extracted_entities || [],
       });
 
       await loadCases();
-      await refreshCaseIntelligence(activeCaseId);
+      await refreshCaseIntelligence(targetCaseId);
     } catch (err: any) {
       alert(`Error analyzing message: ${err.message}`);
     } finally {

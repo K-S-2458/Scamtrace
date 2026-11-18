@@ -6,6 +6,7 @@ from backend.app.api.cases import router as cases_router
 from backend.app.api.evidence import router as evidence_router
 from backend.app.api.graph import router as graph_router
 from backend.app.api.integrity import router as integrity_router
+from backend.app.api.presets import router as presets_router
 from backend.app.api.report import router as report_router
 from backend.app.api.risk import router as risk_router
 from backend.app.api.timeline import router as timeline_router
@@ -29,6 +30,7 @@ app.add_middleware(
 # Include routers under /api
 app.include_router(cases_router, prefix="/api")
 app.include_router(evidence_router, prefix="/api")
+app.include_router(presets_router, prefix="/api")
 app.include_router(integrity_router, prefix="/api")
 app.include_router(graph_router, prefix="/api")
 app.include_router(timeline_router, prefix="/api")
@@ -38,8 +40,17 @@ app.include_router(report_router, prefix="/api")
 
 @app.on_event("startup")
 def on_startup():
-    """Initialize database tables on application start."""
+    """Initialize database tables on application start and seed default demo cases."""
     init_db()
+    try:
+        from backend.app.db.session import SessionLocal
+        from backend.app.db.seed import seed_default_cases
+        db = SessionLocal()
+        seed_default_cases(db)
+        db.close()
+    except Exception as e:
+        print(f"[Startup] Seeding error: {e}")
+
 
 
 @app.get("/api/health")

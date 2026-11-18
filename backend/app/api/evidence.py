@@ -31,6 +31,27 @@ from backend.app.integrity.manifest import generate_manifest
 router = APIRouter(prefix="/cases/{case_id}/evidence", tags=["evidence"])
 
 
+def get_or_create_case(db: Session, case_id: str) -> Case:
+    """Retrieve case or lazily auto-create to gracefully support serverless instances."""
+    case = db.query(Case).filter(Case.id == case_id).first()
+    if not case:
+        from backend.app.db.seed import seed_default_cases
+        seed_default_cases(db)
+        case = db.query(Case).filter(Case.id == case_id).first()
+    if not case:
+        case = Case(
+            id=case_id,
+            title=f"Investigation ({case_id})",
+            description="Active investigation case",
+            status="open",
+            created_at=datetime.datetime.utcnow(),
+        )
+        db.add(case)
+        db.commit()
+        db.refresh(case)
+    return case
+
+
 def get_next_evidence_id(db: Session, case_id: str) -> str:
     """Generate sequential evidence ID (e.g. E1, E2, E3)."""
     existing_items = db.query(Evidence.id).filter(Evidence.case_id == case_id).all()
@@ -171,9 +192,7 @@ async def upload_evidence(
     db: Session = Depends(get_db)
 ):
     """Ingest evidence via multipart file upload or pasted text JSON."""
-    case = db.query(Case).filter(Case.id == case_id).first()
-    if not case:
-        raise HTTPException(status_code=404, detail=f"Case {case_id} not found")
+    case = get_or_create_case(db, case_id)
 
     content_type = request.headers.get("content-type", "")
 
@@ -254,9 +273,7 @@ async def upload_bulk_evidence(
     db: Session = Depends(get_db)
 ):
     """Bulk ingest evidence items from CSV file or JSON list."""
-    case = db.query(Case).filter(Case.id == case_id).first()
-    if not case:
-        raise HTTPException(status_code=404, detail=f"Case {case_id} not found")
+    case = get_or_create_case(db, case_id)
 
     content_type = request.headers.get("content-type", "")
     items_to_ingest = []
@@ -321,9 +338,7 @@ async def upload_bulk_evidence(
 @router.get("", response_model=List[EvidenceResponse])
 def list_case_evidence(case_id: str, db: Session = Depends(get_db)):
     """List all evidence items registered in a case."""
-    case = db.query(Case).filter(Case.id == case_id).first()
-    if not case:
-        raise HTTPException(status_code=404, detail=f"Case {case_id} not found")
+    case = get_or_create_case(db, case_id)
 
     items = (
         db.query(Evidence)
@@ -428,4 +443,97 @@ def analyze_evidence(case_id: str, evidence_id: str, db: Session = Depends(get_d
         created_at=analysis_record.created_at,
         metadata=result.metadata,
     )
+
+
+@router.post("/quick-analyze")
+async def quick_analyze_message(
+    case_id: str,
+    request: Request,
+    db: Session = Depends(get_db)
+):
+    """Atomically ingest text evidence, execute ML analyzer, and update graph correlation in a single request."""
+    get_or_create_case(db, case_id)
+
+    body_bytes = await request.body()
+    try:
+        payload = json.loads(body_bytes)
+    except Exception:
+        raise HTTPException(status_code=400, detail="Invalid JSON body")
+
+    text = payload.get("text", "").strip()
+    ev_type = (payload.get("type") or "sms").lower()
+    if not text:
+        raise HTTPException(status_code=400, detail="Message text cannot be empty")
+
+    raw_bytes = text.encode("utf-8")
+    now_str = datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")
+
+    ev = ingest_single_evidence(
+        db=db,
+        case_id=case_id,
+        raw_bytes=raw_bytes,
+        original_filename=f"Live_{ev_type}_{int(datetime.datetime.utcnow().timestamp())}.txt",
+        user_type=ev_type,
+        source_timestamp_str=now_str,
+        timestamp_source="user_entered",
+        uploader="investigator",
+        raw_text=text,
+    )
+
+    analyzer = get_analyzer(ev.type)
+    result = analyzer.analyze(raw_bytes=raw_bytes, raw_text=ev.raw_text)
+
+    analysis_record = (
+        db.query(Analysis)
+        .filter(Analysis.case_id == case_id, Analysis.evidence_id == ev.id)
+        .first()
+    )
+    if not analysis_record:
+        analysis_record = Analysis(
+            id=str(uuid.uuid4()),
+            case_id=case_id,
+            evidence_id=ev.id,
+            model_name=result.model_name,
+            model_version=result.model_version,
+            label=result.label,
+            score=result.score,
+            top_factors=json.dumps(result.top_factors),
+            created_at=datetime.datetime.utcnow(),
+        )
+        db.add(analysis_record)
+    else:
+        analysis_record.model_name = result.model_name
+        analysis_record.model_version = result.model_version
+        analysis_record.label = result.label
+        analysis_record.score = result.score
+        analysis_record.top_factors = json.dumps(result.top_factors)
+        analysis_record.created_at = datetime.datetime.utcnow()
+
+    ev.analysis_status = "analyzed"
+    db.commit()
+
+    # Run correlation
+    try:
+        from backend.app.correlation.engine import correlate_case
+        correlate_case(db=db, case_id=case_id, persist=True)
+    except Exception as e:
+        print(f"[QuickAnalyze] Correlation error: {e}")
+
+    from backend.app.db.models import Entity
+    ents = db.query(Entity).filter(Entity.case_id == case_id, Entity.evidence_id == ev.id).all()
+
+    return {
+        "evidence_id": ev.id,
+        "type": ev.type,
+        "sha256": ev.sha256,
+        "label": analysis_record.label,
+        "score": analysis_record.score,
+        "top_factors": result.top_factors,
+        "extracted_entities": [
+            {"entity_type": ent.entity_type, "value": ent.value, "confidence": ent.confidence}
+            for ent in ents
+        ],
+        "case_id": case_id,
+    }
+
 

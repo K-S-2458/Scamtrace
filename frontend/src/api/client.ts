@@ -283,3 +283,18 @@ export interface FindingsResponse {
 
 export const apiGetFindings = (caseId: string) =>
   fetchJson<FindingsResponse>(`/cases/${caseId}/findings`);
+
+// Presets
+export const apiLoadPreset = (presetName: string) =>
+  fetchJson<{ case_id: string; title: string; description: string; status: string }>(
+    `/presets/${presetName}`,
+    { method: 'POST' }
+  );
+
+// Real-Time Threat Tester
+export const apiQuickAnalyze = (caseId: string, text: string, type: string) =>
+  fetchJson<any>(`/cases/${caseId}/evidence/quick-analyze`, {
+    method: 'POST',
+    body: JSON.stringify({ text, type }),
+  });
+
